@@ -7,3 +7,6 @@ node_modules/
 
 #백업 파일 제외
 *.bak
+
+#라이센스 파일 제외
+*.LICENSE.txt
