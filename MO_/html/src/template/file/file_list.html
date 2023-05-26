@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    @@include('../include/head.html', { page_main: false, page_title:"파일 목록", theme_color:"#fff" })
+
+    <style>
+      main {
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 5rem 1rem;
+        color: #000;
+      }
+      h1 {
+        font-size: 3rem;
+        font-weight: 600;
+      }
+      [class^='tableStyle'] {
+        width: 100%;
+        margin-top: 30px;
+        font-size: 1.4rem;
+      }
+      [class^='tableStyle'] table {
+        width: 100%;
+        text-align: center;
+        table-layout: fixed;
+      }
+      [class^='tableStyle'] table th,
+      [class^='tableStyle'] table td {
+        border-style: solid;
+        border-color: #5dacf1;
+        line-height: 1.7;
+        padding: 8px 1.5rem;
+        white-space: normal;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+      }
+      [class^='tableStyle'] table td {
+        text-align: left;
+      }
+      [class^='tableStyle'] table th {
+        border-width: 3px 0 1px 0px;
+      }
+      [class^='tableStyle'] table td {
+        border-width: 1px 0 0 1px;
+      }
+      [class^='tableStyle'] table td:first-of-type {
+        border-left: none;
+        text-align: center;
+      }
+      [class^='tableStyle'] table tr:first-of-type td {
+        border-top: none;
+      }
+      .finish {
+        text-decoration: line-through;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>File Index</h1>
+      </header>
+      <div class="contents">
+        <div class="tableStyle">
+          <table>
+            <caption>
+              목록
+            </caption>
+            <colgroup>
+              <col style="width: 7%" />
+              <col style="width: 12%" />
+              <col style="width: 12%" />
+              <col style="width: auto" />
+              <col style="width: 12%" />
+            </colgroup>
+            <thead>
+              <tr>
+                <th scope="col">No.</th>
+                <th class="align-l" colspan="2" scope="col">구분</th>
+                <th scope="col">경로</th>
+                <th scope="col">진행 현황</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="count"></td>
+                <td rowspan="2">메인</td>
+                <td>로그인 전</td>
+                <td><a href="../index.html" target="_blank">index.html</a></td>
+                <td>완료</td>
+              </tr>
+              <tr>
+                <td class="count"></td>
+                <td>로그인 후</td>
+                <td><a href="../index2.html" target="_blank">index2.html</a></td>
+                <td>완료</td>
+              </tr>
+              <tr>
+                <td class="count"></td>
+                <td>공통</td>
+                <td>전체메뉴</td>
+                <td><a href="../aside/menu.html" target="_blank">aside/menu.html</a></td>
+                <td>완료</td>
+              </tr>
+              <tr>
+                <td class="count"></td>
+                <td rowspan="2">서브</td>
+                <td>정보조회</td>
+                <td><a href="../gate/gate.html" target="_blank">gate/gate.html</a></td>
+                <td>완료</td>
+              </tr>
+              <tr>
+                <td class="count"></td>
+                <td>통합사건검색</td>
+                <td><a href="../search/search.html" target="_blank">search/search.html</a></td>
+                <td>완료</td>
+              </tr>
+              <tr>
+                <td class="count"></td>
+                <td rowspan="2">로그인</td>
+                <td>사용자 아이디 선택</td>
+                <td><a href="../login/user_id.html" target="_blank">login/user_id.html</a></td>
+                <td>완료</td>
+              </tr>
+              <tr>
+                <td class="count"></td>
+                <td>로그인 유형 선택</td>
+                <td><a href="../login/login_type.html" target="_blank">login/login_type.html</a></td>
+                <td>완료</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      const counts = document.querySelectorAll('.count');
+
+      counts.forEach((el, idx) => {
+        el.innerHTML = idx + 1;
+        //console.log(el, idx);
+      });
+    </script>
+  </body>
+</html>

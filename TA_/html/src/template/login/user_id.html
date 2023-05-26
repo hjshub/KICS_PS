@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    @@include('../include/head.html', { page_main: false, page_title:"사용자 아이디 선택", theme_color:"#fff" })
+  </head>
+  <body>
+    <div id="layout">
+      <!-- #gnb -->
+      @@include('../include/gnb.html', { page_main: false, page_title:"사용자 아이디 선택", path:'..' })
+      <!-- // #gnb -->
+
+      <!-- #contents -->
+      <main>
+        <section>
+          <div class="inner">
+            <div class="form-wrap">
+              <div class="text-wrap">
+                <label for="user_id"><em class="hidden-txt">아이디</em></label>
+                <input type="text" id="user_id" autocomplete="off" placeholder="아이디" />
+              </div>
+              <div class="btn-wrap">
+                <button class="btn-search bg-navy"><em>검색</em></button>
+              </div>
+            </div>
+            <div class="list type_4">
+              <ul>
+                <li>
+                  <a href="">
+                    <div class="flex-wrap">
+                      <span>
+                        <em>USERID01</em>
+                      </span>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <div class="flex-wrap">
+                      <span>
+                        <em>USERID02</em>
+                      </span>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <div class="flex-wrap">
+                      <span>
+                        <em>USERID03</em>
+                      </span>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <div class="flex-wrap">
+                      <span>
+                        <em>USERID04</em>
+                      </span>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="description">
+              <div class="inner">
+                <ul class="dot-list">
+                  <li><b>팀장 승인</b>(1차 승인) 업무 입니다.</li>
+                  <li>팀장 부재 시 사유를 입력하고 <b>타 부서 팀장 또는 선임자</b>를 승인자로 지정, 등록 할 수 있습니다.</li>
+                </ul>
+              </div>
+            </div>
+            <div class="btn-wrap pd-none">
+              <button class="btn-apply bg-blue">
+                <em>신규사용자 기기등록</em>
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      <!-- // #contents -->
+    </div>
+  </body>
+</html>

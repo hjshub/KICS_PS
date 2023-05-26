@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    @@include('../include/head.html', { page_main: false, page_title:"통합사건검색", theme_color:"#fff" })
+  </head>
+  <body>
+    <div id="layout" class="search">
+      <!-- #gnb -->
+      <header id="gnb">
+        <div class="inner">
+          <div class="flex-wrap h-wrap">
+            <span>
+              <a href="javascript:void(0);" onclick="history.back()" class="icon icon-back">
+                <em class="hidden-txt">뒤로가기</em>
+              </a>
+            </span>
+            <h1>통합사건검색&nbsp;<i class="icon icon-tag"></i></h1>
+          </div>
+        </div>
+      </header>
+      <!-- // #gnb -->
+
+      <!-- #contents -->
+      <main>
+        <section>
+          <div class="inner">
+            <div class="form-wrap">
+              <dl>
+                <dt>진행상태</dt>
+                <dd>
+                  <div class="select-wrap emphasis">
+                    <label for="s"><em class="hidden-txt">진행상태 선택</em></label>
+                    <select name="" id="s">
+                      <option value="">전체</option>
+                      <option value="">승인요청</option>
+                      <option value="">승인완료</option>
+                    </select>
+                  </div>
+                </dd>
+              </dl>
+              <dl>
+                <dt>조회기간</dt>
+                <dd>
+                  <div class="text-wrap flex-wrap emphasis calendar both">
+                    <span>
+                      <label for="startDate"><em class="hidden-txt">조회 시작 날짜</em></label>
+                      <input type="text" id="startDate" autocomplete="off" inputmode="none" />
+                    </span>
+                    <span>
+                      <label for="endDate"><em class="hidden-txt">조회 끝 날짜</em></label>
+                      <input type="text" id="endDate" autocomplete="off" inputmode="none" />
+                    </span>
+                  </div>
+                </dd>
+              </dl>
+              <div class="btn-wrap">
+                <button class="btn-search bg-navy"><em>검색</em></button>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="bg-gray">
+          <header class="heading-title-wrap">
+            <div class="inner">
+              <h2 class="flex-wrap">
+                <strong>검색목록</strong>
+                <span><b>02</b>건</span>
+              </h2>
+            </div>
+          </header>
+          <div class="list type_6">
+            <ul>
+              <li>
+                <div class="inner">
+                  <div class="chk-wrap inline">
+                    <span>
+                      <input type="checkbox" name="" id="chk1" />
+                      <label for="chk1"><em class="hidden-txt">체크</em></label>
+                    </span>
+                  </div>
+                  <div class="list-view">
+                    <div class="st-label apply">승인요청</div>
+                    <div class="table">
+                      <dl>
+                        <dt>요청일시</dt>
+                        <dd>2024.02.24&nbsp;14:25</dd>
+                      </dl>
+                      <dl>
+                        <dt>검색결과</dt>
+                        <dd>승인요청중</dd>
+                      </dl>
+                      <dl>
+                        <dt>검색목적</dt>
+                        <dd>
+                          <span class="txt-line-clamp2">
+                            검색목적이 들어갑니다. 검색목적은최대 2줄까지 들어가며, 내용이 길어질시 검색목적이 들어갑니다.
+                            검색목적은최대 2줄까지 들어가며, 내용이 길어질시
+                          </span>
+                        </dd>
+                      </dl>
+                      <dl>
+                        <dt>검색조건</dt>
+                        <dd>
+                          서울중앙지점<br />
+                          [접수일 : 20230224 ~ 20240223]
+                        </dd>
+                      </dl>
+                      <dl>
+                        <dt>승인&#47;반려자</dt>
+                        <dd>검찰 홍길동</dd>
+                      </dl>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="inner">
+                  <div class="chk-wrap inline">
+                    <span>
+                      <input type="checkbox" name="" id="chk2" />
+                      <label for="chk2"><em class="hidden-txt">체크</em></label>
+                    </span>
+                  </div>
+                  <div class="list-view">
+                    <div class="st-label finish">승인완료</div>
+                    <div class="table">
+                      <dl>
+                        <dt>요청일시</dt>
+                        <dd>2024.02.24&nbsp;14:25</dd>
+                      </dl>
+                      <dl>
+                        <dt>검색결과</dt>
+                        <dd>
+                          <b class="count">1건</b>
+                          <span class="btn-wrap">
+                            <button
+                              type="button"
+                              class="button-active-modal btn-detail sm round bg-navy"
+                              data-modal-name="searchResultDetail"
+                            >
+                              <b>상세보기</b>
+                            </button>
+                          </span>
+                        </dd>
+                      </dl>
+                      <dl>
+                        <dt>검색목적</dt>
+                        <dd>
+                          <span class="txt-line-clamp2">
+                            검색목적이 들어갑니다. 검색목적은최대 2줄까지 들어가며, 내용이 길어질시 검색목적이 들어갑니다.
+                            검색목적은최대 2줄까지 들어가며, 내용이 길어질시
+                          </span>
+                        </dd>
+                      </dl>
+                      <dl>
+                        <dt>검색조건</dt>
+                        <dd>
+                          서울중앙지점<br />
+                          [접수일 : 20230224 ~ 20240223]
+                        </dd>
+                      </dl>
+                      <dl>
+                        <dt>승인&#47;반려자</dt>
+                        <dd>검찰 홍길동</dd>
+                      </dl>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="inner">
+            <div class="btn-wrap grid-wrap col-3 type2">
+              <button class="btn-delete bg-white"><em>삭제</em></button>
+              <button class="btn-return"><em>회수</em></button>
+              <button class="button-active-modal btn-apply bg-blue" data-modal-name="searchApplyDetail">
+                <em>승인요청</em>
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      <!-- // #contents -->
+
+      <!-- 모달 -->
+      <!-- 검색요청 상세-->
+      <div class="modal full animate fast" id="modal-searchApplyDetail">@@include('../include/modal_searchApplyDetail.html')</div>
+
+      <!-- 검색결과 상세-->
+      <div class="modal full animate fast" id="modal-searchResultDetail">
+        @@include('../include/modal_searchResultDetail.html')
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+  <meta name="Author" content="통합사건검색" />
+  <meta name="Keywords" content="" />
+  <meta name="Description" content="" />
+  <meta name="theme-color" content="#fff" />
+  <!-- <meta name="format-detection" content="telephone=no"> -->
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+
+
+  <title>통합사건검색 | 킥스</title>
+  <script defer src="../assets/js/main.js"></script>
+  <script defer src="../assets/js/vendor.js"></script>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+
+
+</head>
+
+<body>
+  <div id="layout" class="search">
+    <!-- #gnb -->
+    <header id="gnb">
+      <div class="inner">
+        <div class="flex-wrap h-wrap">
+          <span>
+            <a href="javascript:void(0);" onclick="history.back()" class="icon icon-back">
+              <em class="hidden-txt">뒤로가기</em>
+            </a>
+          </span>
+          <h1>통합사건검색&nbsp;<i class="icon icon-tag"></i></h1>
+        </div>
+      </div>
+    </header>
+    <!-- // #gnb -->
+
+    <!-- #contents -->
+    <main>
+      <section>
+        <div class="inner">
+          <div class="form-wrap">
+            <dl>
+              <dt>진행상태</dt>
+              <dd>
+                <div class="select-wrap emphasis">
+                  <label for="s"><em class="hidden-txt">진행상태 선택</em></label>
+                  <select name="" id="s">
+                    <option value="">전체</option>
+                    <option value="">승인요청</option>
+                    <option value="">승인완료</option>
+                  </select>
+                </div>
+              </dd>
+            </dl>
+            <dl>
+              <dt>조회기간</dt>
+              <dd>
+                <div class="text-wrap flex-wrap emphasis calendar both">
+                  <span>
+                    <label for="startDate"><em class="hidden-txt">조회 시작 날짜</em></label>
+                    <input type="text" id="startDate" autocomplete="off" inputmode="none" />
+                  </span>
+                  <span>
+                    <label for="endDate"><em class="hidden-txt">조회 끝 날짜</em></label>
+                    <input type="text" id="endDate" autocomplete="off" inputmode="none" />
+                  </span>
+                </div>
+              </dd>
+            </dl>
+            <div class="btn-wrap">
+              <button class="btn-search bg-navy"><em>검색</em></button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="bg-gray">
+        <header class="heading-title-wrap">
+          <div class="inner">
+            <h2 class="flex-wrap">
+              <strong>검색목록</strong>
+              <span><b>02</b>건</span>
+            </h2>
+          </div>
+        </header>
+        <div class="list type_6">
+          <ul>
+            <li>
+              <div class="inner">
+                <div class="chk-wrap inline">
+                  <span>
+                    <input type="checkbox" name="" id="chk1" />
+                    <label for="chk1"><em class="hidden-txt">체크</em></label>
+                  </span>
+                </div>
+                <div class="list-view">
+                  <div class="st-label apply">승인요청</div>
+                  <div class="table">
+                    <dl>
+                      <dt>요청일시</dt>
+                      <dd>2024.02.24&nbsp;14:25</dd>
+                    </dl>
+                    <dl>
+                      <dt>검색결과</dt>
+                      <dd>승인요청중</dd>
+                    </dl>
+                    <dl>
+                      <dt>검색목적</dt>
+                      <dd>
+                        <span class="txt-line-clamp2">
+                          검색목적이 들어갑니다. 검색목적은최대 2줄까지 들어가며, 내용이 길어질시 검색목적이 들어갑니다.
+                          검색목적은최대 2줄까지 들어가며, 내용이 길어질시
+                        </span>
+                      </dd>
+                    </dl>
+                    <dl>
+                      <dt>검색조건</dt>
+                      <dd>
+                        서울중앙지점<br />
+                        [접수일 : 20230224 ~ 20240223]
+                      </dd>
+                    </dl>
+                    <dl>
+                      <dt>승인&#47;반려자</dt>
+                      <dd>검찰 홍길동</dd>
+                    </dl>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="inner">
+                <div class="chk-wrap inline">
+                  <span>
+                    <input type="checkbox" name="" id="chk2" />
+                    <label for="chk2"><em class="hidden-txt">체크</em></label>
+                  </span>
+                </div>
+                <div class="list-view">
+                  <div class="st-label finish">승인완료</div>
+                  <div class="table">
+                    <dl>
+                      <dt>요청일시</dt>
+                      <dd>2024.02.24&nbsp;14:25</dd>
+                    </dl>
+                    <dl>
+                      <dt>검색결과</dt>
+                      <dd>
+                        <b class="count">1건</b>
+                        <span class="btn-wrap">
+                          <button type="button" class="button-active-modal btn-detail sm round bg-navy" data-modal-name="searchResultDetail">
+                            <b>상세보기</b>
+                          </button>
+                        </span>
+                      </dd>
+                    </dl>
+                    <dl>
+                      <dt>검색목적</dt>
+                      <dd>
+                        <span class="txt-line-clamp2">
+                          검색목적이 들어갑니다. 검색목적은최대 2줄까지 들어가며, 내용이 길어질시 검색목적이 들어갑니다.
+                          검색목적은최대 2줄까지 들어가며, 내용이 길어질시
+                        </span>
+                      </dd>
+                    </dl>
+                    <dl>
+                      <dt>검색조건</dt>
+                      <dd>
+                        서울중앙지점<br />
+                        [접수일 : 20230224 ~ 20240223]
+                      </dd>
+                    </dl>
+                    <dl>
+                      <dt>승인&#47;반려자</dt>
+                      <dd>검찰 홍길동</dd>
+                    </dl>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="inner">
+          <div class="btn-wrap grid-wrap col-3 type2">
+            <button class="btn-delete bg-white"><em>삭제</em></button>
+            <button class="btn-return"><em>회수</em></button>
+            <button class="button-active-modal btn-apply bg-blue" data-modal-name="searchApplyDetail">
+              <em>승인요청</em>
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- // #contents -->
+
+    <!-- 모달 -->
+    <!-- 검색요청 상세-->
+    <div class="modal full animate fast" id="modal-searchApplyDetail">
+      <header class="modal-header">
+        <div class="inner">
+          <div class="flex-wrap h-wrap">
+            <span class="button--close">
+              <a href="javascript:void(0)" class="button-close-modal" data-modal-name="searchApplyDetail">
+                <em class="hidden-txt">레이어팝업 닫기</em>
+                <i></i>
+                <i></i>
+              </a>
+            </span>
+            <h2>검색요청 상세</h2>
+          </div>
+        </div>
+      </header>
+      <div class="modal-body">
+        <section>
+          <div class="inner">
+            <div class="description">
+              <div class="inner">
+                <ul class="dot-list">
+                  <li><b>팀장 승인</b>(1차 승인) 업무 입니다.</li>
+                  <li>팀장 부재 시 사유를 입력하고 <b>타 부서 팀장 또는 선임자</b>를 승인자로 지정, 등록 할 수 있습니다.</li>
+                </ul>
+              </div>
+            </div>
+            <div class="form-wrap">
+              <dl>
+                <dt>요청자</dt>
+                <dd>
+                  <div class="text-wrap emphasis">
+                    <label for="a1"><em class="hidden-txt">소속부서</em></label>
+                    <input class="disabled" type="text" id="a1" value="서울중앙지검" autocomplete="off" />
+                  </div>
+                  <div class="text-wrap emphasis">
+                    <label for="a2"><em class="hidden-txt">이름</em></label>
+                    <input class="disabled" type="text" id="a2" value="홍길동" autocomplete="off" />
+                  </div>
+                </dd>
+              </dl>
+              <dl>
+                <dt>승인자</dt>
+                <dd>
+                  <div class="text-wrap">
+                    <label for="b1"><em class="hidden-txt">소속관서</em></label>
+                    <input type="text" id="b1" autocomplete="off" placeholder="소속 관서" />
+                  </div>
+                  <div class="text-wrap">
+                    <label for="b2"><em class="hidden-txt">이름</em></label>
+                    <input type="text" id="b2" autocomplete="off" placeholder="이름" />
+                  </div>
+                  <div class="btn-wrap">
+                    <button class="btn-search bg-navy"><em>변경</em></button>
+                  </div>
+                </dd>
+              </dl>
+              <dl>
+                <dt>검색목적</dt>
+                <dd>
+                  <div class="text-wrap emphasis">
+                    <textarea name="" id="" cols="30" rows="10" placeholder="검색목적은 30자 이상 150자 이내로 입력해 주세요." title="검색목적"></textarea>
+                  </div>
+                </dd>
+              </dl>
+              <dl>
+                <dt>관할관서</dt>
+                <dd>
+                  <div class="text-wrap">
+                    <label for="c"><em class="hidden-txt">소속관서</em></label>
+                    <input type="text" id="c" autocomplete="off" placeholder="소속 관서" />
+                  </div>
+                  <div class="btn-wrap">
+                    <button class="btn-search bg-navy"><em>검색</em></button>
+                  </div>
+                </dd>
+              </dl>
+              <dl>
+                <dt>부서&#47;담당자</dt>
+                <dd>
+                  <div class="text-wrap">
+                    <label for="d1"><em class="hidden-txt">소속팀</em></label>
+                    <input type="text" id="d1" autocomplete="off" placeholder="소속팀" />
+                  </div>
+                  <div class="btn-wrap">
+                    <button class="btn-search bg-navy"><em>검색</em></button>
+                  </div>
+                </dd>
+                <dd>
+                  <div class="text-wrap">
+                    <label for="d2"><em class="hidden-txt">이름</em></label>
+                    <input type="text" id="d2" autocomplete="off" placeholder="이름" />
+                  </div>
+                  <div class="btn-wrap">
+                    <button class="btn-search bg-navy"><em>검색</em></button>
+                  </div>
+                </dd>
+              </dl>
+              <dl>
+                <dt>접수일</dt>
+                <dd>
+                  <div class="text-wrap flex-wrap calendar both">
+                    <span>
+                      <label for="startDate_1"><em class="hidden-txt">접수 시작 날짜</em></label>
+                      <input type="text" id="startDate_1" autocomplete="off" inputmode="none" />
+                    </span>
+                    <span>
+                      <label for="endDate_1"><em class="hidden-txt">접수 끝 날짜</em></label>
+                      <input type="text" id="endDate_1" autocomplete="off" inputmode="none" />
+                    </span>
+                  </div>
+                </dd>
+              </dl>
+              <dl>
+                <dt>접수번호</dt>
+                <dd>
+                  <div class="text-wrap flex-wrap both">
+                    <span>
+                      <label for="startNumber_1"><em class="hidden-txt">접수번호 시작</em></label>
+                      <input type="text" id="startNumber_1" autocomplete="off" />
+                    </span>
+                    <span>
+                      <label for="endNumber_1"><em class="hidden-txt">접수번호 끝</em></label>
+                      <input type="text" id="endNumber_1" autocomplete="off" />
+                    </span>
+                  </div>
+                </dd>
+              </dl>
+              <dl>
+                <dt>입건일</dt>
+                <dd>
+                  <div class="text-wrap flex-wrap calendar both">
+                    <span>
+                      <label for="startDate_2"><em class="hidden-txt">입건 시작 날짜</em></label>
+                      <input type="text" id="startDate_2" autocomplete="off" inputmode="none" />
+                    </span>
+                    <span>
+                      <label for="endDate_2"><em class="hidden-txt">입건 끝 날짜</em></label>
+                      <input type="text" id="endDate_2" autocomplete="off" inputmode="none" />
+                    </span>
+                  </div>
+                </dd>
+              </dl>
+              <dl>
+                <dt>사건번호</dt>
+                <dd>
+                  <div class="text-wrap flex-wrap both">
+                    <span>
+                      <label for="startNumber_2"><em class="hidden-txt">사건번호 시작</em></label>
+                      <input type="text" id="startNumber_2" autocomplete="off" />
+                    </span>
+                    <span>
+                      <label for="endNumber_2"><em class="hidden-txt">사건번호 끝</em></label>
+                      <input type="text" id="endNumber_2" autocomplete="off" />
+                    </span>
+                  </div>
+                </dd>
+              </dl>
+              <dl>
+                <dt>접수단서</dt>
+                <dd>
+                  <div class="select-wrap">
+                    <label for="e"><em class="hidden-txt">접수단서 선택</em></label>
+                    <select name="" id="e">
+                      <option value="">선택</option>
+                    </select>
+                  </div>
+                </dd>
+              </dl>
+              <dl>
+                <dt>접수형태</dt>
+                <dd>
+                  <div class="select-wrap">
+                    <label for="f"><em class="hidden-txt">접수형태 선택</em></label>
+                    <select name="" id="f">
+                      <option value="">선택</option>
+                    </select>
+                  </div>
+                </dd>
+              </dl>
+              <dl>
+                <dt>진행상태</dt>
+                <dd>
+                  <div class="select-wrap">
+                    <label for="g"><em class="hidden-txt">진행상태 선택</em></label>
+                    <select name="" id="g">
+                      <option value="">선택</option>
+                    </select>
+                  </div>
+                </dd>
+              </dl>
+              <dl>
+                <dt>죄명</dt>
+                <dd>
+                  <div class="text-wrap">
+                    <label for="h"><em class="hidden-txt">죄명검색</em></label>
+                    <input type="text" id="h" autocomplete="off" placeholder="죄명검색" />
+                  </div>
+                  <div class="btn-wrap">
+                    <button class="btn-search bg-navy"><em>검색</em></button>
+                  </div>
+                  <div class="chk-wrap type2 grid-wrap col-2">
+                    <span>
+                      <input type="checkbox" name="" id="chk1" />
+                      <label for="chk1"><b>원표작성정보</b></label>
+                    </span>
+                    <span>
+                      <input type="checkbox" name="" id="chk2" />
+                      <label for="chk2"><b>단서검색</b></label>
+                    </span>
+                  </div>
+                </dd>
+              </dl>
+            </div>
+          </div>
+        </section>
+        <section class="bg-gray">
+          <div class="caution">
+            <div class="inner current">
+              <a href="javascript:void(0);" class="flex-wrap button-active-dropDown">
+                <i class="icon icon-caution"></i>
+                <b class="button--arrow2">보안경고</b>
+              </a>
+              <ul class="dropDown dot-list">
+                <li>
+                  모든 검색 및 출력기록은 저장·관리되며, 검색 내용 및 출력물은 수사 등 형사사법업무처리 이외의 목적으로 이용할 수
+                  없습니다.
+                </li>
+                <li>
+                  형사사법정보의 누설, 권한 없는 처리, 타인 이용 제공 등 행위는 형사처벌을 받을 수 있습니다. (5년 이하 징역 또는 5천만원
+                  이하의 벌금)
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="inner">
+            <div class="btn-wrap grid-wrap col-2">
+              <button class="btn-cancle bg-white"><em>취소</em></button>
+              <button class="btn-apply bg-blue"><em>승인요청</em></button>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- 검색결과 상세-->
+    <div class="modal full animate fast" id="modal-searchResultDetail">
+      <header class="modal-header">
+        <div class="inner">
+          <div class="flex-wrap h-wrap">
+            <span class="button--close">
+              <a href="javascript:void(0)" class="button-close-modal" data-modal-name="searchResultDetail">
+                <em class="hidden-txt">레이어팝업 닫기</em>
+                <i></i>
+                <i></i>
+              </a>
+            </span>
+            <h2>검색결과 상세</h2>
+          </div>
+        </div>
+      </header>
+      <div class="modal-body">
+        <section>
+          <div class="searchFilter">
+            <div class="inner current">
+              <a href="javascript:void(0);" class="button--arrow button-active-dropDown">
+                <b>검색요청 상세 조건</b>
+              </a>
+              <div class="dropDown table">
+                <dl>
+                  <dt>관할관서</dt>
+                  <dd>서울중앙지검</dd>
+                </dl>
+                <dl>
+                  <dt>부서&#47;담당자</dt>
+                  <dd>공판제4부 &#47; 홍길동</dd>
+                </dl>
+                <dl>
+                  <dt>접수일</dt>
+                  <dd>2022.01.01 ~ 2022.05.20</dd>
+                </dl>
+                <dl>
+                  <dt>접수번호</dt>
+                  <dd>123456789 - 123456789</dd>
+                </dl>
+                <dl>
+                  <dt>입건일</dt>
+                  <dd>2022.01.01 ~ 2022.05.20</dd>
+                </dl>
+                <dl>
+                  <dt>사건번호</dt>
+                  <dd>123456789 - 123456789</dd>
+                </dl>
+                <dl>
+                  <dt>접수단서</dt>
+                  <dd>-</dd>
+                </dl>
+                <dl>
+                  <dt>접수형태</dt>
+                  <dd>-</dd>
+                </dl>
+                <dl>
+                  <dt>진행상태</dt>
+                  <dd>-</dd>
+                </dl>
+                <dl>
+                  <dt>죄명</dt>
+                  <dd>절도, 사기</dd>
+                </dl>
+                <dl>
+                  <dt>원표작성정보</dt>
+                  <dd>미포함</dd>
+                </dl>
+                <dl>
+                  <dt>단서검색</dt>
+                  <dd>포함</dd>
+                </dl>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="bg-gray">
+          <div class="tab-container">
+            <div class="tab-menu grid-wrap col-2 gap-none">
+              <span>
+                <a href="" class="active"><em>탐문정보 사건 제외</em></a>
+              </span>
+              <span>
+                <a href=""><em>탐문정보 사건(입건이후)</em></a>
+              </span>
+            </div>
+            <div class="tab-contents">
+              <ul>
+                <li>
+                  <div class="inner">
+                    <div class="table">
+                      <dl>
+                        <dt>취급관서</dt>
+                        <dd>서울중앙지검</dd>
+                      </dl>
+                      <dl>
+                        <dt>접수번호</dt>
+                        <dd>2018-000232</dd>
+                      </dl>
+                      <dl>
+                        <dt>접수일</dt>
+                        <dd>2018.05.16</dd>
+                      </dl>
+                      <dl>
+                        <dt>접수단서</dt>
+                        <dd>탐문정보</dd>
+                      </dl>
+                      <dl>
+                        <dt>피의자</dt>
+                        <dd>호비 외 1</dd>
+                      </dl>
+                      <dl>
+                        <dt>처리상태</dt>
+                        <dd>입건</dd>
+                      </dl>
+                      <dl>
+                        <dt>담당자(부서)</dt>
+                        <dd>김미현(공판제4부)</dd>
+                      </dl>
+                      <dl>
+                        <dt>사건번호</dt>
+                        <dd>2018-000111</dd>
+                      </dl>
+                      <dl>
+                        <dt>입건일</dt>
+                        <dd>2018.05.29</dd>
+                      </dl>
+                      <dl>
+                        <dt>죄명</dt>
+                        <dd>절도</dd>
+                      </dl>
+                      <dl>
+                        <dt>피해자</dt>
+                        <dd>고길동</dd>
+                      </dl>
+                      <dl>
+                        <dt>종결일</dt>
+                        <dd>-</dd>
+                      </dl>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="inner">
+                    <div class="table">
+                      <dl>
+                        <dt>취급관서</dt>
+                        <dd>서울중앙지검</dd>
+                      </dl>
+                      <dl>
+                        <dt>접수번호</dt>
+                        <dd>2018-000232</dd>
+                      </dl>
+                      <dl>
+                        <dt>접수일</dt>
+                        <dd>2018.05.16</dd>
+                      </dl>
+                      <dl>
+                        <dt>접수단서</dt>
+                        <dd>탐문정보</dd>
+                      </dl>
+                      <dl>
+                        <dt>피의자</dt>
+                        <dd>호비 외 1</dd>
+                      </dl>
+                      <dl>
+                        <dt>처리상태</dt>
+                        <dd>입건</dd>
+                      </dl>
+                      <dl>
+                        <dt>담당자(부서)</dt>
+                        <dd>김미현(공판제4부)</dd>
+                      </dl>
+                      <dl>
+                        <dt>사건번호</dt>
+                        <dd>2018-000111</dd>
+                      </dl>
+                      <dl>
+                        <dt>입건일</dt>
+                        <dd>2018.05.29</dd>
+                      </dl>
+                      <dl>
+                        <dt>죄명</dt>
+                        <dd>절도</dd>
+                      </dl>
+                      <dl>
+                        <dt>피해자</dt>
+                        <dd>고길동</dd>
+                      </dl>
+                      <dl>
+                        <dt>종결일</dt>
+                        <dd>-</dd>
+                      </dl>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="inner">
+            <div class="btn-wrap grid-wrap col-2">
+              <button class="btn-cancle bg-white"><em>취소</em></button>
+              <button class="btn-print bg-blue"><em>인쇄</em></button>
+            </div>
+          </div>
+        </section>
+      </div>
+
+    </div>
+  </div>
+</body>
+
+</html>

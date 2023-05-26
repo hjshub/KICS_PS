@@ -1,0 +1,109 @@
+/**
+ * ==============================+
+ * footer
+ * ==============================+
+ */
+footer {
+  width: 100%;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  text-align: center;
+  background-color: $white;
+  box-shadow: 0 -1px 7px 2px rgba($black, 0.1);
+
+  ul {
+    li {
+      a {
+        display: block;
+        padding: 10px 0;
+      }
+
+      span {
+        height: 40px;
+        @include justify-content('space-between');
+        color: $gray2;
+
+        &::before {
+          @include icon;
+          content: '';
+        }
+
+        em {
+          line-height: 1;
+          font-size: 1.2rem;
+        }
+      }
+
+      &:first-of-type {
+        span {
+          &::before {
+            @include icon-home;
+          }
+        }
+      }
+
+      &:nth-of-type(2) {
+        span {
+          &::before {
+            @include icon-mypage;
+          }
+        }
+      }
+
+      &:nth-of-type(3) {
+        span {
+          &::before {
+            @include icon-bookmark;
+          }
+        }
+      }
+
+      &:nth-of-type(4) {
+        span {
+          &::before {
+            @include icon-setting;
+          }
+        }
+      }
+
+      &.active {
+        &:first-of-type {
+          span {
+            &::before {
+              @include icon-home-active;
+            }
+          }
+        }
+
+        &:nth-of-type(2) {
+          span {
+            &::before {
+              @include icon-mypage-active;
+            }
+          }
+        }
+
+        &:nth-of-type(3) {
+          span {
+            &::before {
+              @include icon-bookmark-active;
+            }
+          }
+        }
+
+        &:nth-of-type(4) {
+          span {
+            &::before {
+              @include icon-setting-active;
+            }
+          }
+        }
+
+        span {
+          color: $primary;
+        }
+      }
+    }
+  }
+}

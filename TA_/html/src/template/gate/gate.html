@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    @@include('../include/head.html', { page_main: false, page_title:"정보조회", theme_color:"#fff" })
+  </head>
+  <body>
+    <div id="layout" class="gate">
+      <!-- #gnb -->
+      @@include('../include/gnb.html', { page_main: false, page_title:"정보조회", path:'..' })
+      <!-- // #gnb -->
+
+      <!-- #contents -->
+      <main>
+        <section>
+          <div class="list type_2">
+            <div class="inner">
+              <ul>
+                <li>
+                  <a href="../search/search.html">
+                    <div class="flex-wrap">
+                      <span class="flex-wrap icon-thumb"><em class="hidden-txt">통합사건검색</em></span>
+                      <span>
+                        <b>통합사건검색</b>
+                      </span>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <div class="flex-wrap">
+                      <span class="flex-wrap icon-thumb"><em class="hidden-txt">범죄경력조회</em></span>
+                      <span>
+                        <b>범죄경력조회</b>
+                      </span>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <div class="flex-wrap">
+                      <span class="flex-wrap icon-thumb"><em class="hidden-txt">지명수배조회</em></span>
+                      <span>
+                        <b>지명수배조회</b>
+                      </span>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <div class="flex-wrap">
+                      <span class="flex-wrap icon-thumb"><em class="hidden-txt">주민정보조회</em></span>
+                      <span>
+                        <b>주민정보조회</b>
+                      </span>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <div class="flex-wrap">
+                      <span class="flex-wrap icon-thumb"><em class="hidden-txt">차적조회</em></span>
+                      <span>
+                        <b>차적조회</b>
+                      </span>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <div class="flex-wrap">
+                      <span class="flex-wrap icon-thumb"><em class="hidden-txt">수배차량조회</em></span>
+                      <span>
+                        <b>수배차량조회</b>
+                      </span>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <div class="flex-wrap">
+                      <span class="flex-wrap icon-thumb"><em class="hidden-txt">운전면허조회</em></span>
+                      <span>
+                        <b>운전면허조회</b>
+                      </span>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </main>
+      <!-- // #contents -->
+
+      <!-- #footer -->
+      @@include('../include/footer.html')
+      <!-- // #footer -->
+    </div>
+  </body>
+</html>
