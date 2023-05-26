@@ -14,189 +14,9 @@
   }
 
   &.main {
-    #gnb {
-      background-color: $gray3;
-    }
-
+    #gnb,
     main {
       background-color: $gray3;
-
-      section {
-        .banner-wrap {
-          overflow: hidden;
-          padding-top: 15px;
-          position: relative;
-
-          > div {
-            padding: 25px 20px;
-            background-color: $navy;
-            position: relative;
-
-            &::after {
-              position: absolute;
-              top: -15px;
-              right: 20px;
-              width: 101px;
-              height: 137px;
-              background-image: url('../images/img-raw.png');
-              background-repeat: no-repeat;
-              background-position: 0 0;
-              background-size: 100% auto;
-              content: '';
-            }
-
-            dl {
-              dt,
-              dd {
-                line-height: 1;
-                font-size: 1.3rem;
-                color: #dbecf1;
-              }
-
-              dt {
-                color: $white;
-                font-size: 1.8rem;
-              }
-
-              dd {
-                margin-top: 10px;
-              }
-            }
-          }
-        }
-
-        .approvalStatus {
-          .statusBoard {
-            background-color: $navy;
-            padding: 25px 0;
-
-            span {
-              height: 48px;
-              @include justify-content('space-between');
-              font-size: 2.6rem;
-              color: #f3f5fa;
-              position: relative;
-
-              * {
-                line-height: 1;
-              }
-
-              em {
-                color: #c9ccd4;
-                font-size: 1.3rem;
-              }
-
-              & + span {
-                &::before {
-                  position: absolute;
-                  left: 0;
-                  top: 0;
-                  width: 1px;
-                  height: 100%;
-                  background-color: #e6e6e7;
-                  opacity: 0.2;
-                  content: '';
-                }
-              }
-            }
-          }
-        }
-
-        .myWork {
-          .work-list {
-            background-color: $white;
-            padding: 15px 0;
-            grid-area: workList;
-
-            h3 {
-              line-height: 1;
-              font-size: 1.6rem;
-              margin-bottom: 20px;
-            }
-
-            .swiper-slide {
-              span {
-                height: 42px;
-                @include justify-content('space-between');
-                em {
-                  font-size: 1.3rem;
-                  letter-spacing: -0.7px;
-                }
-              }
-            }
-          }
-          .banner {
-            background-color: $primary;
-            grid-area: banner;
-
-            a {
-              display: block;
-              padding: 20px;
-            }
-
-            dl {
-              dt,
-              dd {
-                line-height: 1;
-                font-size: 1.2rem;
-                color: #dbecf1;
-              }
-
-              dt {
-                color: $white;
-                font-size: 1.6rem;
-              }
-
-              dd {
-                margin-top: 15px;
-                line-height: 1.2;
-                @include break-word;
-              }
-            }
-          }
-          .btn-wrap {
-            padding: 0;
-            grid-area: btnWrap;
-            @include justify-content('space-between');
-          }
-        }
-
-        .faq-wrap {
-          article {
-            background-color: $white;
-            padding: 20px;
-
-            .faq-list {
-              li {
-                .caption {
-                  padding: 5px 8px;
-                  border-radius: 5px;
-                  background-color: $sub4;
-                  color: $sub2;
-                  font-size: 0;
-
-                  em {
-                    display: inline-block;
-                    line-height: 1;
-                    font-size: 1.1rem;
-                  }
-                }
-                .txtInfo {
-                  @include ellipsis;
-                  padding-left: 8px;
-                  max-width: -webkit-calc(100vw - 140px);
-                  max-width: -moz-calc(100vw - 140px);
-                  max-width: calc(100vw - 140px);
-                }
-
-                & + li {
-                  margin-top: 15px;
-                }
-              }
-            }
-          }
-        }
-      }
     }
   }
 
@@ -332,6 +152,8 @@
 
   &.search {
     main {
+      padding-bottom: 0;
+
       section {
         & + section {
           margin-top: 20px;
@@ -436,73 +258,353 @@ main {
     }
   }
 
+  // 메인 - 로그인 전
   .main-grid-area {
     margin-top: 10px;
-  }
-
-  .sub-grid-area {
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 110px 100px;
+    grid-template-rows: 120px 150px 95px auto;
     grid-template-areas:
-      'workList workList workList'
-      'banner banner btnWrap';
-  }
-}
+      'item1'
+      'item2'
+      'item3'
+      'item4';
 
-/*list*/
-.list {
-  /*main 1*/
-  &.type_1 {
-    ul {
-      li {
+    > * {
+      overflow: hidden;
+    }
+
+    .banner {
+      padding-top: 15px;
+      position: relative;
+
+      > div {
+        height: 105px;
+        padding: 25px 0 0 20px;
+        background-color: $navy;
         position: relative;
-        box-shadow: 0 0 3px 1px rgba($black, 5%);
-        background-color: $white;
 
-        a {
-          display: block;
-          position: relative;
-          line-height: 1;
-          padding: 30px 0;
-
-          &::after {
-            position: absolute;
-            top: 50%;
-            right: 20px;
-            margin-top: -8px;
-            @include icon;
-            @include icon-next-active;
-            content: '';
-          }
+        &::after {
+          position: absolute;
+          top: -15px;
+          right: 20px;
+          width: 101px;
+          height: 137px;
+          background-image: url('../images/img-raw.png');
+          background-repeat: no-repeat;
+          background-position: 0 0;
+          background-size: 100% auto;
+          content: '';
         }
 
         dl {
           dt,
           dd {
             line-height: 1;
-          }
-          dt {
-            font-size: 1.8rem;
-            * {
-              vertical-align: top;
-            }
-          }
-          dd {
-            margin-left: 10px;
             font-size: 1.3rem;
-            color: $gray5;
+            color: #dbecf1;
+          }
+
+          dt {
+            color: $white;
+            font-size: 1.8rem;
+          }
+
+          dd {
+            margin-top: 10px;
           }
         }
+      }
 
-        & + li {
-          margin-top: 10px;
+      grid-area: item1;
+    }
+    .primary-list {
+      ul {
+        height: 100%;
+        @include justify-content('space-between');
+
+        li {
+          width: 100%;
+          box-shadow: 0 0 3px 1px rgba($black, 5%);
+          background-color: $white;
+
+          a {
+            position: relative;
+            height: 70px;
+
+            &::after {
+              position: absolute;
+              top: 50%;
+              right: 20px;
+              margin-top: -8px;
+              @include icon;
+              @include icon-next-active;
+              content: '';
+            }
+          }
+
+          dl {
+            dt,
+            dd {
+              line-height: 1;
+            }
+            dt {
+              font-size: 1.8rem;
+              * {
+                vertical-align: top;
+              }
+            }
+            dd {
+              margin-left: 10px;
+              font-size: 1.3rem;
+              color: $gray5;
+            }
+          }
+        }
+      }
+      grid-area: item2;
+    }
+    .secondary-list {
+      ul {
+        height: 100%;
+
+        li {
+          a {
+            height: 100%;
+            background-color: $white;
+            border-radius: 10px;
+            @include justify-content('center');
+
+            span {
+              height: 60px;
+              @include justify-content('space-between');
+
+              &::before {
+                @include icon;
+                content: '';
+              }
+
+              em {
+                font-weight: 500;
+              }
+            }
+          }
+
+          &:nth-of-type(1) {
+            span {
+              &::before {
+                @include icon-exec;
+              }
+            }
+          }
+          &:nth-of-type(2) {
+            span {
+              &::before {
+                @include icon-exec2;
+              }
+            }
+          }
+          &:nth-of-type(3) {
+            span {
+              &::before {
+                @include icon-detail-view;
+              }
+            }
+          }
+        }
+      }
+
+      grid-area: item3;
+    }
+    .faq {
+      article {
+        background-color: $white;
+        padding: 20px;
+
+        .faq-list {
+          li {
+            .caption {
+              padding: 5px 8px;
+              border-radius: 5px;
+              background-color: $sub4;
+              color: $sub2;
+              font-size: 0;
+
+              em {
+                display: inline-block;
+                line-height: 1;
+                font-size: 1.1rem;
+              }
+            }
+            .txtInfo {
+              @include ellipsis;
+              padding-left: 8px;
+              max-width: 100%;
+            }
+
+            & + li {
+              margin-top: 15px;
+            }
+          }
+        }
+      }
+      grid-area: item4;
+    }
+  }
+
+  // 메인 - 로그인 후
+  .main-grid-area2 {
+    margin-top: 10px;
+    row-gap: 15px;
+    grid-template-rows: repeat(3, auto);
+
+    > * {
+      overflow: hidden;
+    }
+
+    .approvalStatus {
+      .statusBoard {
+        background-color: $navy;
+        padding: 25px 0;
+
+        span {
+          height: 48px;
+          @include justify-content('space-between');
+          font-size: 2.6rem;
+          color: #f3f5fa;
+          position: relative;
+
+          * {
+            line-height: 1;
+          }
+
+          em {
+            color: #c9ccd4;
+            font-size: 1.3rem;
+          }
+
+          & + span {
+            &::before {
+              position: absolute;
+              left: 0;
+              top: 0;
+              width: 1px;
+              height: 100%;
+              background-color: #e6e6e7;
+              opacity: 0.2;
+              content: '';
+            }
+          }
+        }
+      }
+    }
+
+    .myWork {
+      .work-list {
+        background-color: $white;
+        padding: 15px 0;
+        grid-area: subItem1;
+
+        h3 {
+          line-height: 1;
+          font-size: 1.6rem;
+          margin-bottom: 20px;
+        }
+
+        .swiper-slide {
+          span {
+            height: 42px;
+            @include justify-content('space-between');
+            em {
+              font-size: 1.3rem;
+              letter-spacing: -0.7px;
+            }
+          }
+        }
+      }
+      .banner {
+        background-color: $primary;
+        grid-area: subItem2;
+
+        a {
+          display: block;
+          padding: 20px;
+        }
+
+        dl {
+          dt,
+          dd {
+            line-height: 1;
+            font-size: 1.2rem;
+            color: #dbecf1;
+          }
+
+          dt {
+            color: $white;
+            font-size: 1.6rem;
+          }
+
+          dd {
+            margin-top: 15px;
+            line-height: 1.2;
+            @include break-word;
+          }
+        }
+      }
+      .btn-wrap {
+        padding: 0;
+        grid-area: subItem3;
+        @include justify-content('space-between');
+      }
+    }
+
+    .faq {
+      article {
+        background-color: $white;
+        padding: 20px;
+
+        .faq-list {
+          li {
+            .caption {
+              padding: 5px 8px;
+              border-radius: 5px;
+              background-color: $sub4;
+              color: $sub2;
+              font-size: 0;
+
+              em {
+                display: inline-block;
+                line-height: 1;
+                font-size: 1.1rem;
+              }
+            }
+            .txtInfo {
+              @include ellipsis;
+              padding-left: 8px;
+              max-width: 100%;
+            }
+
+            & + li {
+              margin-top: 15px;
+            }
+          }
         }
       }
     }
   }
 
+  // 메인 - 나의 업무 바로가기
+  .sub-grid-area {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 110px 100px;
+    grid-template-areas:
+      'subItem1 subItem1 subItem1'
+      'subItem2 subItem2 subItem3';
+  }
+}
+
+/*list*/
+.list {
   /*gate*/
-  &.type_2 {
+  &.type-1 {
     ul {
       li {
         .icon-thumb {
@@ -591,16 +693,12 @@ main {
             content: '';
           }
         }
-
-        & + li {
-          margin-top: 20px;
-        }
       }
     }
   }
 
   /*login type*/
-  &.type_3 {
+  &.type-3 {
     ul {
       li {
         padding: 20px 0;
@@ -686,7 +784,7 @@ main {
   }
 
   /*user id*/
-  &.type_4 {
+  &.type-4 {
     ul {
       li {
         position: relative;
@@ -732,57 +830,8 @@ main {
       }
     }
   }
-  /*main 2*/
-  &.type_5 {
-    ul {
-      li {
-        a {
-          display: block;
-          padding: 20px 0;
-          background-color: $white;
-          border-radius: 10px;
-
-          span {
-            height: 60px;
-            @include justify-content('space-between');
-
-            &::before {
-              @include icon;
-              content: '';
-            }
-
-            em {
-              font-weight: 500;
-            }
-          }
-        }
-
-        &:nth-of-type(1) {
-          span {
-            &::before {
-              @include icon-exec;
-            }
-          }
-        }
-        &:nth-of-type(2) {
-          span {
-            &::before {
-              @include icon-exec2;
-            }
-          }
-        }
-        &:nth-of-type(3) {
-          span {
-            &::before {
-              @include icon-detail-view;
-            }
-          }
-        }
-      }
-    }
-  }
   /*search*/
-  &.type_6 {
+  &.type-2 {
     ul {
       li {
         padding: 20px 0;

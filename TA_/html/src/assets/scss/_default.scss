@@ -190,6 +190,7 @@ textarea {
     @include justify-content('space-between');
     color: $darkGray;
     line-height: 1;
+    font-size: 0;
 
     strong {
       font-size: 1.8rem;
@@ -284,14 +285,19 @@ textarea {
     }
   }
 
-  &.gap30 {
-    column-gap: 30px;
-    row-gap: 30px;
-  }
-
   &.gap-none {
     column-gap: 0;
     row-gap: 0;
+  }
+
+  &.gap20 {
+    column-gap: 20px;
+    row-gap: 20px;
+  }
+
+  &.gap30 {
+    column-gap: 30px;
+    row-gap: 30px;
   }
 
   .grid-item {

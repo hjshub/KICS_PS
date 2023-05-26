@@ -10,3 +10,6 @@ node_modules/
 
 #라이센스 파일 제외
 *.LICENSE.txt
+
+#태블릿
+TA_/
