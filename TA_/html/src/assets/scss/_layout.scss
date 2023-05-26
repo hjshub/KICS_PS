@@ -11,6 +11,12 @@
   &.main,
   &.gate {
     padding-bottom: 60px;
+
+    main {
+      min-height: -webkit-calc(100vh - 184px);
+      min-height: -moz-calc(100vh - 184px);
+      min-height: calc(100vh - 184px);
+    }
   }
 
   &.main {
@@ -168,7 +174,10 @@ main {
   width: 100%;
   position: relative;
   background-color: $white;
-  padding: 15px 0;
+  padding: 20px 0 40px;
+  min-height: -webkit-calc(100vh - 124px);
+  min-height: -moz-calc(100vh - 124px);
+  min-height: calc(100vh - 124px);
 
   &::after {
     display: block;
@@ -193,8 +202,8 @@ main {
   section {
     &.top {
       .symbol {
-        width: 52px;
-        height: 52px;
+        width: 70px;
+        height: 70px;
         border-radius: 50%;
         background-color: $white;
 
@@ -214,12 +223,12 @@ main {
         @include justify-content('space-between');
 
         > em {
-          font-size: 1.3rem;
+          font-size: 1.5rem;
           color: $gray6;
         }
 
         > b {
-          font-size: 2rem;
+          font-size: 2.4rem;
           line-height: 1;
         }
       }
@@ -260,34 +269,32 @@ main {
 
   // 메인 - 로그인 전
   .main-grid-area {
-    margin-top: 10px;
-    grid-template-rows: 120px 150px 95px auto;
+    margin-top: 25px;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: 220px 225px;
     grid-template-areas:
-      'item1'
-      'item2'
-      'item3'
-      'item4';
+      'item1 item1 item1 item1 item2 item2 item2'
+      'item3 item3 item3 item3 item4 item4 item4';
 
     > * {
       overflow: hidden;
     }
 
     .banner {
-      padding-top: 15px;
       position: relative;
 
       > div {
-        height: 105px;
-        padding: 25px 0 0 20px;
+        height: 100%;
+        padding: 75px 0 0 50px;
         background-color: $navy;
         position: relative;
 
         &::after {
           position: absolute;
-          top: -15px;
-          right: 20px;
-          width: 101px;
-          height: 137px;
+          top: 30px;
+          right: 25px;
+          width: 157px;
+          height: 212px;
           background-image: url('../images/img-raw.png');
           background-repeat: no-repeat;
           background-position: 0 0;
@@ -299,13 +306,13 @@ main {
           dt,
           dd {
             line-height: 1;
-            font-size: 1.3rem;
+            font-size: 1.5rem;
             color: #dbecf1;
           }
 
           dt {
             color: $white;
-            font-size: 1.8rem;
+            font-size: 2.6rem;
           }
 
           dd {
@@ -328,7 +335,7 @@ main {
 
           a {
             position: relative;
-            height: 70px;
+            height: 105px;
 
             &::after {
               position: absolute;
@@ -347,14 +354,14 @@ main {
               line-height: 1;
             }
             dt {
-              font-size: 1.8rem;
+              font-size: 2.2rem;
               * {
                 vertical-align: top;
               }
             }
             dd {
-              margin-left: 10px;
-              font-size: 1.3rem;
+              margin-left: 15px;
+              font-size: 1.5rem;
               color: $gray5;
             }
           }
@@ -363,6 +370,8 @@ main {
       grid-area: item2;
     }
     .secondary-list {
+      padding-top: 15px;
+
       ul {
         height: 100%;
 
@@ -374,15 +383,16 @@ main {
             @include justify-content('center');
 
             span {
-              height: 60px;
+              height: 120px;
               @include justify-content('space-between');
 
-              &::before {
+              &::after {
                 @include icon;
                 content: '';
               }
 
               em {
+                font-size: 2rem;
                 font-weight: 500;
               }
             }
@@ -390,21 +400,21 @@ main {
 
           &:nth-of-type(1) {
             span {
-              &::before {
+              &::after {
                 @include icon-exec;
               }
             }
           }
           &:nth-of-type(2) {
             span {
-              &::before {
+              &::after {
                 @include icon-exec2;
               }
             }
           }
           &:nth-of-type(3) {
             span {
-              &::before {
+              &::after {
                 @include icon-detail-view;
               }
             }
@@ -431,12 +441,13 @@ main {
               em {
                 display: inline-block;
                 line-height: 1;
-                font-size: 1.1rem;
+                font-size: 1.4rem;
               }
             }
             .txtInfo {
               @include ellipsis;
               padding-left: 8px;
+              font-size: 1.5rem;
               max-width: 100%;
             }
 
@@ -452,9 +463,12 @@ main {
 
   // 메인 - 로그인 후
   .main-grid-area2 {
-    margin-top: 10px;
-    row-gap: 15px;
-    grid-template-rows: repeat(3, auto);
+    margin-top: 25px;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: 240px 230px;
+    grid-template-areas:
+      'item1 item1 item1 item1 item2 item2 item2'
+      'item3 item3 item3 item3 item4 item4 item4';
 
     > * {
       overflow: hidden;
@@ -463,12 +477,12 @@ main {
     .approvalStatus {
       .statusBoard {
         background-color: $navy;
-        padding: 25px 0;
+        padding: 56px 0;
 
         span {
-          height: 48px;
+          height: 80px;
           @include justify-content('space-between');
-          font-size: 2.6rem;
+          font-size: 0;
           color: #f3f5fa;
           position: relative;
 
@@ -476,9 +490,13 @@ main {
             line-height: 1;
           }
 
+          b {
+            font-size: 4.5rem;
+          }
+
           em {
             color: #c9ccd4;
-            font-size: 1.3rem;
+            font-size: 1.6rem;
           }
 
           & + span {
@@ -495,13 +513,60 @@ main {
           }
         }
       }
+      grid-area: item1;
     }
 
     .myWork {
-      .work-list {
+      .banner {
+        background-color: $primary;
+
+        a {
+          display: block;
+          padding: 25px 25px 0;
+          height: 120px;
+        }
+
+        dl {
+          dt,
+          dd {
+            line-height: 1;
+            font-size: 1.4rem;
+            color: #dbecf1;
+          }
+
+          dt {
+            color: $white;
+            font-size: 2.2rem;
+          }
+
+          dd {
+            margin-top: 20px;
+            line-height: 1.2;
+            @include break-word;
+          }
+        }
+      }
+      .btn-wrap {
+        margin-top: 15px;
+        padding: 0;
+        column-gap: 15px;
+        @include justify-content('space-between');
+
+        button {
+          height: 58px;
+
+          em {
+            font-size: 1.8rem;
+          }
+        }
+      }
+      grid-area: item2;
+    }
+
+    .mobileTrial {
+      .trial-list {
         background-color: $white;
-        padding: 15px 0;
-        grid-area: subItem1;
+        height: 180px;
 
         h3 {
           line-height: 1;
@@ -520,46 +585,13 @@ main {
           }
         }
       }
-      .banner {
-        background-color: $primary;
-        grid-area: subItem2;
-
-        a {
-          display: block;
-          padding: 20px;
-        }
-
-        dl {
-          dt,
-          dd {
-            line-height: 1;
-            font-size: 1.2rem;
-            color: #dbecf1;
-          }
-
-          dt {
-            color: $white;
-            font-size: 1.6rem;
-          }
-
-          dd {
-            margin-top: 15px;
-            line-height: 1.2;
-            @include break-word;
-          }
-        }
-      }
-      .btn-wrap {
-        padding: 0;
-        grid-area: subItem3;
-        @include justify-content('space-between');
-      }
+      grid-area: item3;
     }
 
     .faq {
       article {
         background-color: $white;
-        padding: 20px;
+        padding: 20px 25px;
 
         .faq-list {
           li {
@@ -573,13 +605,14 @@ main {
               em {
                 display: inline-block;
                 line-height: 1;
-                font-size: 1.1rem;
+                font-size: 1.4rem;
               }
             }
             .txtInfo {
               @include ellipsis;
               padding-left: 8px;
               max-width: 100%;
+              font-size: 1.5rem;
             }
 
             & + li {
@@ -588,16 +621,8 @@ main {
           }
         }
       }
+      grid-area: item4;
     }
-  }
-
-  // 메인 - 나의 업무 바로가기
-  .sub-grid-area {
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 110px 100px;
-    grid-template-areas:
-      'subItem1 subItem1 subItem1'
-      'subItem2 subItem2 subItem3';
   }
 }
 

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+  <meta name="Author" content="퍼블리싱 가이드" />
+  <meta name="Keywords" content="" />
+  <meta name="Description" content="" />
+  <meta name="theme-color" content="#ececec" />
+  <!-- <meta name="format-detection" content="telephone=no"> -->
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+
+
+  <title>퍼블리싱 가이드 | 킥스</title>
+  <script defer src="../assets/js/main.js"></script>
+  <script defer src="../assets/js/vendor.js"></script>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+
+
+
+  <style>
+    main {
+      min-height: 100vh;
+      padding: 20px 0 40px;
+      background-color: #ececec;
+    }
+
+    h1 {
+      font-size: 2.2rem;
+    }
+
+    dl+dl {
+      margin-top: 20px;
+    }
+
+    dl dt b {
+      text-transform: uppercase;
+    }
+
+    dl dd {
+      margin-top: 10px;
+    }
+
+    pre {
+      white-space: pre-line;
+    }
+
+    .markup {
+      display: block;
+      text-align: left;
+      padding: 10px;
+      margin: 10px 0 0 0;
+      background-color: #000;
+      color: #1dffa8;
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <section class="inner">
+      <header>
+        <h1>퍼블리싱 가이드</h1>
+      </header>
+      <hr />
+      <article>
+        <dl>
+          <dt><b>button</b></dt>
+          <dd>
+            <div class="btn-wrap">
+              <button class="btn-cancle bg-navy"><em>로그인</em></button>
+            </div>
+            <div class="btn-wrap grid-wrap col-2">
+              <button class="btn-cancle bg-white"><em>취소</em></button>
+              <button class="btn-apply bg-blue"><em>승인요청</em></button>
+            </div>
+            <div class="btn-wrap grid-wrap col-3 type2">
+              <button class="btn-delete bg-white"><em>삭제</em></button>
+              <button class="btn-return"><em>회수</em></button>
+              <button class="btn-apply bg-blue"><em>승인요청</em></button>
+            </div>
+          </dd>
+        </dl>
+
+        <dl>
+          <dt><b>icon</b></dt>
+          <dd>
+            <span class="inline"><i class="icon icon-notice"></i><em>공지사항</em></span>
+            <span class="markup">
+              &lt;span class="inline"&gt;&lt;i class="icon
+              icon-notice"&gt;&lt;&#47;i&gt;&lt;em&gt;공지사항&lt;&#47;em&gt;&lt;&#47;span&gt;
+            </span>
+          </dd>
+          <dd>
+            <span>
+              <i class="icon icon-notice"><em class="hidden-txt">공지사항</em></i>
+            </span>
+            <span class="markup">
+              &lt;span&gt;&lt;i class="icon icon-notice"&gt;&lt;em
+              class="hidden-txt"&gt;공지사항&lt;&#47;em&gt;&lt;&#47;i&gt;&lt;&#47;span&gt;
+            </span>
+          </dd>
+        </dl>
+
+        <dl>
+          <dt><b>checkbox</b></dt>
+          <dd>
+            <div class="chk-wrap inline">
+              <span>
+                <input type="checkbox" name="" id="chk1" />
+                <label for="chk1"><em>unchecked</em></label>
+              </span>
+
+              <span>
+                <input type="checkbox" name="" id="chk2" checked />
+                <label for="chk2"><em>checked</em></label>
+              </span>
+            </div>
+          </dd>
+        </dl>
+
+        <dl>
+          <dt><b>selectbox</b></dt>
+          <dd>
+            <div class="select-wrap">
+              <label for="s"><em class="hidden-txt">선택</em></label>
+              <select name="" id="s">
+                <option value="">선택</option>
+                <option value="">선택</option>
+                <option value="">선택</option>
+              </select>
+            </div>
+          </dd>
+        </dl>
+
+        <dl>
+          <dt><b>textbox</b></dt>
+          <dd>
+            <div class="text-wrap">
+              <input type="text" name="" id="" placeholder="소속관서" />
+            </div>
+          </dd>
+          <dd>
+            <div class="text-wrap">
+              <textarea name="" id="" cols="30" rows="10" placeholder="검색목적은 30자 이상 150자 이내로 입력 해 주세요."></textarea>
+            </div>
+          </dd>
+        </dl>
+
+        <dl>
+          <dt><b>calendar</b></dt>
+          <dd>
+            <div class="date-wrap">
+              <label for="c"><em class="hidden-txt">날짜 선택</em></label>
+              <input type="date" name="" id="c" />
+            </div>
+          </dd>
+        </dl>
+      </article>
+    </section>
+  </main>
+</body>
+
+</html>

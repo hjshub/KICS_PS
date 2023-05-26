@@ -14,14 +14,13 @@ footer {
 
   ul {
     li {
+      height: 60px;
+      @include justify-content('center');
+
       a {
-        display: block;
-        padding: 10px 0;
       }
 
       span {
-        height: 40px;
-        @include justify-content('space-between');
         color: $gray2;
 
         &::before {
@@ -31,7 +30,8 @@ footer {
 
         em {
           line-height: 1;
-          font-size: 1.2rem;
+          font-size: 1.3rem;
+          margin-left: 12px;
         }
       }
 

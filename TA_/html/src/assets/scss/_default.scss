@@ -197,7 +197,7 @@ textarea {
     }
 
     span {
-      font-size: 1.3rem;
+      font-size: 1.4rem;
       font-weight: 400;
 
       * {
@@ -226,10 +226,13 @@ textarea {
   }
 }
 .inner {
-  padding: 0 20px;
+  padding: 0 30px;
   width: 100%;
   margin: 0 auto;
   position: relative;
+}
+.container {
+  padding: 0 20px;
 }
 /*flex*/
 .flex-wrap {
@@ -253,8 +256,8 @@ textarea {
 /*grid*/
 .grid-wrap {
   display: grid;
-  column-gap: 10px;
-  row-gap: 10px;
+  column-gap: 25px;
+  row-gap: 25px;
   position: relative;
 
   &.col-4 {
