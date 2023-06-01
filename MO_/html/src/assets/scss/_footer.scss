@@ -21,7 +21,6 @@ footer {
 
       span {
         height: 40px;
-        @include justify-content('space-between');
         color: $gray2;
 
         &::before {

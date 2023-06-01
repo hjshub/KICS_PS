@@ -11,6 +11,12 @@
   &.main,
   &.gate {
     padding-bottom: 60px;
+
+    main {
+      min-height: -webkit-calc(100vh - 140px);
+      min-height: -moz-calc(100vh - 140px);
+      min-height: calc(100vh - 140px);
+    }
   }
 
   &.main {
@@ -169,6 +175,9 @@ main {
   position: relative;
   background-color: $white;
   padding: 15px 0;
+  min-height: -webkit-calc(100vh - 80px);
+  min-height: -moz-calc(100vh - 80px);
+  min-height: calc(100vh - 80px);
 
   &::after {
     display: block;
@@ -187,6 +196,23 @@ main {
 
     &.bg-gray {
       background-color: $gray4 !important;
+    }
+
+    &.bg-cert {
+      background-color: $sub4;
+      background-image: url('../images/img-bg01.gif');
+      background-repeat: no-repeat;
+      background-size: auto 100%;
+      background-position: center 0;
+      padding: 25px 0 15px;
+
+      .btn-wrap {
+        margin-top: 80px;
+      }
+
+      & + section {
+        padding: 30px 0;
+      }
     }
   }
 
@@ -211,7 +237,6 @@ main {
         width: calc(100% - 52px);
         padding-left: 15px;
         height: 52px;
-        @include justify-content('space-between');
 
         > em {
           font-size: 1.3rem;
@@ -225,7 +250,6 @@ main {
       }
 
       .log {
-        @include justify-content('space-between');
         width: 100%;
         font-size: 2rem;
 
@@ -261,7 +285,7 @@ main {
   // 메인 - 로그인 전
   .main-grid-area {
     margin-top: 10px;
-    grid-template-rows: 120px 150px 95px auto;
+    grid-template-rows: 123px 154px 95px auto;
     grid-template-areas:
       'item1'
       'item2'
@@ -277,7 +301,7 @@ main {
       position: relative;
 
       > div {
-        height: 105px;
+        height: 108px;
         padding: 25px 0 0 20px;
         background-color: $navy;
         position: relative;
@@ -319,7 +343,6 @@ main {
     .primary-list {
       ul {
         height: 100%;
-        @include justify-content('space-between');
 
         li {
           width: 100%;
@@ -328,7 +351,7 @@ main {
 
           a {
             position: relative;
-            height: 70px;
+            height: 72px;
 
             &::after {
               position: absolute;
@@ -371,11 +394,9 @@ main {
             height: 100%;
             background-color: $white;
             border-radius: 10px;
-            @include justify-content('center');
 
             span {
               height: 60px;
-              @include justify-content('space-between');
 
               &::before {
                 @include icon;
@@ -467,7 +488,6 @@ main {
 
         span {
           height: 48px;
-          @include justify-content('space-between');
           font-size: 2.6rem;
           color: #f3f5fa;
           position: relative;
@@ -552,7 +572,6 @@ main {
       .btn-wrap {
         padding: 0;
         grid-area: subItem3;
-        @include justify-content('space-between');
       }
     }
 
@@ -608,7 +627,6 @@ main {
     ul {
       li {
         .icon-thumb {
-          @include justify-content('center');
           width: 65px;
           height: 65px;
           border-radius: 10px;
@@ -680,14 +698,7 @@ main {
         }
 
         a {
-          display: block;
-          position: relative;
-
           &::after {
-            position: absolute;
-            top: 50%;
-            right: 0;
-            margin-top: -7px;
             @include icon;
             @include icon-next-black;
             content: '';
@@ -698,7 +709,7 @@ main {
   }
 
   /*login type*/
-  &.type-3 {
+  &.type-2 {
     ul {
       li {
         padding: 20px 0;
@@ -715,7 +726,6 @@ main {
         }
 
         .icon-thumb {
-          @include justify-content('center');
           width: 50px;
           height: 50px;
           border-radius: 10px;
@@ -766,14 +776,7 @@ main {
         }
 
         a {
-          display: block;
-          position: relative;
-
           &::after {
-            position: absolute;
-            top: 50%;
-            right: 0;
-            margin-top: -7px;
             @include icon;
             @include icon-next-black;
             content: '';
@@ -784,7 +787,7 @@ main {
   }
 
   /*user id*/
-  &.type-4 {
+  &.type-3 {
     ul {
       li {
         position: relative;
@@ -830,57 +833,50 @@ main {
       }
     }
   }
-  /*search*/
-  &.type-2 {
-    ul {
-      li {
-        padding: 20px 0;
-        background-color: $white;
+}
 
-        .chk-wrap {
+/*card list*/
+.card-list {
+  ul {
+    li {
+      padding: 20px 0;
+      background-color: $white;
+
+      .contents {
+        grid-template-columns: 25px auto;
+      }
+
+      .card-view {
+        .st-label {
+          display: inline-block;
           position: absolute;
-          top: 0;
-          left: 20px;
-        }
+          top: -20px;
+          right: 0;
+          line-height: 25px;
+          padding: 0 15px;
+          border-width: 0 0 1px 1px;
+          border-style: solid;
+          border-color: #cccfd5;
+          background-color: $gray3;
+          border-bottom-left-radius: 10px;
+          font-size: 1.3rem;
+          font-weight: 500;
+          color: $gray5;
 
-        .list-view {
-          padding-left: 40px;
-
-          .st-label {
-            display: inline-block;
-            position: absolute;
-            top: -20px;
-            right: 0;
-            line-height: 25px;
-            padding: 0 15px;
-            border-width: 0 0 1px 1px;
-            border-style: solid;
-            border-color: #cccfd5;
-            background-color: $gray3;
-            border-bottom-left-radius: 10px;
-            font-size: 1.3rem;
-            font-weight: 500;
-            color: $gray5;
-
-            &.apply {
-              border-color: $sub3;
-              background-color: #e7fcff;
-              color: $sub3;
-            }
-          }
-
-          dl {
-            dd {
-              .count {
-                display: inline-block;
-                vertical-align: bottom;
-              }
-            }
+          &.apply {
+            border-color: $sub3;
+            background-color: #e7fcff;
+            color: $sub3;
           }
         }
 
-        & + li {
-          margin-top: 10px;
+        dl {
+          dd {
+            .count {
+              display: inline-block;
+              vertical-align: bottom;
+            }
+          }
         }
       }
     }

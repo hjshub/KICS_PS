@@ -6,7 +6,7 @@
   <body>
     <div id="layout" class="main">
       <!-- #gnb -->
-      @@include('./include/gnb.html', { page_main: true, path:'.' })
+      @@include('./include/gnb.html', {path:'.' })
       <!-- // #gnb -->
 
       <!-- #contents -->
@@ -15,9 +15,9 @@
           <div class="inner">
             <div class="flex-wrap">
               <div class="flex-wrap center symbol"><em class="hidden-txt">검찰</em></div>
-              <div class="flex-wrap column start info">
+              <div class="flex-wrap column start edge info">
                 <b>홍길동 검사님</b>
-                <span class="flex-wrap log">
+                <span class="flex-wrap edge log">
                   <em>안녕하세요!</em>
                   <button type="button" class="btn-logout sm bg-white round_ border gray"><em>사용자 전환</em></button>
                 </span>
@@ -34,11 +34,11 @@
                 </h2>
               </header>
               <div class="grid-wrap col-2 gap-none statusBoard">
-                <span class="flex-wrap column">
+                <span class="flex-wrap column edge">
                   <b class="txt-color sub3">7</b>
                   <em>승인 요청</em>
                 </span>
-                <span class="flex-wrap column">
+                <span class="flex-wrap column edge">
                   <b>22</b>
                   <em>승인 완료</em>
                 </span>
@@ -120,7 +120,7 @@
                     </dl>
                   </a>
                 </div>
-                <div class="btn-wrap flex-wrap column">
+                <div class="btn-wrap flex-wrap column edge">
                   <button type="button" class="btn-certifying bg-white"><i class="icon icon-cert"></i><em>인증센터</em></button>
                   <button type="button" class="btn-manual bg-white"><i class="icon icon-manual"></i><em>매뉴얼</em></button>
                 </div>
@@ -128,7 +128,7 @@
             </div>
             <div class="faq">
               <header class="heading-title-wrap">
-                <h2 class="flex-wrap">
+                <h2 class="flex-wrap edge">
                   <strong>자주 묻는 질문</strong>
                   <a href="" class="flex-wrap"><i class="icon icon-more"></i><em>더보기</em></a>
                 </h2>

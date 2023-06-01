@@ -17,6 +17,7 @@
   <title>로그인 유형 선택 | 킥스</title>
   <script defer src="../assets/js/main.js"></script>
   <script defer src="../assets/js/vendor.js"></script>
+  <link rel="stylesheet" href="../assets/css/ui.css" />
   <link rel="stylesheet" href="../assets/css/style.css" />
 
 
@@ -28,7 +29,7 @@
 
     <header id="gnb">
       <div class="inner">
-        <div class="flex-wrap h-wrap">
+        <div class="flex-wrap edge h-wrap">
           <span>
             <a href="javascript:void(0);" onclick="history.back()" class="icon icon-back">
               <em class="hidden-txt">뒤로가기</em>
@@ -40,18 +41,19 @@
     </header>
 
 
+
     <!-- // #gnb -->
 
     <!-- #contents -->
     <main>
       <section>
-        <div class="list type-3">
+        <div class="list type-2">
           <div class="inner">
             <ul>
               <li>
-                <a href="javascript:void(0);" class="button-active-modal" data-modal-name="inputPassword">
+                <a href="javascript:void(0);" class="flex-wrap edge button-active-modal" data-modal-name="inputPassword">
                   <div class="flex-wrap">
-                    <span class="flex-wrap icon-thumb"><em class="hidden-txt">아이디&#47;비밀번호</em></span>
+                    <span class="flex-wrap center icon-thumb"><em class="hidden-txt">아이디&#47;비밀번호</em></span>
                     <span>
                       <b>아이디&#47;비밀번호</b>
                     </span>
@@ -59,9 +61,9 @@
                 </a>
               </li>
               <li>
-                <a href="javascript:void(0);" class="button-active-modal" data-modal-name="inputCertPassword">
+                <a href="javascript:void(0);" class="flex-wrap edge button-active-modal" data-modal-name="inputCertPassword">
                   <div class="flex-wrap">
-                    <span class="flex-wrap icon-thumb"><em class="hidden-txt">행정전자서명 인증서</em></span>
+                    <span class="flex-wrap center icon-thumb"><em class="hidden-txt">행정전자서명 인증서</em></span>
                     <span>
                       <b>행정전자서명 인증서</b>
                     </span>
@@ -69,9 +71,9 @@
                 </a>
               </li>
               <li>
-                <a href="javascript:void(0);" class="button-active-modal" data-modal-name="inputPattern">
+                <a href="javascript:void(0);" class="flex-wrap edge button-active-modal" data-modal-name="inputPattern">
                   <div class="flex-wrap">
-                    <span class="flex-wrap icon-thumb"><em class="hidden-txt">패턴</em></span>
+                    <span class="flex-wrap center icon-thumb"><em class="hidden-txt">패턴</em></span>
                     <span>
                       <b>패턴</b>
                     </span>
@@ -79,9 +81,9 @@
                 </a>
               </li>
               <li>
-                <a href="javascript:void(0);" class="button-active-modal" data-modal-name="inputPinNumber">
+                <a href="javascript:void(0);" class="flex-wrap edge button-active-modal" data-modal-name="inputPinNumber">
                   <div class="flex-wrap">
-                    <span class="flex-wrap icon-thumb"><em class="hidden-txt">PIN 번호</em></span>
+                    <span class="flex-wrap center icon-thumb"><em class="hidden-txt">PIN 번호</em></span>
                     <span>
                       <b>PIN 번호</b>
                     </span>
@@ -100,7 +102,7 @@
     <div class="modal full animate fast" id="modal-inputPassword">
       <header class="modal-header">
         <div class="inner">
-          <div class="flex-wrap h-wrap">
+          <div class="flex-wrap end h-wrap">
             <span class="button--close">
               <a href="javascript:void(0)" class="button-close-modal" data-modal-name="inputPassword">
                 <em class="hidden-txt">레이어팝업 닫기</em>
@@ -116,7 +118,7 @@
         <section>
           <div class="inner">
             <header class="heading-title-wrap2">
-              <h3>사용자 <b class="txt-primary">ID USERID01</b></h3>
+              <h3>사용자 <b class="txt-color primary">ID USERID01</b></h3>
             </header>
             <div class="form-wrap">
               <div class="text-wrap">
@@ -148,7 +150,7 @@
     <div class="modal full animate fast" id="modal-inputCertPassword">
       <header class="modal-header">
         <div class="inner">
-          <div class="flex-wrap h-wrap">
+          <div class="flex-wrap end h-wrap">
             <span class="button--close">
               <a href="javascript:void(0)" class="button-close-modal" data-modal-name="inputCertPassword">
                 <em class="hidden-txt">레이어팝업 닫기</em>
@@ -164,7 +166,7 @@
         <section>
           <div class="inner">
             <header class="heading-title-wrap2">
-              <h3>사용자 <b class="txt-primary">ID USERID01</b></h3>
+              <h3>사용자 <b class="txt-color primary">ID USERID01</b></h3>
             </header>
             <div class="form-wrap">
               <div class="text-wrap">
@@ -184,7 +186,7 @@
     <div class="modal full animate fast" id="modal-inputPattern">
       <header class="modal-header">
         <div class="inner">
-          <div class="flex-wrap h-wrap">
+          <div class="flex-wrap end h-wrap">
             <span class="button--close">
               <a href="javascript:void(0)" class="button-close-modal" data-modal-name="inputPattern">
                 <em class="hidden-txt">레이어팝업 닫기</em>
@@ -200,7 +202,7 @@
         <section>
           <div class="inner">
             <header class="heading-title-wrap2">
-              <h3>사용자 <b class="txt-primary">ID USERID01</b></h3>
+              <h3>사용자 <b class="txt-color primary">ID USERID01</b></h3>
             </header>
             <div class="align-c">패턴을 그려주세요.</div>
           </div>
@@ -212,7 +214,7 @@
     <div class="modal full animate fast" id="modal-inputPinNumber">
       <header class="modal-header">
         <div class="inner">
-          <div class="flex-wrap h-wrap">
+          <div class="flex-wrap end h-wrap">
             <span class="button--close">
               <a href="javascript:void(0)" class="button-close-modal" data-modal-name="inputPinNumber">
                 <em class="hidden-txt">레이어팝업 닫기</em>
@@ -228,7 +230,7 @@
         <section>
           <div class="inner">
             <header class="heading-title-wrap2">
-              <h3>사용자 <b class="txt-primary">ID USERID01</b></h3>
+              <h3>사용자 <b class="txt-color primary">ID USERID01</b></h3>
             </header>
             <div class="form-wrap">
               <div class="text-wrap">

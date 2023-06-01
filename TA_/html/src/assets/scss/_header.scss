@@ -23,13 +23,15 @@
 
   .h-wrap {
     height: 64px;
-    @include justify-content('space-between');
 
     h1 {
       display: inline-block;
       position: absolute;
       left: 50%;
       font-size: 2rem;
+      white-space: nowrap;
+      color: $darkGray;
+      font-weight: 700;
       @include transform(translateX(-50%));
 
       * {
@@ -50,27 +52,31 @@
     z-index: 999;
     display: none;
 
-    header {
-      position: fixed;
-      width: 100%;
-      top: 0;
-      left: 0;
-      background-color: $sub4;
-      z-index: 10;
-
-      .title {
-        font-size: 2rem;
-      }
+    .button--close {
+      position: absolute;
+      top: 25px;
+      right: 30px;
     }
 
-    section {
-      &.top {
-        padding-top: 50px;
-        background-color: $sub4;
+    > div {
+      grid-template-columns: 1fr 3fr;
+      min-height: 100vh;
+    }
+
+    .snb {
+      background-color: $sub4;
+      padding: 54px 0;
+
+      > div {
+        height: 100%;
+      }
+
+      .user-info {
+        width: 100%;
 
         .symbol {
-          width: 52px;
-          height: 52px;
+          width: 70px;
+          height: 70px;
           border-radius: 50%;
           background-color: $white;
 
@@ -81,31 +87,25 @@
           }
 
           & + div {
-            width: -webkit-calc(100% - 52px);
-            width: -moz-calc(100% - 52px);
-            width: calc(100% - 52px);
-            padding-left: 15px;
+            padding-top: 15px;
 
             em {
-              font-size: 1.3rem;
+              font-size: 1.5rem;
               color: $gray6;
-              vertical-align: top;
             }
           }
         }
 
         .log {
-          @include justify-content('space-between');
-          //@include align-items('end');
-          //margin-top: 7px;
+          margin-top: 10px;
 
           b {
-            font-size: 2rem;
-            //line-height: 1;
+            font-size: 2.4rem;
           }
 
           ul {
             font-size: 0;
+            padding-top: 40px;
 
             li {
               display: inline-block;
@@ -117,150 +117,63 @@
 
               a {
                 color: $primary;
-                font-size: 1.4rem;
+                font-size: 1.5rem;
               }
             }
           }
         }
-
-        & + section {
-          overflow: hidden;
-        }
       }
 
-      .user-info {
-        margin-bottom: 30px;
+      .sideMenu {
+        width: 100%;
+        padding-left: 12px;
+      }
+    }
+
+    .category {
+      padding: 54px 60px;
+
+      > ul {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-row: repeat(2, auto);
+        column-gap: 40px;
+        row-gap: 40px;
       }
 
-      .horizonSlider {
-        font-size: 0;
-        overflow: hidden;
-        overflow-x: auto;
-        position: relative;
-        width: -webkit-calc(100% + 40px);
-        width: -moz-calc(100% + 40px);
-        width: calc(100% + 40px);
-        left: -20px;
-        padding: 15px 20px;
-
-        span {
-          button {
-            padding: 8px 13px;
-            background-color: $gray4;
-            color: $gray5;
-            line-height: 1;
-            border-radius: 7px;
-            font-size: 1.4rem;
-
-            em {
-              display: inline-block;
-              white-space: nowrap;
-              line-height: 1;
-              margin-top: 2px;
-            }
-
-            &.active {
-              background-color: $primary;
-              color: $white;
-            }
-          }
-
-          & + span {
-            margin-left: 10px;
-          }
-        }
+      h4 {
+        color: $gray6;
+        font-size: 1.4rem;
+        font-weight: 400;
       }
 
-      .category {
-        h4 {
-          color: $gray6;
-          font-size: 1.3rem;
-          font-weight: 400;
-          line-height: 35px;
-        }
-        // 1Depth
-        > li {
-          padding: 20px 0;
-          position: relative;
+      ._depth2 {
+        margin-top: 25px;
 
+        li {
           & + li {
-            &::before {
-              position: absolute;
-              top: 0;
-              left: -20px;
-              right: -20px;
-              height: 1px;
-              background-color: $gray4;
-              content: '';
-            }
+            margin-top: 20px;
           }
         }
 
-        ._depth2 {
-          > li {
-            > a {
-              display: block;
-              line-height: 45px;
-              font-size: 1.6rem;
-              color: $darkGray;
-              font-weight: 700;
-              position: relative;
-            }
-
-            .button-active-dropDown {
-              &::before {
-                position: absolute;
-                top: 50%;
-                right: 0;
-                @include icon;
-                @include icon-arrow-down;
-                @include transform(translateY(-50%) rotateX(0));
-                @include transition(transform 0.3s ease-out);
-                content: '';
-              }
-            }
-
-            &.on {
-              .button-active-dropDown {
-                &::before {
-                  @include transform(translateY(-50%) rotateX(180deg));
-                }
-              }
-            }
+        > li {
+          > a {
+            display: block;
+            line-height: 1.4;
+            font-size: 1.8rem;
+            color: $darkGray;
+            font-weight: 700;
           }
         }
+      }
 
-        ._depth3 {
-          position: relative;
-          width: -webkit-calc(100% + 40px);
-          width: -moz-calc(100% + 40px);
-          width: calc(100% + 40px);
-          margin-left: -20px;
-          background-color: $gray3;
-          padding: 20px 30px;
+      ._depth3 {
+        margin-top: 25px;
 
-          li {
-            line-height: 1;
-
-            & + li {
-              margin-top: 25px;
-            }
-
-            a {
-              display: block;
-              padding-left: 10px;
-              position: relative;
-
-              &::before {
-                position: absolute;
-                top: 50%;
-                left: 0;
-                @include transform(translateY(-50%));
-                @include icon;
-                @include icon-dot-gray;
-                content: '';
-              }
-            }
+        li {
+          a {
+            display: block;
+            font-size: 1.5rem;
+            color: $darkGray2;
           }
         }
       }

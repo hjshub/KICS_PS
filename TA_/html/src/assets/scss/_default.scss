@@ -15,7 +15,7 @@ html {
   @include text-size-adjust(none);
 }
 body {
-  font: 400 1.4em 'Noto Sans KR', 'Noto Sans CJK KR', '맑은 고딕', '나눔 고딕', sans-serif;
+  font: 400 1.4em 'Noto Sans CJK KR', 'Noto Sans KR', '맑은 고딕', '나눔 고딕', sans-serif;
   vertical-align: middle;
   min-width: 320px;
   color: $darkGray2;
@@ -57,9 +57,6 @@ textarea {
   display: inline-block;
   @include transform(rotate(-0.03deg));
 }
-.txt-primary {
-  color: $primary;
-}
 .txt-error {
   padding: 10px;
 
@@ -86,6 +83,17 @@ textarea {
   }
   &.sub3 {
     color: $sub3 !important;
+  }
+  &.navy {
+    color: $navy !important;
+  }
+  &.gray6 {
+    color: $gray6 !important;
+  }
+}
+.fts {
+  &-xlg {
+    font-size: 2.8rem !important;
   }
 }
 .clear {
@@ -133,11 +141,38 @@ textarea {
       position: absolute;
       top: 50%;
       left: 0;
-      width: 1px;
-      height: 10px;
+      width: 2px;
+      height: 13px;
       background-color: rgba($darkGray2, 0.3);
       @include transform(translateY(-50%));
       content: '';
+    }
+  }
+}
+.numeric-list {
+  li {
+    padding-left: 15px;
+    position: relative;
+    font-size: 1.2rem;
+    line-height: 1.4;
+    @include break-word;
+
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    @for $i from 1 to 20 {
+      &:nth-of-type(#{$i}) {
+        &::before {
+          content: '#{$i}.';
+        }
+      }
+    }
+
+    & + li {
+      margin-top: 10px;
     }
   }
 }
@@ -168,6 +203,25 @@ textarea {
 * ~ .dot-list {
   margin-top: 15px;
 }
+.dot-list2 {
+  li {
+    position: relative;
+    padding-left: 15px;
+
+    &::before {
+      position: absolute;
+      top: 7px;
+      left: 0;
+      @include icon;
+      @include icon-dot-gray;
+      content: '';
+    }
+
+    * {
+      vertical-align: top;
+    }
+  }
+}
 .description {
   background-color: $sub4;
   padding: 20px 0;
@@ -187,7 +241,6 @@ textarea {
   padding: 15px 0;
 
   h2 {
-    @include justify-content('space-between');
     color: $darkGray;
     line-height: 1;
     font-size: 0;
@@ -239,6 +292,10 @@ textarea {
   @include display-flex;
   @include align-items('center');
 
+  &.inline {
+    @include display-inlineFlex;
+  }
+
   &.column {
     flex-direction: column;
     -ms-flex-direction: column;
@@ -250,6 +307,14 @@ textarea {
 
   &.center {
     @include justify-content('center');
+  }
+
+  &.end {
+    @include justify-content('flex-end');
+  }
+
+  &.edge {
+    @include justify-content('space-between');
   }
 }
 
@@ -291,6 +356,11 @@ textarea {
   &.gap-none {
     column-gap: 0;
     row-gap: 0;
+  }
+
+  &.gap15 {
+    column-gap: 15px;
+    row-gap: 15px;
   }
 
   &.gap20 {
@@ -405,10 +475,6 @@ textarea {
       li {
         background-color: $white;
         padding: 20px 0;
-
-        & + li {
-          margin-top: 10px;
-        }
       }
     }
   }

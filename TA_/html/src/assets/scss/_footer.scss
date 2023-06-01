@@ -15,10 +15,6 @@ footer {
   ul {
     li {
       height: 60px;
-      @include justify-content('center');
-
-      a {
-      }
 
       span {
         color: $gray2;

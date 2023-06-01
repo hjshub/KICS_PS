@@ -17,6 +17,7 @@
   <title>전체메뉴 | 킥스</title>
   <script defer src="../assets/js/main.js"></script>
   <script defer src="../assets/js/vendor.js"></script>
+  <link rel="stylesheet" href="../assets/css/ui.css" />
   <link rel="stylesheet" href="../assets/css/style.css" />
 
 
@@ -27,7 +28,7 @@
     <!-- #gnb -->
     <header id="gnb">
       <div class="inner">
-        <div class="flex-wrap h-wrap">
+        <div class="flex-wrap edge h-wrap">
           <span>
             <a href="javascript:void(0);" onclick="history.back()" class="icon icon-back">
               <em class="hidden-txt">뒤로가기</em>
@@ -48,9 +49,9 @@
         <div class="inner">
           <div class="flex-wrap userInfo">
             <div class="flex-wrap center symbol"><em class="hidden-txt">검찰</em></div>
-            <div class="flex-wrap column start info">
+            <div class="flex-wrap column start edge info">
               <em>검찰 형사사법정보시스템 입니다.</em>
-              <span class="flex-wrap log">
+              <span class="flex-wrap edge log">
                 <b>홍길동 검사님</b>
                 <ul>
                   <li class="dash"><a href="">내정보</a></li>
@@ -60,9 +61,15 @@
             </div>
           </div>
           <div class="grid-wrap col-3 auto gap-none">
-            <span class="flex-wrap center dash"><i class="icon icon-notice"></i><em>공지사항</em></span>
-            <span class="flex-wrap center dash"><i class="icon icon-faq"></i><em>자주 묻는 질문</em></span>
-            <span class="flex-wrap center dash"><i class="icon icon-cert2"></i><em>인증센터</em></span>
+            <span class="flex-wrap center dash">
+              <a href="" class="flex-wrap inline"><i class="icon icon-notice"></i><em>공지사항</em></a>
+            </span>
+            <span class="flex-wrap center dash">
+              <a href="" class="flex-wrap inline"><i class="icon icon-faq"></i><em>자주 묻는 질문</em></a>
+            </span>
+            <span class="flex-wrap center dash">
+              <a href="" class="flex-wrap inline"><i class="icon icon-cert2"></i><em>인증센터</em></a>
+            </span>
           </div>
         </div>
       </section>

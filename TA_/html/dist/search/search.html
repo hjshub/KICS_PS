@@ -17,6 +17,7 @@
   <title>통합사건검색 | 킥스</title>
   <script defer src="../assets/js/main.js"></script>
   <script defer src="../assets/js/vendor.js"></script>
+  <link rel="stylesheet" href="../assets/css/ui.css" />
   <link rel="stylesheet" href="../assets/css/style.css" />
 
 
@@ -27,7 +28,7 @@
     <!-- #gnb -->
     <header id="gnb">
       <div class="inner">
-        <div class="flex-wrap h-wrap">
+        <div class="flex-wrap edge h-wrap">
           <span>
             <a href="javascript:void(0);" onclick="history.back()" class="icon icon-back">
               <em class="hidden-txt">뒤로가기</em>
@@ -81,23 +82,23 @@
       <section class="bg-gray">
         <header class="heading-title-wrap">
           <div class="inner">
-            <h2 class="flex-wrap">
+            <h2 class="flex-wrap edge">
               <strong>검색목록</strong>
               <span><b>02</b>건</span>
             </h2>
           </div>
         </header>
-        <div class="list type-2">
-          <ul>
+        <div class="card-list">
+          <ul class="grid-wrap">
             <li>
-              <div class="inner">
-                <div class="chk-wrap inline">
+              <div class="grid-wrap gap15 contents inner">
+                <div class="chk-wrap">
                   <span>
                     <input type="checkbox" name="" id="chk1" />
                     <label for="chk1"><em class="hidden-txt">체크</em></label>
                   </span>
                 </div>
-                <div class="list-view">
+                <div class="card-view">
                   <div class="st-label apply">승인요청</div>
                   <div class="table">
                     <dl>
@@ -133,14 +134,14 @@
               </div>
             </li>
             <li>
-              <div class="inner">
-                <div class="chk-wrap inline">
+              <div class="grid-wrap gap15 contents inner">
+                <div class="chk-wrap">
                   <span>
                     <input type="checkbox" name="" id="chk2" />
                     <label for="chk2"><em class="hidden-txt">체크</em></label>
                   </span>
                 </div>
-                <div class="list-view">
+                <div class="card-view">
                   <div class="st-label finish">승인완료</div>
                   <div class="table">
                     <dl>
@@ -202,7 +203,7 @@
     <div class="modal full animate fast" id="modal-searchApplyDetail">
       <header class="modal-header">
         <div class="inner">
-          <div class="flex-wrap h-wrap">
+          <div class="flex-wrap end h-wrap">
             <span class="button--close">
               <a href="javascript:void(0)" class="button-close-modal" data-modal-name="searchApplyDetail">
                 <em class="hidden-txt">레이어팝업 닫기</em>
@@ -401,12 +402,12 @@
                   </div>
                   <div class="chk-wrap type2 grid-wrap col-2">
                     <span>
-                      <input type="checkbox" name="" id="chk1" />
-                      <label for="chk1"><b>원표작성정보</b></label>
+                      <input type="checkbox" name="" id="chk3" />
+                      <label for="chk3"><b>원표작성정보</b></label>
                     </span>
                     <span>
-                      <input type="checkbox" name="" id="chk2" />
-                      <label for="chk2"><b>단서검색</b></label>
+                      <input type="checkbox" name="" id="chk4" />
+                      <label for="chk4"><b>단서검색</b></label>
                     </span>
                   </div>
                 </dd>
@@ -447,7 +448,7 @@
     <div class="modal full animate fast" id="modal-searchResultDetail">
       <header class="modal-header">
         <div class="inner">
-          <div class="flex-wrap h-wrap">
+          <div class="flex-wrap end h-wrap">
             <span class="button--close">
               <a href="javascript:void(0)" class="button-close-modal" data-modal-name="searchResultDetail">
                 <em class="hidden-txt">레이어팝업 닫기</em>
@@ -530,7 +531,7 @@
               </span>
             </div>
             <div class="tab-contents">
-              <ul>
+              <ul class="grid-wrap">
                 <li>
                   <div class="inner">
                     <div class="table">

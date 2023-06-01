@@ -1,9 +1,13 @@
 const path = require('path');
 const mode = process.env.NODE_ENV || 'development';
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
   mode,
   // entry: './src/assets/js/common.js',
+  output: {
+    path: path.resolve(__dirname, 'dist/assets/js'),
+  },
   optimization: {
     minimize: true,
     splitChunks: {
@@ -16,10 +20,11 @@ module.exports = {
       },
     },
   },
-  //   output: {
-  //     //path: path.resolve(__dirname, 'dist/assets/js'),
-  //     filename: 'bundle.js',
-  //   },
+  plugins: [
+    new MiniCssExtractPlugin({
+      filename: '../css/ui.css',
+    }),
+  ],
   module: {
     rules: [
       {
@@ -28,6 +33,11 @@ module.exports = {
         use: {
           loader: 'babel-loader',
         },
+      },
+
+      {
+        test: /\.css$/i,
+        use: [MiniCssExtractPlugin.loader, 'css-loader'],
       },
     ],
   },

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    @@include('../include/head.html', { page_main: false, page_title:"행정전자서명 인증센터", theme_color:"#fff" })
+  </head>
+  <body>
+    <div id="layout">
+      <!-- #gnb -->
+      @@include('../include/gnb2.html', { menu: true, page_title:"행정전자서명 인증센터", path:'..' })
+      <!-- // #gnb -->
+
+      <!-- #contents -->
+      <main>
+        <section class="bg-cert">
+          <div class="inner">
+            <header class="heading-title-wrap">
+              <h2 class="fts-xlg txt-color navy">행정전자서명 인증서</h2>
+              <p>&nbsp;</p>
+              <p class="txt-color gray6">
+                행정전자문서의 안정적 유통을 위한<br />
+                정부차원의 보안 인증시스템!
+              </p>
+            </header>
+            <div class="btn-wrap grid-wrap column">
+              <button type="button" class="btn-cert1 bg-blue"><b>인증서 가져오기</b></button>
+              <button type="button" class="btn-cert2 bg-white"><b>인증서 목록 보기</b></button>
+            </div>
+          </div>
+        </section>
+        <section>
+          <div class="inner">
+            <h3>인증서 가져오기 안내</h3>
+            <p>&nbsp;</p>
+            <ol class="numeric-list">
+              <li>PC에서 KICS 인증관리센터 메뉴(메뉴 경로 설명)에 접속해 주세요.</li>
+              <li>PC화면의 [스마트폰으로 인증서 내보내기] 버튼을 선택해 주세요.</li>
+              <li>스마트폰으로 복사할 인증서를 선택하신 후 인증서 비밀번호를 입력해 주세요.</li>
+              <li>[인증서 가져오기] 버튼 선시 스마트폰에 생성된 승인번호 12자리를 확인합니다.</li>
+              <li>PC화면에 스마트폰에 생성된 승인번호 12자리를 입력 후 [내보내기] 버튼을 선택해 주세요.</li>
+              <li>스마트폰에서 해당 인증서를 저장해 주세요.</li>
+              <li>스마트폰에 저장된 인증서를 확인 해 주세요.</li>
+            </ol>
+          </div>
+        </section>
+      </main>
+      <!-- // #contents -->
+    </div>
+  </body>
+</html>

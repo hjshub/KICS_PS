@@ -23,13 +23,15 @@
 
   .h-wrap {
     height: 50px;
-    @include justify-content('space-between');
 
     h1 {
       display: inline-block;
       position: absolute;
       left: 50%;
       font-size: 2rem;
+      white-space: nowrap;
+      color: $darkGray;
+      font-weight: 700;
       @include transform(translateX(-50%));
 
       * {
