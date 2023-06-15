@@ -8,14 +8,9 @@ import gsap from 'gsap';
 import Swiper, { Navigation, Pagination, Autoplay } from 'swiper';
 import gb from './global.js';
 import { setCookie, getCookie } from './cookie.js';
-//import { Grid } from 'ag-grid-community';
 
 // swiper style
 import 'swiper/swiper.min.css';
-
-// grid style
-//import 'ag-grid-community/styles/ag-grid.css';
-//import 'ag-grid-community/styles/ag-theme-alpine.css';
 
 window.addEventListener('load', () => {
   gb.CommonFunction.init();

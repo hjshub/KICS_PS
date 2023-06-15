@@ -7,6 +7,9 @@ module.exports = {
   // entry: './src/assets/js/common.js',
   output: {
     path: path.resolve(__dirname, 'dist/assets/js'),
+    environment: {
+      arrowFunction: false, // <-- this line does the trick
+    },
   },
   optimization: {
     minimize: true,
@@ -29,7 +32,16 @@ module.exports = {
     rules: [
       {
         test: /\.js$/,
-        exclude: /node_modules/, // 제외
+        // exclude: {
+        //   and: [/node_modules/], // Exclude libraries in node_modules ...
+        //   not: [
+        //     // Except for a few of them that needs to be transpiled because they use modern syntax
+        //     /jquery/,
+        //     /gsap/,
+        //     /swiper/,
+        //   ],
+        // },
+        exclude: /node_modules/,
         use: {
           loader: 'babel-loader',
         },
