@@ -201,7 +201,7 @@ gb.CommonFunction = (function () {
   };
   const init = () => {
     modalOn();
-    //setGnb();
+    setGnb();
     checkAll();
     dropDown();
     listSwiper();

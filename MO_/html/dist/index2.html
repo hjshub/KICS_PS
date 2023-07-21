@@ -24,7 +24,7 @@
 </head>
 
 <body>
-  <div id="layout" class="main">
+  <div id="layout" class="main signedIn">
     <!-- #gnb -->
     <header id="gnb">
       <div class="inner">
@@ -33,8 +33,8 @@
             <a href="" class="icon icon-logo"><em class="hidden-txt">검찰</em></a>
           </span>
           <h1 class="hidden-txt">메인</h1>
-          <span class="button--allmenu button-open-allMenu">
-            <a href="aside/menu.html">
+          <span class="button--allmenu">
+            <a class="button-open-allMenu" href="aside/menu.html">
               <em class="hidden-txt">전체메뉴</em>
               <i></i>
               <i></i>
@@ -50,7 +50,7 @@
 
     <!-- #contents -->
     <main>
-      <section class="top">
+      <section class="page-top">
         <div class="inner">
           <div class="flex-wrap">
             <div class="flex-wrap center symbol"><em class="hidden-txt">검찰</em></div>
@@ -65,8 +65,8 @@
         </div>
       </section>
       <section>
-        <div class="grid-wrap main-grid-area2 inner">
-          <div class="approvalStatus">
+        <div class="grid-wrap main-grid-area inner">
+          <div class="approval-status">
             <header class="heading-title-wrap">
               <h2>
                 <strong>통합승인 현황</strong>
@@ -83,7 +83,7 @@
               </span>
             </div>
           </div>
-          <div class="myWork">
+          <div class="my-work">
             <header class="heading-title-wrap">
               <h2>
                 <strong>나의 업무 바로가기</strong>
@@ -160,8 +160,8 @@
                 </a>
               </div>
               <div class="btn-wrap flex-wrap column edge">
-                <button type="button" class="btn-certifying bg-white"><i class="icon icon-cert"></i><em>인증센터</em></button>
-                <button type="button" class="btn-manual bg-white"><i class="icon icon-manual"></i><em>매뉴얼</em></button>
+                <button type="button" class="flex-wrap center"><em>인증센터</em></button>
+                <button type="button" class="flex-wrap center"><em>매뉴얼</em></button>
               </div>
             </div>
           </div>
@@ -173,24 +173,24 @@
               </h2>
             </header>
             <article>
-              <ul class="faq-list">
-                <li>
-                  <a href="" class="flex-wrap">
-                    <span class="caption"><em>공판지원</em></span>
-                    <span class="txtInfo">공판카드 작성시 주의사항 및 작성 방법 공판카드 작성시 주의사항 및 작성 방법</span>
-                  </a>
+              <ul>
+                <li class="flex-wrap">
+                  <span class="caption"><em>공판지원</em></span>
+                  <span class="txtInfo">
+                    <a href="">공판카드 작성시 주의사항 및 작성 방법 공판카드 작성시 주의사항 및 작성 방법</a>
+                  </span>
                 </li>
-                <li>
-                  <a href="" class="flex-wrap">
-                    <span class="caption"><em>전자영장</em></span>
-                    <span class="txtInfo">사본 발급시 전자서명과 발급 방법입니다.</span>
-                  </a>
+                <li class="flex-wrap">
+                  <span class="caption"><em>전자영장</em></span>
+                  <span class="txtInfo">
+                    <a href="">사본 발급시 전자서명과 발급 방법입니다.</a>
+                  </span>
                 </li>
-                <li>
-                  <a href="" class="flex-wrap">
-                    <span class="caption"><em>압수지원</em></span>
-                    <span class="txtInfo">폐기 대상 압수물 선별 및 선택 방법입니다.</span>
-                  </a>
+                <li class="flex-wrap">
+                  <span class="caption"><em>압수지원</em></span>
+                  <span class="txtInfo">
+                    <a href="">폐기 대상 압수물 선별 및 선택 방법입니다.</a>
+                  </span>
                 </li>
               </ul>
             </article>

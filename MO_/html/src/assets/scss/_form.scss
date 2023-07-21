@@ -78,6 +78,39 @@ button {
       top: 1px;
     }
   }
+
+  &:active:enabled {
+    overflow: hidden;
+    @include transform(scale(0.97));
+    @include transition(0.2s all ease-out);
+    background-color: rgba($black, 50%) !important;
+  }
+
+  &:disabled {
+    &:not(.hasIcon) {
+      border-color: #ededed !important;
+      background-color: #f7f7f7 !important;
+      color: rgba(#222, 30%) !important;
+      box-shadow: none !important;
+
+      &::before,
+      &::after {
+        filter: grayscale(1);
+        opacity: 0.6;
+      }
+    }
+
+    &.hasIcon {
+      background-color: rgba($black, 5%) !important;
+      box-shadow: 0 1px 6px 2px rgba(#08172d, 8%) !important;
+      color: rgba($black, 20%) !important;
+      border-color: rgba(#08172d, 8%) !important;
+
+      &::before {
+        opacity: 0.2;
+      }
+    }
+  }
 }
 
 .button--allmenu {

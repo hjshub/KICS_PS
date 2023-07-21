@@ -22,44 +22,15 @@
                 <button class="btn-search bg-navy"><em>검색</em></button>
               </div>
             </div>
-            <div class="list type-3">
+            <div class="list user">
               <ul>
+                @@for(var i = 1; i < 5; i++){
                 <li>
-                  <a href="">
-                    <div class="flex-wrap">
-                      <span>
-                        <em>USERID01</em>
-                      </span>
-                    </div>
-                  </a>
+                  <button class="flex-wrap edge" type="button">
+                    <em>USERID0${i}</em>
+                  </button>
                 </li>
-                <li>
-                  <a href="">
-                    <div class="flex-wrap">
-                      <span>
-                        <em>USERID02</em>
-                      </span>
-                    </div>
-                  </a>
-                </li>
-                <li>
-                  <a href="">
-                    <div class="flex-wrap">
-                      <span>
-                        <em>USERID03</em>
-                      </span>
-                    </div>
-                  </a>
-                </li>
-                <li>
-                  <a href="">
-                    <div class="flex-wrap">
-                      <span>
-                        <em>USERID04</em>
-                      </span>
-                    </div>
-                  </a>
-                </li>
+                }
               </ul>
             </div>
             <div class="description">

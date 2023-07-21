@@ -26,6 +26,192 @@
     }
   }
 
+  &.signedIn {
+    // 메인 - 로그인 후
+    .main-grid-area {
+      margin-top: 15px;
+      grid-template-columns: repeat(7, 1fr);
+      grid-template-rows: 240px 230px;
+      grid-template-areas:
+        'item1 item1 item1 item1 item2 item2 item2'
+        'item3 item3 item3 item3 item4 item4 item4';
+
+      > * {
+        overflow: hidden;
+      }
+
+      .approval-status {
+        .statusBoard {
+          height: 192px;
+          background-color: $navy;
+          @include align-items('center');
+
+          span {
+            height: 80px;
+            font-size: 0;
+            color: #f3f5fa;
+            position: relative;
+
+            * {
+              line-height: 1;
+            }
+
+            b {
+              font-size: 4.5rem;
+            }
+
+            em {
+              color: #c9ccd4;
+              font-size: 1.6rem;
+            }
+
+            & + span {
+              &::before {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 1px;
+                height: 100%;
+                background-color: #e6e6e7;
+                opacity: 0.2;
+                content: '';
+              }
+            }
+          }
+        }
+        grid-area: item1;
+      }
+
+      .my-work {
+        .banner {
+          background-color: $primary;
+
+          a {
+            display: block;
+            padding: 25px 25px 0;
+            height: 120px;
+          }
+
+          dl {
+            dt,
+            dd {
+              line-height: 1;
+              font-size: 1.4rem;
+              color: #dbecf1;
+            }
+
+            dt {
+              color: $white;
+              font-size: 2.2rem;
+            }
+
+            dd {
+              margin-top: 20px;
+              line-height: 1.2;
+              @include break-word;
+            }
+          }
+        }
+        .btn-wrap {
+          margin-top: 15px;
+          padding: 0;
+          column-gap: 15px;
+
+          button {
+            height: 58px;
+            background-color: white;
+
+            &::before {
+              @include icon;
+              content: '';
+            }
+
+            &:first-of-type {
+              &::before {
+                @include icon-cert;
+              }
+            }
+
+            &:nth-of-type(2) {
+              &::before {
+                @include icon-manual;
+              }
+            }
+
+            em {
+              font-size: 1.8rem;
+              margin-left: 10px;
+            }
+          }
+        }
+        grid-area: item2;
+      }
+
+      .mobile-trial {
+        .trial-list {
+          background-color: $white;
+          height: 180px;
+
+          h3 {
+            line-height: 1;
+            font-size: 1.6rem;
+            margin-bottom: 20px;
+          }
+
+          .swiper-slide {
+            span {
+              height: 64px;
+              @include justify-content('space-between');
+
+              b {
+                font-size: 1.8rem;
+                letter-spacing: -0.7px;
+                margin-left: 0;
+              }
+            }
+          }
+        }
+        grid-area: item3;
+      }
+
+      .faq {
+        article {
+          background-color: $white;
+          padding: 20px 25px;
+
+          .faq-list {
+            li {
+              .caption {
+                padding: 5px 8px;
+                border-radius: 5px;
+                background-color: $sub4;
+                color: $sub2;
+                font-size: 0;
+
+                em {
+                  display: inline-block;
+                  line-height: 1;
+                  font-size: 1.4rem;
+                }
+              }
+              .txtInfo {
+                @include ellipsis;
+                padding-left: 8px;
+                max-width: 100%;
+                font-size: 1.5rem;
+              }
+
+              & + li {
+                margin-top: 15px;
+              }
+            }
+          }
+        }
+        grid-area: item4;
+      }
+    }
+  }
+
   &.menu {
     #gnb {
       background-color: $sub4;
@@ -33,7 +219,7 @@
 
     main {
       section {
-        &.top {
+        &.page-top {
           padding: 15px 0;
           background-color: $sub4;
 
@@ -217,7 +403,7 @@ main {
   }
 
   section {
-    &.top {
+    &.page-top {
       .symbol {
         width: 70px;
         height: 70px;
@@ -288,19 +474,16 @@ main {
       overflow: hidden;
     }
 
-    .banner {
-      position: relative;
+    .major-work-01 {
+      background-color: $navy;
 
-      > div {
+      > a {
         height: 100%;
-        padding: 75px 0 0 50px;
-        background-color: $navy;
-        position: relative;
+        padding: 0 25px 0 50px;
 
         &::after {
-          position: absolute;
+          position: relative;
           top: 30px;
-          right: 25px;
           width: 157px;
           height: 212px;
           background-image: url('../images/img-raw.png');
@@ -331,99 +514,88 @@ main {
 
       grid-area: item1;
     }
-    .primary-list {
-      ul {
-        height: 100%;
+    .major-work-02 {
+      button {
+        width: 100%;
+        height: 105px;
+        box-shadow: 0 0 3px 1px rgba($black, 5%);
+        background-color: $white;
+        padding: 0 20px;
 
-        li {
-          width: 100%;
-          box-shadow: 0 0 3px 1px rgba($black, 5%);
-          background-color: $white;
+        &:focus,
+        &:active:enabled,
+        &.active {
+          background-color: $primary !important;
+          color: $white;
 
-          a {
-            position: relative;
-            height: 105px;
-
-            &::after {
-              position: absolute;
-              top: 50%;
-              right: 20px;
-              margin-top: -8px;
-              @include icon;
-              @include icon-next-active;
-              content: '';
-            }
+          * {
+            color: $white;
           }
 
-          dl {
-            dt,
-            dd {
-              line-height: 1;
-            }
-            dt {
-              font-size: 2.2rem;
-              * {
-                vertical-align: top;
-              }
-            }
-            dd {
-              margin-left: 15px;
-              font-size: 1.5rem;
-              color: $gray5;
-            }
+          &::after {
+            @include icon-next-wh;
+          }
+        }
+
+        &::after {
+          @include icon;
+          @include icon-next-active;
+          content: '';
+        }
+
+        span {
+          b {
+            font-size: 2.2rem;
+          }
+          em {
+            margin-left: 15px;
+            font-size: 1.5rem;
+            color: $gray5;
           }
         }
       }
       grid-area: item2;
     }
-    .secondary-list {
+    .major-work-03 {
       padding-top: 15px;
 
-      ul {
-        height: 100%;
+      button {
+        height: 210px;
+        padding: 45px 0;
+        background-color: $white;
+        border-radius: 10px;
 
-        li {
-          a {
-            height: 100%;
-            background-color: $white;
-            border-radius: 10px;
+        &:focus,
+        &:active:enabled,
+        &.active {
+          background-color: $primary !important;
+          color: $white;
+        }
 
-            span {
-              height: 120px;
+        &::after {
+          @include icon;
+          content: '';
+        }
 
-              &::after {
-                @include icon;
-                content: '';
-              }
-
-              em {
-                font-size: 2rem;
-                font-weight: 500;
-              }
-            }
+        &:nth-of-type(1) {
+          &::after {
+            @include icon-exec;
           }
+        }
+        &:nth-of-type(2) {
+          &::after {
+            @include icon-exec2;
+          }
+        }
+        &:nth-of-type(3) {
+          &::after {
+            @include icon-detail-view;
+          }
+        }
 
-          &:nth-of-type(1) {
-            span {
-              &::after {
-                @include icon-exec;
-              }
-            }
-          }
-          &:nth-of-type(2) {
-            span {
-              &::after {
-                @include icon-exec2;
-              }
-            }
-          }
-          &:nth-of-type(3) {
-            span {
-              &::after {
-                @include icon-detail-view;
-              }
-            }
-          }
+        em {
+          font-size: 2rem;
+          font-weight: 500;
         }
       }
 
@@ -434,7 +606,7 @@ main {
         background-color: $white;
         padding: 20px;
 
-        .faq-list {
+        ul {
           li {
             .caption {
               padding: 5px 8px;
@@ -454,170 +626,6 @@ main {
               padding-left: 8px;
               font-size: 1.5rem;
               max-width: 100%;
-            }
-
-            & + li {
-              margin-top: 15px;
-            }
-          }
-        }
-      }
-      grid-area: item4;
-    }
-  }
-
-  // 메인 - 로그인 후
-  .main-grid-area2 {
-    margin-top: 15px;
-    grid-template-columns: repeat(7, 1fr);
-    grid-template-rows: 240px 230px;
-    grid-template-areas:
-      'item1 item1 item1 item1 item2 item2 item2'
-      'item3 item3 item3 item3 item4 item4 item4';
-
-    > * {
-      overflow: hidden;
-    }
-
-    .approvalStatus {
-      .statusBoard {
-        background-color: $navy;
-        padding: 56px 0;
-
-        span {
-          height: 80px;
-          font-size: 0;
-          color: #f3f5fa;
-          position: relative;
-
-          * {
-            line-height: 1;
-          }
-
-          b {
-            font-size: 4.5rem;
-          }
-
-          em {
-            color: #c9ccd4;
-            font-size: 1.6rem;
-          }
-
-          & + span {
-            &::before {
-              position: absolute;
-              left: 0;
-              top: 0;
-              width: 1px;
-              height: 100%;
-              background-color: #e6e6e7;
-              opacity: 0.2;
-              content: '';
-            }
-          }
-        }
-      }
-      grid-area: item1;
-    }
-
-    .myWork {
-      .banner {
-        background-color: $primary;
-
-        a {
-          display: block;
-          padding: 25px 25px 0;
-          height: 120px;
-        }
-
-        dl {
-          dt,
-          dd {
-            line-height: 1;
-            font-size: 1.4rem;
-            color: #dbecf1;
-          }
-
-          dt {
-            color: $white;
-            font-size: 2.2rem;
-          }
-
-          dd {
-            margin-top: 20px;
-            line-height: 1.2;
-            @include break-word;
-          }
-        }
-      }
-      .btn-wrap {
-        margin-top: 15px;
-        padding: 0;
-        column-gap: 15px;
-
-        button {
-          height: 58px;
-
-          em {
-            font-size: 1.8rem;
-          }
-        }
-      }
-      grid-area: item2;
-    }
-
-    .mobileTrial {
-      .trial-list {
-        background-color: $white;
-        height: 180px;
-
-        h3 {
-          line-height: 1;
-          font-size: 1.6rem;
-          margin-bottom: 20px;
-        }
-
-        .swiper-slide {
-          span {
-            height: 64px;
-            @include justify-content('space-between');
-
-            b {
-              font-size: 1.8rem;
-              letter-spacing: -0.7px;
-              margin-left: 0;
-            }
-          }
-        }
-      }
-      grid-area: item3;
-    }
-
-    .faq {
-      article {
-        background-color: $white;
-        padding: 20px 25px;
-
-        .faq-list {
-          li {
-            .caption {
-              padding: 5px 8px;
-              border-radius: 5px;
-              background-color: $sub4;
-              color: $sub2;
-              font-size: 0;
-
-              em {
-                display: inline-block;
-                line-height: 1;
-                font-size: 1.4rem;
-              }
-            }
-            .txtInfo {
-              @include ellipsis;
-              padding-left: 8px;
-              max-width: 100%;
-              font-size: 1.5rem;
             }
 
             & + li {
@@ -634,7 +642,7 @@ main {
 /*list*/
 .list {
   /*gate*/
-  &.type-1 {
+  &.gate {
     ul {
       li {
         .icon-thumb {
@@ -720,7 +728,7 @@ main {
   }
 
   /*login type*/
-  &.type-2 {
+  &.selectType {
     ul {
       li {
         padding: 20px 0;
@@ -798,16 +806,23 @@ main {
   }
 
   /*user id*/
-  &.type-3 {
+  &.user {
     ul {
+      position: relative;
+      left: -30px;
+      right: -30px;
+      width: -webkit-calc(100% + 60px);
+      width: -moz-calc(100% + 60px);
+      width: calc(100% + 60px);
+
       li {
         position: relative;
 
         &:first-of-type {
           &::before {
             position: absolute;
-            left: -20px;
-            right: -20px;
+            left: 0;
+            right: 0;
             top: 0;
             height: 1px;
             background-color: $gray4;
@@ -817,25 +832,20 @@ main {
 
         &::after {
           position: absolute;
-          left: -20px;
-          right: -20px;
+          left: 0;
+          right: 0;
           bottom: 0;
           height: 1px;
           background-color: $gray4;
           content: '';
         }
 
-        a {
-          display: block;
-          position: relative;
-          line-height: 1;
-          padding: 20px 0;
+        button {
+          width: 100%;
+          height: 60px;
+          padding: 0 30px;
 
           &::after {
-            position: absolute;
-            top: 50%;
-            right: 0;
-            margin-top: -6px;
             @include icon;
             @include icon-next;
             content: '';
