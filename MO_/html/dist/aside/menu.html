@@ -15,8 +15,8 @@
 
 
   <title>전체메뉴 | 킥스</title>
-  <script defer src="../assets/js/main.js"></script>
-  <script defer src="../assets/js/vendor.js"></script>
+  <script defer src="../assets/js/lib.js"></script>
+  <script defer src="../assets/js/common.js"></script>
   <link rel="stylesheet" href="../assets/css/ui.css" />
   <link rel="stylesheet" href="../assets/css/style.css" />
 
@@ -25,30 +25,37 @@
 
 <body>
   <div id="layout" class="menu">
-    <!-- #gnb -->
-    <header id="gnb">
+    <!-- page navigation -->
+    <header class="page-nav">
       <div class="inner">
         <div class="flex-wrap edge h-wrap">
           <span>
-            <a href="javascript:void(0);" onclick="history.back()" class="icon icon-back">
+            <a href="javascript:void(0);" onclick="history.back()">
+              <i class="icon icon-back"></i>
               <em class="hidden-txt">뒤로가기</em>
             </a>
           </span>
           <h1>전체메뉴</h1>
           <span>
-            <a href="" class="icon icon-setting-black"><em class="hidden-txt">환경설정</em></a>
+            <a href="">
+              <i class="icon icon-setting-black"></i>
+              <em class="hidden-txt">환경설정</em>
+            </a>
           </span>
         </div>
       </div>
     </header>
-    <!-- // #gnb -->
+    <!-- // page navigation -->
 
     <!-- #contents -->
     <main>
       <section class="page-top">
         <div class="inner">
-          <div class="flex-wrap userInfo">
-            <div class="flex-wrap center symbol"><em class="hidden-txt">검찰</em></div>
+          <div class="flex-wrap user-info">
+            <div class="flex-wrap center symbol">
+              <i class="icon icon-symbol"></i>
+              <em class="hidden-txt">검찰</em>
+            </div>
             <div class="flex-wrap column start edge info">
               <em>검찰 형사사법정보시스템 입니다.</em>
               <span class="flex-wrap edge log">
@@ -75,7 +82,7 @@
       </section>
       <section>
         <div class="inner">
-          <div class="horizonSlider flex-wrap">
+          <div class="horizon-slider flex-wrap">
             <span>
               <button type="button" class="active"><em>모바일 공판정</em></button>
             </span>
@@ -98,7 +105,7 @@
           <ul class="category">
             <li>
               <h4>모바일 공판정</h4>
-              <ul class="_depth2">
+              <ul class="depth2">
                 <li><a href="">1심 사건부</a></li>
                 <li><a href="">2심 사건부</a></li>
                 <li><a href="">3심 사건부</a></li>
@@ -106,14 +113,14 @@
             </li>
             <li>
               <h4>판결문&#47;결정문 조회</h4>
-              <ul class="_depth2">
+              <ul class="depth2">
                 <li><a href="">판결문 조회</a></li>
                 <li><a href="">결정문 조회</a></li>
               </ul>
             </li>
             <li>
               <h4>전자영장 집행</h4>
-              <ul class="_depth2">
+              <ul class="depth2">
                 <li><a href="">압수수색 영장</a></li>
                 <li><a href="">체포구속 영장</a></li>
                 <li><a href="">통신사실확인자료 제공요청 허가서</a></li>
@@ -122,11 +129,11 @@
             </li>
             <li>
               <h4>압수지원</h4>
-              <ul class="_depth2">
+              <ul class="depth2">
                 <li><a href="">압수현장 자료</a></li>
                 <li class="current">
                   <a href="javascript:void(0);" class="button--arrow button-active-dropDown">압수물 관리</a>
-                  <ul class="dropDown _depth3">
+                  <ul class="dropDown depth3">
                     <li><a href="">압수물 조회</a></li>
                     <li><a href="">압수물 수리</a></li>
                     <li><a href="">압수물 폐기</a></li>
@@ -136,17 +143,17 @@
             </li>
             <li>
               <h4>재산형&#47;자유형 집행</h4>
-              <ul class="_depth2">
+              <ul class="depth2">
                 <li class="current">
                   <a href="javascript:void(0);" class="button--arrow button-active-dropDown">재산형 집행</a>
-                  <ul class="dropDown _depth3">
+                  <ul class="dropDown depth3">
                     <li><a href="">벌과금 조회</a></li>
                     <li><a href="">신한은행 가상계좌 조회</a></li>
                   </ul>
                 </li>
                 <li class="current">
                   <a href="javascript:void(0);" class="button--arrow button-active-dropDown">자유형 집행</a>
-                  <ul class="dropDown _depth3">
+                  <ul class="dropDown depth3">
                     <li><a href="">집행정보 조회</a></li>
                     <li><a href="">형 집행장</a></li>
                   </ul>
@@ -155,7 +162,7 @@
             </li>
             <li>
               <h4>정보조회</h4>
-              <ul class="_depth2">
+              <ul class="depth2">
                 <li><a href="../gate/gate.html">통합사건검색</a></li>
                 <li><a href="">범죄경력 조회</a></li>
                 <li><a href="">지명수배 정보 조회</a></li>

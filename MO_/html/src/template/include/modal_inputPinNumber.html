@@ -13,29 +13,59 @@
   </div>
 </header>
 <div class="modal-body">
-  <section>
+  <section class="has-title">
     <div class="inner">
       <header class="heading-title-wrap2">
         <h3>사용자 <b class="txt-color primary">ID USERID01</b></h3>
       </header>
       <div class="form-wrap">
-        <div class="text-wrap">
-          <label for="password"><em class="hidden-txt">PIN번호</em></label>
-          <input type="password" id="password" placeholder="PIN번호" autocomplete="off" />
+        <div class="pin-pw-wrap">
+          <label for="pinPwRegist"><em class="hidden-txt">PIN번호</em></label>
+          <input type="password" id="pinPwRegist" autocomplete="off" pattern="" maxlength="4" inputmode="numeric" />
+          <span class="grid-wrap col-4 gap-none pin-number">
+            <em class="flex-wrap center"></em>
+            <em class="flex-wrap center"></em>
+            <em class="flex-wrap center"></em>
+            <em class="flex-wrap center"></em>
+          </span>
         </div>
 
-        <!-- PIN번호 오류-->
-        <!-- <div class="text-wrap error">
-          <label for="password"><em class="hidden-txt">PIN번호</em></label>
-          <input type="password" id="password" placeholder="PIN번호" autocomplete="off" />
-        </div>
-        <p class="txt-error">
-          <em>
+        <!-- PIN번호 오류 메시지 -->
+        <p class="txt-error align-c">
+          <em class="txt-color">
             PIN번호가 일치하지 않습니다.(2&#47;5)<br />
             5회 연속으로 오류 시 이용이 불가능 합니다.
           </em>
-        </p> -->
+        </p>
       </div>
     </div>
   </section>
 </div>
+
+<script>
+  const pinPwRg = document.getElementById('pinPwRegist');
+
+  pinPwRg.addEventListener('keydown', function (event) {
+    const exceptionKey = [' ', 'ArrowLeft', 'ArrowRight', 'ArrowUp', 'ArrowDown'];
+
+    exceptionKey.forEach(function (el) {
+      if (event.key == el) {
+        event.preventDefault();
+      }
+    });
+  });
+
+  pinPwRg.addEventListener('input', function (event) {
+    const child = pinPwRg.nextElementSibling.children;
+    const value = event.target.value;
+    const max = value.length;
+
+    for (let i = 0; i < child.length; i++) {
+      child[i].classList.remove('input');
+    }
+
+    for (let j = 0; j < max; j++) {
+      child[j].classList.add('input');
+    }
+  });
+</script>

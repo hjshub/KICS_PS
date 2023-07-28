@@ -48,7 +48,7 @@ gb.CommonFunction = (function () {
 
         const trg = this;
         const modalName = trg.getAttribute('data-modal-name');
-        const currentModal = document.querySelector(`.modal#modal-${modalName}`);
+        const currentModal = document.querySelector(`.modal#modal_${modalName}`);
 
         currentModal.classList.add('zoomIn');
 
@@ -64,7 +64,7 @@ gb.CommonFunction = (function () {
 
         const trg = this;
         const modalName = trg.getAttribute('data-modal-name');
-        const currentModal = document.querySelector(`.modal#modal-${modalName}`);
+        const currentModal = document.querySelector(`.modal#modal_${modalName}`);
 
         currentModal.classList.remove('zoomIn');
 
@@ -79,17 +79,17 @@ gb.CommonFunction = (function () {
     const filepoint = el.value.substring(pathpoint + 1, el.length);
     const filetype = filepoint.toLowerCase(); // 업로드 파일 확장자
     const fileReader = new FileReader();
-    const fileName = $(el)[0].files[0].name; // 첨부 파일 명
-    const filesize = $(el)[0].files[0].size; // 첨부 파일 용량
+    const fileName = el.files[0].name; // 첨부 파일 명
+    const filesize = el.files[0].size; // 첨부 파일 용량
 
-    fileReader.readAsDataURL($(el)[0].files[0]);
+    fileReader.readAsDataURL(el.files[0]);
 
     if (type == 'image') {
       // 이미지 업로드
       if (filetype == 'jpg' || filetype == 'gif' || filetype == 'png' || filetype == 'jpeg' || filetype == 'bmp') {
         // 정상적인 이미지 확장자 파일일 경우
         // fileReader.onload = function (e) {
-        //   $(el).closest('.file-up-list').find('.file-attach-image img').attr('src', e.target.result);
+        //    el.closest('.file-attach-image').children[0].children[0].setAttribute('src', e.target.result);
         // };
       } else {
         alert('이미지 파일만 선택 할 수 있습니다.');
@@ -97,9 +97,9 @@ gb.CommonFunction = (function () {
         node = parentObj.replaceChild(el.cloneNode(true), el);
         return false;
       }
+    } else {
+      el.closest('.file-attach').children[0].children[0].value = fileName;
     }
-
-    $(el).closest('.file-attach').find('.text-wrap input[type=text]').val(fileName);
   };
   const copyToClipboard = (val) => {
     // 클립 보드에 복사

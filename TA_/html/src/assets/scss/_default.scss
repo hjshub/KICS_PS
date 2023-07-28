@@ -58,7 +58,7 @@ textarea {
   @include transform(rotate(-0.03deg));
 }
 .txt-error {
-  padding: 10px;
+  margin-top: 30px;
 
   em {
     display: inline-block;
@@ -70,7 +70,7 @@ textarea {
     &::before {
       position: absolute;
       left: 0;
-      top: 3px;
+      top: 0;
       @include icon;
       @include icon-caution;
       content: '';
@@ -272,7 +272,7 @@ textarea {
 .heading-title-wrap2 {
   font-size: 1.7rem;
   text-align: center;
-  margin: 60px 0 35px;
+  margin: 0 0 35px;
 
   * {
     vertical-align: top;
@@ -414,11 +414,6 @@ textarea {
   & + .form-wrap {
     margin-top: 20px;
   }
-}
-
-/*dropDown*/
-.dropDown {
-  display: none;
 }
 
 /*tab container*/

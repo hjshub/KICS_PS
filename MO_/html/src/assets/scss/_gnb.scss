@@ -3,7 +3,7 @@
  * footer
  * ==============================+
  */
-footer {
+.gnb {
   width: 100%;
   position: fixed;
   left: 0;
@@ -18,6 +18,13 @@ footer {
       a {
         display: block;
         padding: 10px 0;
+
+        &:focus,
+        &:hover {
+          span {
+            color: $primary;
+          }
+        }
       }
 
       span {
@@ -41,12 +48,34 @@ footer {
             @include icon-home;
           }
         }
+
+        a {
+          &:focus,
+          &:hover {
+            span {
+              &::before {
+                @include icon-home-active;
+              }
+            }
+          }
+        }
       }
 
       &:nth-of-type(2) {
         span {
           &::before {
             @include icon-mypage;
+          }
+        }
+
+        a {
+          &:focus,
+          &:hover {
+            span {
+              &::before {
+                @include icon-mypage-active;
+              }
+            }
           }
         }
       }
@@ -57,12 +86,34 @@ footer {
             @include icon-bookmark;
           }
         }
+
+        a {
+          &:focus,
+          &:hover {
+            span {
+              &::before {
+                @include icon-bookmark-active;
+              }
+            }
+          }
+        }
       }
 
       &:nth-of-type(4) {
         span {
           &::before {
             @include icon-setting;
+          }
+        }
+
+        a {
+          &:focus,
+          &:hover {
+            span {
+              &::before {
+                @include icon-setting-active;
+              }
+            }
           }
         }
       }

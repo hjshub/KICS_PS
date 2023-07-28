@@ -4,17 +4,24 @@
     @@include('./include/head.html', { page_main: true, theme_color:"#eff2f8" })
   </head>
   <body>
-    <div id="layout" class="main signedIn">
-      <!-- #gnb -->
-      @@include('./include/gnb.html', {path:'.' })
-      <!-- // #gnb -->
+    <div id="layout" class="main sign-in">
+      <!-- gnb -->
+      @@include('./include/gnb.html')
+      <!-- // gnb -->
+
+      <!-- page navigation -->
+      @@include('./include/page_nav.html', {path:'.' })
+      <!-- // page navigation -->
 
       <!-- #contents -->
       <main>
         <section class="page-top">
           <div class="inner">
             <div class="flex-wrap">
-              <div class="flex-wrap center symbol"><em class="hidden-txt">검찰</em></div>
+              <div class="flex-wrap center symbol">
+                <i class="icon icon-symbol"></i>
+                <em class="hidden-txt">검찰</em>
+              </div>
               <div class="flex-wrap column start edge info">
                 <b>홍길동 검사님</b>
                 <span class="flex-wrap edge log">
@@ -33,7 +40,7 @@
                   <strong>통합승인 현황</strong>
                 </h2>
               </header>
-              <div class="grid-wrap col-2 gap-none statusBoard">
+              <div class="grid-wrap col-2 gap-none status-board">
                 <span class="flex-wrap column edge">
                   <b class="txt-color sub3">7</b>
                   <em>승인 요청</em>
@@ -121,8 +128,14 @@
                   </a>
                 </div>
                 <div class="btn-wrap flex-wrap column edge">
-                  <button type="button" class="flex-wrap center"><em>인증센터</em></button>
-                  <button type="button" class="flex-wrap center"><em>매뉴얼</em></button>
+                  <button type="button" class="flex-wrap center">
+                    <i class="icon icon-cert"></i>
+                    <em>인증센터</em>
+                  </button>
+                  <button type="button" class="flex-wrap center">
+                    <i class="icon icon-manual"></i>
+                    <em>매뉴얼</em>
+                  </button>
                 </div>
               </div>
             </div>
@@ -137,19 +150,19 @@
                 <ul>
                   <li class="flex-wrap">
                     <span class="caption"><em>공판지원</em></span>
-                    <span class="txtInfo">
+                    <span class="txt-info">
                       <a href="">공판카드 작성시 주의사항 및 작성 방법 공판카드 작성시 주의사항 및 작성 방법</a>
                     </span>
                   </li>
                   <li class="flex-wrap">
                     <span class="caption"><em>전자영장</em></span>
-                    <span class="txtInfo">
+                    <span class="txt-info">
                       <a href="">사본 발급시 전자서명과 발급 방법입니다.</a>
                     </span>
                   </li>
                   <li class="flex-wrap">
                     <span class="caption"><em>압수지원</em></span>
-                    <span class="txtInfo">
+                    <span class="txt-info">
                       <a href="">폐기 대상 압수물 선별 및 선택 방법입니다.</a>
                     </span>
                   </li>
@@ -160,10 +173,6 @@
         </section>
       </main>
       <!-- // #contents -->
-
-      <!-- #footer -->
-      @@include('./include/footer.html')
-      <!-- // #footer -->
     </div>
   </body>
 </html>

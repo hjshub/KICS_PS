@@ -15,8 +15,8 @@
 
 
   <title>사용자 아이디 선택 | 킥스</title>
-  <script defer src="../assets/js/main.js"></script>
-  <script defer src="../assets/js/vendor.js"></script>
+  <script defer src="../assets/js/lib.js"></script>
+  <script defer src="../assets/js/common.js"></script>
   <link rel="stylesheet" href="../assets/css/ui.css" />
   <link rel="stylesheet" href="../assets/css/style.css" />
 
@@ -25,13 +25,14 @@
 
 <body>
   <div id="layout">
-    <!-- #gnb -->
+    <!-- page navigation -->
 
-    <header id="gnb">
+    <header class="page-nav">
       <div class="inner">
         <div class="flex-wrap edge h-wrap">
           <span>
-            <a href="javascript:void(0);" onclick="history.back()" class="icon icon-back">
+            <a href="javascript:void(0);" onclick="history.back()">
+              <i class="icon icon-back"></i>
               <em class="hidden-txt">뒤로가기</em>
             </a>
           </span>
@@ -41,8 +42,7 @@
     </header>
 
 
-
-    <!-- // #gnb -->
+    <!-- // page navigation -->
 
     <!-- #contents -->
     <main>
@@ -52,6 +52,7 @@
             <div class="text-wrap">
               <label for="user_id"><em class="hidden-txt">아이디</em></label>
               <input type="text" id="user_id" autocomplete="off" placeholder="아이디" />
+              <button type="button" class="button-reset"><em class="hidden-txt">초기화</em></button>
             </div>
             <div class="btn-wrap">
               <button class="btn-search bg-navy"><em>검색</em></button>

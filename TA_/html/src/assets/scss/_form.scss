@@ -429,6 +429,68 @@ button {
   }
 }
 
+/*pin password*/
+.pin-pw-wrap {
+  width: 400px;
+  height: 100px;
+  margin: 0 auto;
+  position: relative;
+
+  label {
+    background-color: transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+  }
+
+  input[type='password'] {
+    background-color: transparent;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    color: $primary;
+    font-size: 1rem;
+    z-index: 1;
+    pointer-events: none;
+    caret-color: transparent;
+
+    &:focus-visible {
+      outline: none;
+
+      & + .pin-number {
+        outline: 1px dashed rgba(#dce0e3, 50%);
+        outline-offset: 1px;
+      }
+    }
+  }
+
+  .pin-number {
+    height: 100%;
+
+    em {
+      &::before {
+        width: 30px;
+        height: 30px;
+        background-color: #dce0e3;
+        border-radius: 50%;
+        content: '';
+      }
+
+      &.input {
+        &::before {
+          background-color: $primary;
+        }
+      }
+    }
+  }
+}
+
 /*checkbox*/
 .chk-wrap {
   &.inline {

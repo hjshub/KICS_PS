@@ -13,195 +13,28 @@
     padding-bottom: 60px;
 
     main {
-      min-height: -webkit-calc(100vh - 140px);
-      min-height: -moz-calc(100vh - 140px);
-      min-height: calc(100vh - 140px);
+      min-height: -webkit-calc(100vh - 110px);
+      min-height: -moz-calc(100vh - 110px);
+      min-height: calc(100vh - 110px);
     }
   }
 
   &.main {
-    #gnb,
+    .page-nav,
     main {
       background-color: $gray3;
     }
 
-    &.signedIn {
+    &.sign-in {
       // 메인 - 로그인 후
       .main-grid-area {
         row-gap: 15px;
-        grid-template-rows: repeat(3, auto);
-
-        .approval-status {
-          .statusBoard {
-            background-color: $navy;
-            height: 100px;
-            @include align-items('center');
-
-            span {
-              height: 48px;
-              font-size: 2.6rem;
-              color: #f3f5fa;
-              position: relative;
-
-              * {
-                line-height: 1;
-              }
-
-              em {
-                color: #c9ccd4;
-                font-size: 1.3rem;
-              }
-
-              & + span {
-                &::before {
-                  position: absolute;
-                  left: 0;
-                  top: 0;
-                  width: 1px;
-                  height: 100%;
-                  background-color: #e6e6e7;
-                  opacity: 0.2;
-                  content: '';
-                }
-              }
-            }
-          }
-        }
-
-        .my-work {
-          .work-list {
-            background-color: $white;
-            padding: 15px 0;
-            grid-area: subItem1;
-
-            h3 {
-              line-height: 1;
-              font-size: 1.6rem;
-              margin-bottom: 20px;
-            }
-
-            .swiper-slide {
-              span {
-                height: 42px;
-                @include justify-content('space-between');
-                em {
-                  font-size: 1.3rem;
-                  letter-spacing: -0.7px;
-                }
-              }
-            }
-          }
-          .banner {
-            background-color: $primary;
-            grid-area: subItem2;
-
-            a {
-              display: block;
-              padding: 20px;
-            }
-
-            dl {
-              dt,
-              dd {
-                line-height: 1;
-                font-size: 1.2rem;
-                color: #dbecf1;
-              }
-
-              dt {
-                color: $white;
-                font-size: 1.6rem;
-              }
-
-              dd {
-                margin-top: 15px;
-                line-height: 1.2;
-                @include break-word;
-              }
-            }
-          }
-          .btn-wrap {
-            padding: 0;
-            grid-area: subItem3;
-
-            button {
-              width: 100%;
-              height: 45px;
-              background-color: $white;
-
-              &:before {
-                @include icon;
-                content: '';
-              }
-
-              &:first-of-type {
-                &::before {
-                  @include icon-cert;
-                }
-              }
-
-              &:nth-of-type(2) {
-                &::before {
-                  @include icon-manual;
-                }
-              }
-
-              em {
-                font-size: 1.4rem;
-                margin-left: 5px;
-              }
-            }
-          }
-        }
-
-        .faq {
-          article {
-            background-color: $white;
-            padding: 20px;
-
-            ul {
-              li {
-                .caption {
-                  padding: 5px 8px;
-                  border-radius: 5px;
-                  background-color: $sub4;
-                  color: $sub2;
-                  font-size: 0;
-
-                  em {
-                    display: inline-block;
-                    line-height: 1;
-                    font-size: 1.1rem;
-                  }
-                }
-                .txtInfo {
-                  @include ellipsis;
-                  padding-left: 8px;
-                  max-width: 100%;
-                }
-
-                & + li {
-                  margin-top: 15px;
-                }
-              }
-            }
-          }
-        }
-      }
-
-      // 메인 - 나의 업무 바로가기
-      .sub-grid-area {
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: 110px 100px;
-        grid-template-areas:
-          'subItem1 subItem1 subItem1'
-          'subItem2 subItem2 subItem3';
       }
     }
   }
 
   &.menu {
-    #gnb {
+    .page-nav {
       background-color: $sub4;
     }
 
@@ -216,7 +49,7 @@
           }
         }
 
-        .horizonSlider {
+        .horizon-slider {
           font-size: 0;
           overflow: hidden;
           overflow-x: auto;
@@ -280,7 +113,7 @@
             }
           }
 
-          ._depth2 {
+          .depth2 {
             > li {
               > a {
                 display: block;
@@ -292,7 +125,7 @@
             }
           }
 
-          ._depth3 {
+          .depth3 {
             position: relative;
             width: -webkit-calc(100% + 40px);
             width: -moz-calc(100% + 40px);
@@ -397,12 +230,6 @@ main {
         height: 52px;
         border-radius: 50%;
         background-color: $white;
-
-        &::before {
-          @include icon;
-          @include icon-symbol;
-          content: '';
-        }
       }
 
       .info {
@@ -450,7 +277,7 @@ main {
         }
       }
 
-      .userInfo + div {
+      .user-info + div {
         margin-top: 30px;
       }
 
@@ -460,171 +287,264 @@ main {
     }
   }
 
-  // 메인 - 로그인 전
-  .main-grid-area {
-    grid-template-rows: 123px 154px auto auto;
+  // 메인
+  // 로그인 전
+  .major-work {
+    height: 123px;
+    padding-top: 15px;
+    overflow: hidden;
 
-    .major-work-01 {
-      padding-top: 15px;
-      overflow: hidden;
+    > a {
+      padding: 0 20px;
+      height: 100%;
+      background-color: $navy;
 
-      > a {
-        padding: 0 20px;
-        height: 100%;
-        background-color: $navy;
-
-        &::after {
-          width: 101px;
-          height: 137px;
-          background-image: url('../images/img-raw.png');
-          background-repeat: no-repeat;
-          background-position: 0 0;
-          background-size: 100% auto;
-          content: '';
-        }
-
-        dl {
-          dt,
-          dd {
-            line-height: 1;
-            font-size: 1.3rem;
-            color: #dbecf1;
-          }
-
-          dt {
-            color: $white;
-            font-size: 1.8rem;
-          }
-
-          dd {
-            margin-top: 10px;
-          }
-        }
+      &::after {
+        width: 101px;
+        height: 137px;
+        background-image: url('../images/img-raw.png');
+        background-repeat: no-repeat;
+        background-position: 0 0;
+        background-size: 100% auto;
+        content: '';
       }
-    }
-    .major-work-02 {
-      button {
-        width: 100%;
-        height: 72px;
-        padding: 0 20px;
-        background-color: $white;
-        box-shadow: 0 0 3px 1px rgba($black, 5%);
 
-        &:disabled {
-          background-color: #f2f2f2 !important;
-          color: rgba(#222, 20%) !important;
+      dl {
+        dt,
+        dd {
+          line-height: 1;
+          font-size: 1.3rem;
+          color: #dbecf1;
         }
 
-        &:focus,
-        &:active:enabled,
-        &.active {
-          background-color: $primary !important;
-
-          * {
-            color: $white !important;
-          }
-
-          &::after {
-            @include icon-next-active-wh;
-          }
-        }
-
-        &::after {
-          @include icon;
-          @include icon-next-active;
-          content: '';
-        }
-
-        b {
+        dt {
+          color: $white;
           font-size: 1.8rem;
         }
 
-        em {
-          width: 100%;
-          padding-left: 10px;
-          text-align: left;
-          font-size: 1.3rem;
-          color: $gray5;
+        dd {
+          margin-top: 10px;
         }
       }
     }
-    .major-work-03 {
-      button {
-        height: 95px;
-        padding: 15px 0;
-        background-color: $white;
-        border-radius: 10px;
+  }
+  .major-work-02 {
+    height: 154px;
 
-        // &:disabled {
-        //   background-color: #f2f2f2 !important;
-        //   color: rgba(#222, 20%) !important;
-        // }
+    button {
+      width: 100%;
+      height: 72px;
+      padding: 0 20px;
+      background-color: $white;
+      box-shadow: 0 0 3px 1px rgba($black, 5%);
 
-        &:focus,
-        &:active:enabled,
-        &.active {
-          background-color: $primary !important;
-          color: $white;
+      &:disabled {
+        background-color: #f2f2f2 !important;
+        color: rgba(#222, 20%) !important;
+      }
+
+      &:focus,
+      &:active:enabled,
+      &.active {
+        background-color: $primary !important;
+
+        * {
+          color: $white !important;
         }
 
         &::after {
-          @include icon;
-          content: '';
+          @include icon-next-active-wh;
         }
+      }
 
-        &:first-of-type {
-          &::after {
-            @include icon-exec;
+      &::after {
+        @include icon;
+        @include icon-next-active;
+        content: '';
+      }
+
+      b {
+        font-size: 1.8rem;
+      }
+
+      em {
+        width: 100%;
+        padding-left: 10px;
+        text-align: left;
+        font-size: 1.3rem;
+        color: $gray5;
+      }
+    }
+  }
+  .major-work-03 {
+    button {
+      height: 95px;
+      padding: 15px 0;
+      background-color: $white;
+      border-radius: 10px;
+
+      // &:disabled {
+      //   background-color: #f2f2f2 !important;
+      //   color: rgba(#222, 20%) !important;
+      // }
+
+      &:focus,
+      &:active:enabled,
+      &.active {
+        background-color: $primary !important;
+        color: $white;
+      }
+    }
+  }
+  .faq {
+    overflow: hidden;
+
+    article {
+      background-color: $white;
+      padding: 20px;
+
+      ul {
+        li {
+          .caption {
+            padding: 5px 8px;
+            border-radius: 5px;
+            background-color: $sub4;
+            color: $sub2;
+            font-size: 0;
+
+            em {
+              display: inline-block;
+              line-height: 1;
+              font-size: 1.1rem;
+            }
           }
-        }
-        &:nth-of-type(2) {
-          &::after {
-            @include icon-exec2;
+          .txt-info {
+            @include ellipsis;
+            padding-left: 8px;
+            max-width: 100%;
           }
-        }
-        &:nth-of-type(3) {
-          &::after {
-            @include icon-detail-view;
+
+          & + li {
+            margin-top: 15px;
           }
         }
       }
     }
+  }
 
-    .faq {
-      overflow: hidden;
+  // 로그인 후
+  .approval-status {
+    .status-board {
+      background-color: $navy;
+      height: 100px;
+      @include align-items('center');
 
-      article {
-        background-color: $white;
+      span {
+        height: 48px;
+        font-size: 2.6rem;
+        color: #f3f5fa;
+        position: relative;
+
+        * {
+          line-height: 1;
+        }
+
+        em {
+          color: #c9ccd4;
+          font-size: 1.3rem;
+        }
+
+        & + span {
+          &::before {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 1px;
+            height: 100%;
+            background-color: #e6e6e7;
+            opacity: 0.2;
+            content: '';
+          }
+        }
+      }
+    }
+  }
+  .my-work {
+    .work-list {
+      background-color: $white;
+      padding: 15px 0;
+      grid-area: subItem1;
+
+      h3 {
+        line-height: 1;
+        font-size: 1.6rem;
+        margin-bottom: 20px;
+      }
+
+      .swiper-slide {
+        span {
+          height: 42px;
+          @include justify-content('space-between');
+          em {
+            font-size: 1.3rem;
+            letter-spacing: -0.7px;
+          }
+        }
+      }
+    }
+    .banner {
+      background-color: $primary;
+      grid-area: subItem2;
+
+      a {
+        display: block;
         padding: 20px;
+      }
 
-        ul {
-          li {
-            .caption {
-              padding: 5px 8px;
-              border-radius: 5px;
-              background-color: $sub4;
-              color: $sub2;
-              font-size: 0;
+      dl {
+        dt,
+        dd {
+          line-height: 1;
+          font-size: 1.2rem;
+          color: #dbecf1;
+        }
 
-              em {
-                display: inline-block;
-                line-height: 1;
-                font-size: 1.1rem;
-              }
-            }
-            .txtInfo {
-              @include ellipsis;
-              padding-left: 8px;
-              max-width: 100%;
-            }
+        dt {
+          color: $white;
+          font-size: 1.6rem;
+        }
 
-            & + li {
-              margin-top: 15px;
-            }
-          }
+        dd {
+          margin-top: 15px;
+          line-height: 1.2;
+          @include break-word;
         }
       }
     }
+    .btn-wrap {
+      padding: 0;
+      grid-area: subItem3;
+
+      button {
+        width: 100%;
+        height: 45px;
+        background-color: $white;
+
+        em {
+          font-size: 1.4rem;
+          margin-left: 5px;
+        }
+      }
+    }
+  }
+
+  // 나의 업무 바로가기
+  .sub-grid-area {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 110px 100px;
+    grid-template-areas:
+      'subItem1 subItem1 subItem1'
+      'subItem2 subItem2 subItem3';
   }
 }
 
@@ -717,7 +637,7 @@ main {
   }
 
   /*login type*/
-  &.selectType {
+  &.select-type {
     ul {
       li {
         padding: 20px 0;
@@ -893,6 +813,35 @@ main {
   }
 }
 
+/*dropDown*/
+.dropDown {
+  display: none;
+}
+
+/*pattern*/
+.pattern-wrap {
+  max-width: 189px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 15px);
+  column-gap: 72px;
+  row-gap: 72px;
+  margin: 70px auto 0;
+
+  i {
+    @include display-flex;
+    @include align-items('center');
+    @include justify-content('center');
+
+    &::before {
+      width: 15px;
+      height: 15px;
+      background-color: #dee1e4;
+      border-radius: 50%;
+      content: '';
+    }
+  }
+}
+
 /*swiper*/
 .list-swiper-wrap {
   &.col-4 {
@@ -907,12 +856,18 @@ main {
 
   .swiper-button-prev,
   .swiper-button-next {
+    width: auto;
     position: absolute;
     top: 50%;
     margin-top: -5px;
     z-index: 10;
     cursor: pointer;
-    font-size: 0;
+    height: auto;
+
+    &::after {
+      content: none;
+      display: none;
+    }
   }
 
   .swiper-button-prev {

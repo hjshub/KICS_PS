@@ -15,8 +15,8 @@
 
 
   <title>정보조회 | 킥스</title>
-  <script defer src="../assets/js/main.js"></script>
-  <script defer src="../assets/js/vendor.js"></script>
+  <script defer src="../assets/js/lib.js"></script>
+  <script defer src="../assets/js/common.js"></script>
   <link rel="stylesheet" href="../assets/css/ui.css" />
   <link rel="stylesheet" href="../assets/css/style.css" />
 
@@ -25,13 +25,44 @@
 
 <body>
   <div id="layout" class="gate">
-    <!-- #gnb -->
+    <!-- gnb -->
+    <nav class="gnb">
+      <div class="inner">
+        <ul class="grid-wrap col-4 gap-none">
+          <li class="active">
+            <a href="../index.html">
+              <span class="flex-wrap column edge"><em>메인화면</em></span>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <span class="flex-wrap column edge"><em>마이페이지</em></span>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <span class="flex-wrap column edge"><em>즐겨찾기</em></span>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <span class="flex-wrap column edge"><em>환경설정</em></span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
 
-    <header id="gnb">
+    <!-- // gnb -->
+
+    <!-- page navigation -->
+
+    <header class="page-nav">
       <div class="inner">
         <div class="flex-wrap edge h-wrap">
           <span>
-            <a href="javascript:void(0);" onclick="history.back()" class="icon icon-back">
+            <a href="javascript:void(0);" onclick="history.back()">
+              <i class="icon icon-back"></i>
               <em class="hidden-txt">뒤로가기</em>
             </a>
           </span>
@@ -41,8 +72,7 @@
     </header>
 
 
-
-    <!-- // #gnb -->
+    <!-- // page navigation -->
 
     <!-- #contents -->
     <main>
@@ -126,36 +156,6 @@
       </section>
     </main>
     <!-- // #contents -->
-
-    <!-- #footer -->
-    <footer>
-      <div class="inner">
-        <ul class="grid-wrap col-4 gap-none">
-          <li class="active">
-            <a href="../index.html">
-              <span class="flex-wrap column edge"><em>메인화면</em></span>
-            </a>
-          </li>
-          <li>
-            <a href="">
-              <span class="flex-wrap column edge"><em>마이페이지</em></span>
-            </a>
-          </li>
-          <li>
-            <a href="">
-              <span class="flex-wrap column edge"><em>즐겨찾기</em></span>
-            </a>
-          </li>
-          <li>
-            <a href="">
-              <span class="flex-wrap column edge"><em>환경설정</em></span>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </footer>
-
-    <!-- // #footer -->
   </div>
 </body>
 

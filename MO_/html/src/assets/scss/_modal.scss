@@ -52,10 +52,51 @@
   }
 
   .modal-body {
-    padding-top: 60px;
+    padding-top: 50px;
     overflow: hidden;
     overflow-y: auto;
     max-height: 100%;
+
+    section {
+      &.has-title {
+        margin-top: 60px;
+      }
+
+      &.search-filter {
+        background-color: $sub4;
+        padding: 20px 0;
+
+        a {
+          display: block;
+          line-height: 1;
+          margin-bottom: 15px;
+          position: relative;
+
+          &::after {
+            position: absolute;
+            left: 0;
+            bottom: -15px;
+            width: 100%;
+            height: 1px;
+            background-color: $darkGray;
+            content: '';
+          }
+
+          b {
+            font-size: 1.8rem;
+          }
+        }
+        .table {
+          padding-top: 15px;
+
+          dl {
+            dt {
+              width: 100px;
+            }
+          }
+        }
+      }
+    }
 
     .modal-title {
       font-size: 0;

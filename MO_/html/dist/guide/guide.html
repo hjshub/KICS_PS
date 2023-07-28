@@ -15,8 +15,8 @@
 
 
   <title>퍼블리싱 가이드 | 킥스</title>
-  <script defer src="../assets/js/main.js"></script>
-  <script defer src="../assets/js/vendor.js"></script>
+  <script defer src="../assets/js/lib.js"></script>
+  <script defer src="../assets/js/common.js"></script>
   <link rel="stylesheet" href="../assets/css/ui.css" />
   <link rel="stylesheet" href="../assets/css/style.css" />
 
@@ -29,20 +29,70 @@
       background-color: #ececec;
     }
 
+    hr {
+      margin: 2em 0;
+    }
+
     h1 {
+      font-size: 3rem;
+    }
+
+    article {
+      column-gap: 60px !important;
+      row-gap: 60px !important;
+    }
+
+    article>dl {
+      position: relative;
+    }
+
+    article>dl+dl:before {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: -30px;
+      height: 1px;
+      background-color: currentColor;
+      content: '';
+    }
+
+    article>dl>dt {
+      display: flex;
+      align-items: center;
       font-size: 2.2rem;
+      line-height: 1;
     }
 
-    dl+dl {
-      margin-top: 20px;
-    }
-
-    dl dt b {
+    article>dl>dt b {
       text-transform: uppercase;
     }
 
-    dl dd {
-      margin-top: 10px;
+    article>dl>dt::before {
+      width: 5px;
+      height: 15px;
+      background-color: currentColor;
+      margin-right: 5px;
+      content: '';
+    }
+
+    article>dl>dd {
+      margin-top: 20px;
+    }
+
+    article>dl>dd li+li {
+      margin-top: 20px;
+    }
+
+    article>dl>dd li strong {
+      display: block;
+      font-size: 2rem;
+      margin-bottom: 10px;
+      text-decoration-line: underline;
+      text-underline-position: from-font;
+      text-decoration-skip-ink: none;
+      text-decoration-thickness: 16px;
+      text-underline-offset: -16px;
+      text-decoration-color: rgba(176, 255, 231, 0.7);
     }
 
     pre {
@@ -67,41 +117,87 @@
         <h1>퍼블리싱 가이드</h1>
       </header>
       <hr />
-      <article>
+      <article class="grid-wrap">
         <dl>
           <dt><b>button</b></dt>
           <dd>
-            <div class="btn-wrap">
-              <button class="btn-cancle bg-navy"><em>로그인</em></button>
-            </div>
-            <div class="btn-wrap grid-wrap col-2">
-              <button class="btn-cancle bg-white"><em>취소</em></button>
-              <button class="btn-apply bg-blue"><em>승인요청</em></button>
-            </div>
-            <div class="btn-wrap grid-wrap col-3 type2">
-              <button class="btn-delete bg-white"><em>삭제</em></button>
-              <button class="btn-return"><em>회수</em></button>
-              <button class="btn-apply bg-blue"><em>승인요청</em></button>
-            </div>
+            <ul>
+              <li>
+                <strong>box type</strong>
+                <div class="btn-wrap">
+                  <button class="btn- bg-navy"><em>버튼명</em></button>
+                </div>
+                <div class="btn-wrap grid-wrap col-2">
+                  <button class="btn- bg-white"><em>버튼명</em></button>
+                  <button class="btn- bg-blue"><em>버튼명</em></button>
+                </div>
+                <div class="btn-wrap grid-wrap col-3 type2">
+                  <button class="btn- bg-white"><em>버튼명</em></button>
+                  <button class="btn-"><em>버튼명</em></button>
+                  <button class="btn- bg-blue"><em>버튼명</em></button>
+                </div>
+                <div class="btn-wrap align-c">
+                  <button class="btn- md round bg-navy"><em>버튼명</em></button>
+                </div>
+              </li>
+              <li>
+                <strong>icon + text type</strong>
+                <div class="major-work-03">
+                  <div class="grid-wrap col-3">
+                    <button class="flex-wrap column edge" type="button" onclick="location.href=''">
+                      <i class="icon icon-exec"></i>
+                      <em>자유형집행</em>
+                    </button>
+                    <button class="flex-wrap column edge" type="button" onclick="location.href=''">
+                      <i class="icon icon-exec2"></i>
+                      <em>재산형집행</em>
+                    </button>
+                    <button class="flex-wrap column edge" type="button" onclick="location.href=''">
+                      <i class="icon icon-detail-view"></i>
+                      <em>정보조회</em>
+                    </button>
+                  </div>
+                </div>
+              <li>
+                <div class="my-work">
+                  <div class="btn-wrap grid-wrap">
+                    <button type="button" class="flex-wrap center">
+                      <i class="icon icon-cert"></i>
+                      <em>인증센터</em>
+                    </button>
+                    <button type="button" class="flex-wrap center">
+                      <i class="icon icon-manual"></i>
+                      <em>매뉴얼</em>
+                    </button>
+                  </div>
+                </div>
+              </li>
+              </li>
+            </ul>
           </dd>
         </dl>
 
         <dl>
           <dt><b>icon</b></dt>
           <dd>
-            <span class="inline"><i class="icon icon-notice"></i><em>공지사항</em></span>
+            <span class="flex-wrap">
+              <i class="icon icon-setting-black"></i>
+              <em class="hidden-txt">설정</em>
+            </span>
             <span class="markup">
-              &lt;span class="inline"&gt;&lt;i class="icon
-              icon-notice"&gt;&lt;&#47;i&gt;&lt;em&gt;공지사항&lt;&#47;em&gt;&lt;&#47;span&gt;
+              &lt;span class="flex-wrap"&gt;<br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;i class="icon icon-setting-black"&gt; &lt;&#47;i&gt;<br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;em class="hidden-txt"&gt;설정&lt;&#47;em&gt;<br />
+              &lt;&#47;span&gt;
             </span>
           </dd>
           <dd>
-            <span>
-              <i class="icon icon-notice"><em class="hidden-txt">공지사항</em></i>
-            </span>
+            <span class="flex-wrap"><i class="icon icon-notice"></i><em>공지사항</em></span>
             <span class="markup">
-              &lt;span&gt;&lt;i class="icon icon-notice"&gt;&lt;em
-              class="hidden-txt"&gt;공지사항&lt;&#47;em&gt;&lt;&#47;i&gt;&lt;&#47;span&gt;
+              &lt;span class="flex-wrap"&gt;<br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;i class="icon icon-notice"&gt; &lt;&#47;i&gt;<br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;em&gt;공지사항&lt;&#47;em&gt;<br />
+              &lt;&#47;span&gt;
             </span>
           </dd>
         </dl>
@@ -109,22 +205,111 @@
         <dl>
           <dt><b>checkbox</b></dt>
           <dd>
-            <div class="chk-wrap inline">
-              <span>
-                <input type="checkbox" name="" id="chk1" />
-                <label for="chk1"><em>unchecked</em></label>
-              </span>
-
-              <span>
-                <input type="checkbox" name="" id="chk2" checked />
-                <label for="chk2"><em>checked</em></label>
-              </span>
-            </div>
+            <ul>
+              <li>
+                <strong>only checkbox</strong>
+                <div class="chk-wrap">
+                  <!-- checked -->
+                  <span>
+                    <input type="checkbox" name="" id="chk01" checked />
+                    <label for="chk01"><em class="hidden-txt">checked</em></label>
+                  </span>
+                  <!-- unchecked -->
+                  <span>
+                    <input type="checkbox" name="" id="chk02" />
+                    <label for="chk02"><em class="hidden-txt">unchecked</em></label>
+                  </span>
+                </div>
+              </li>
+              <li>
+                <strong>checkbox + text</strong>
+                <div class="chk-wrap">
+                  <!-- checked -->
+                  <span>
+                    <input type="checkbox" name="" id="chk03" checked />
+                    <label for="chk03"><em>checked</em></label>
+                  </span>
+                  <!-- unchecked -->
+                  <span>
+                    <input type="checkbox" name="" id="chk04" />
+                    <label for="chk04"><em>unchecked</em></label>
+                  </span>
+                </div>
+              </li>
+              <li>
+                <strong>checkbox button type</strong>
+                <div class="chk-wrap type-02 grid-wrap col-4">
+                  <!-- checked -->
+                  <span>
+                    <input type="checkbox" name="" id="chk05" checked />
+                    <label for="chk05"><b>checked</b></label>
+                  </span>
+                  <!-- unchecked -->
+                  <span>
+                    <input type="checkbox" name="" id="chk06" />
+                    <label for="chk06"><b>unchecked</b></label>
+                  </span>
+                </div>
+              </li>
+              <li>
+                <strong>checkbox toggle switch type</strong>
+                <div class="toggle-switch-wrap">
+                  <!-- checked -->
+                  <span>
+                    <input type="checkbox" name="" id="sw_chk01" checked />
+                    <label for="sw_chk01"><em class="hidden-txt">checked</em></label>
+                  </span>
+                  <!-- unchecked -->
+                  <span>
+                    <input type="checkbox" name="" id="sw_chk02" />
+                    <label for="sw_chk02"><em class="hidden-txt">unchecked</em></label>
+                  </span>
+                </div>
+              </li>
+            </ul>
           </dd>
         </dl>
 
         <dl>
-          <dt><b>selectbox</b></dt>
+          <dt><b>radio</b></dt>
+          <dd>
+            <ul>
+              <li>
+                <strong>only radio</strong>
+                <div class="radio-wrap">
+                  <!-- checked -->
+                  <span>
+                    <input type="radio" name="radio_group" id="r_chk01" checked />
+                    <label for="r_chk01"><em class="hidden-txt">checked</em></label>
+                  </span>
+                  <!-- unchecked -->
+                  <span>
+                    <input type="radio" name="radio_group" id="r_chk02" />
+                    <label for="r_chk02"><em class="hidden-txt">unchecked</em></label>
+                  </span>
+                </div>
+              </li>
+              <li>
+                <strong>radio + text</strong>
+                <div class="radio-wrap">
+                  <!-- checked -->
+                  <span>
+                    <input type="radio" name="radio_group_02" id="r_chk03" checked />
+                    <label for="r_chk03"><em>checked</em></label>
+                  </span>
+                  <!-- unchecked -->
+                  <span>
+                    <input type="radio" name="radio_group_02" id="r_chk04" />
+                    <label for="r_chk04"><em>unchecked</em></label>
+                  </span>
+                </div>
+              </li>
+            </ul>
+          </dd>
+        </dl>
+
+        <dl>
+          <dt><b>select</b></dt>
           <dd>
             <div class="select-wrap">
               <label for="s"><em class="hidden-txt">선택</em></label>
@@ -140,24 +325,159 @@
         <dl>
           <dt><b>textbox</b></dt>
           <dd>
-            <div class="text-wrap">
-              <input type="text" name="" id="" placeholder="소속관서" />
-            </div>
-          </dd>
-          <dd>
-            <div class="text-wrap">
-              <textarea name="" id="" cols="30" rows="10" placeholder="검색목적은 30자 이상 150자 이내로 입력 해 주세요."></textarea>
-            </div>
-          </dd>
-        </dl>
-
-        <dl>
-          <dt><b>calendar</b></dt>
-          <dd>
-            <div class="date-wrap">
-              <label for="c"><em class="hidden-txt">날짜 선택</em></label>
-              <input type="date" name="" id="c" />
-            </div>
+            <ul>
+              <li>
+                <strong>default</strong>
+                <!-- input:text default -->
+                <dl class="form-list">
+                  <dt>
+                    <label for="default"><em>레이블</em></label>
+                  </dt>
+                  <dd>
+                    <div class="text-wrap">
+                      <input type="text" name="" id="default" placeholder="placeholder" />
+                      <button type="button" class="button-reset">
+                        <em class="hidden-txt">초기화</em>
+                      </button>
+                    </div>
+                  </dd>
+                </dl>
+              </li>
+              <li>
+                <strong>focus</strong>
+                <!-- input:text focus -->
+                <dl class="form-list">
+                  <dt>
+                    <label for="focus"><em>레이블</em></label>
+                  </dt>
+                  <dd>
+                    <div class="text-wrap">
+                      <input type="text" name="" class="focus-in" id="focus" placeholder="placeholder" value="내용입력" />
+                      <button type="button" class="button-reset">
+                        <em class="hidden-txt">초기화</em>
+                      </button>
+                    </div>
+                  </dd>
+                </dl>
+              </li>
+              <li>
+                <strong>input</strong>
+                <!-- input:text input -->
+                <dl class="form-list">
+                  <dt>
+                    <label for="typing"><em>레이블</em></label>
+                  </dt>
+                  <dd>
+                    <div class="text-wrap">
+                      <input type="text" name="" class="focus-in txt-input" id="typing" placeholder="placeholder" value="내용입력 중" />
+                      <button type="button" class="button-reset"><em class="hidden-txt">초기화</em></button>
+                    </div>
+                  </dd>
+                </dl>
+              </li>
+              <li>
+                <strong>error</strong>
+                <!-- input:text error -->
+                <dl class="form-list">
+                  <dt>
+                    <label for="error"><em>레이블</em></label>
+                  </dt>
+                  <dd>
+                    <div class="text-wrap">
+                      <input type="text" name="" class="error" id="error" placeholder="placeholder" value="내용 입력" />
+                      <button type="button" class="button-reset">
+                        <em class="hidden-txt">초기화</em>
+                      </button>
+                    </div>
+                    <p class="txt-error"><em>오류 메시지 텍스트</em></p>
+                  </dd>
+                </dl>
+              </li>
+              <li>
+                <strong>disabled</strong>
+                <!-- input:text disabled -->
+                <dl class="form-list">
+                  <dt>
+                    <label for="disabled"><em>레이블</em></label>
+                  </dt>
+                  <dd>
+                    <div class="text-wrap">
+                      <input type="text" name="" id="disabled" placeholder="placeholder" value="내용 입력" disabled />
+                      <button type="button" class="button-reset">
+                        <em class="hidden-txt">초기화</em>
+                      </button>
+                    </div>
+                  </dd>
+                </dl>
+              </li>
+              <li>
+                <strong>calendar</strong>
+                <!-- input:text calendar -->
+                <dl class="form-list">
+                  <dt>레이블</dt>
+                  <dd>
+                    <div class="text-wrap calendar">
+                      <label for="date"><em class="hidden-txt">날짜 입력</em></label>
+                      <input type="text" id="date" autocomplete="off" inputmode="none" readonly />
+                    </div>
+                  </dd>
+                </dl>
+              </li>
+              <li>
+                <strong>half</strong>
+                <!-- input:text half textbox -->
+                <dl class="form-list">
+                  <dt>레이블</dt>
+                  <dd class="flex-wrap edge">
+                    <div class="text-wrap both">
+                      <label for="startNumber"><em class="hidden-txt">사건번호 시작</em></label>
+                      <input type="text" id="startNumber" autocomplete="off" />
+                      <button type="button" class="button-reset"><em class="hidden-txt">초기화</em></button>
+                    </div>
+                    <div class="text-wrap both">
+                      <label for="endNumber"><em class="hidden-txt">사건번호 끝</em></label>
+                      <input type="text" id="endNumber" autocomplete="off" />
+                      <button type="button" class="button-reset"><em class="hidden-txt">초기화</em></button>
+                    </div>
+                  </dd>
+                </dl>
+              </li>
+              <li>
+                <strong>half calendar</strong>
+                <!-- input:text half calendar -->
+                <dl class="form-list">
+                  <dt>레이블</dt>
+                  <dd class="flex-wrap edge">
+                    <div class="text-wrap calendar both">
+                      <label for="startDate"><em class="hidden-txt">시작 날짜</em></label>
+                      <input type="text" id="startDate" autocomplete="off" inputmode="none" readonly />
+                    </div>
+                    <div class="text-wrap calendar both">
+                      <label for="endDate"><em class="hidden-txt">끝 날짜</em></label>
+                      <input type="text" id="endDate" autocomplete="off" inputmode="none" readonly />
+                    </div>
+                  </dd>
+                </dl>
+              </li>
+              <li>
+                <strong>textarea</strong>
+                <!-- textarea -->
+                <dl class="form-list">
+                  <dt>
+                    <label for="contents"><em>내용</em></label>
+                  </dt>
+                  <dd>
+                    <div class="text-wrap">
+                      <textarea name="" id="contents" cols="30" rows="10" maxlength="150" placeholder="검색목적은 30자 이상 150자 이내로 입력 해 주세요."></textarea>
+                      <div class="flex-wrap edge info">
+                        <span>30자 이상 150자 이내로 입력해주세요</span>
+                        <span class="txt-length"><em class="txt-count">0</em> &#47; 150Byte</span>
+                      </div>
+                    </div>
+                  </dd>
+                </dl>
+              </li>
+            </ul>
           </dd>
         </dl>
       </article>

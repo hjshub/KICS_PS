@@ -52,10 +52,14 @@
   }
 
   .modal-body {
-    padding-top: 60px;
+    padding-top: 50px;
     overflow: hidden;
     overflow-y: auto;
     max-height: 100%;
+
+    > section:first-of-type {
+      margin-top: 60px;
+    }
 
     .modal-title {
       font-size: 0;

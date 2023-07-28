@@ -5,16 +5,23 @@
   </head>
   <body>
     <div id="layout" class="main">
-      <!-- #gnb -->
-      @@include('./include/gnb.html', {path:'.' })
-      <!-- // #gnb -->
+      <!-- gnb -->
+      @@include('./include/gnb.html')
+      <!-- // gnb -->
+
+      <!-- page navigation -->
+      @@include('./include/page_nav.html', {path:'.' })
+      <!-- // page navigation -->
 
       <!-- #contents -->
       <main>
         <section class="page-top">
           <div class="inner">
             <div class="flex-wrap">
-              <div class="flex-wrap center symbol"><em class="hidden-txt">검찰</em></div>
+              <div class="flex-wrap center symbol">
+                <i class="icon icon-symbol"></i>
+                <em class="hidden-txt">검찰</em>
+              </div>
               <div class="flex-wrap column start edge info">
                 <em>검찰 형사사법정보시스템 입니다.</em>
                 <span class="log"> 이용을 위해 <b class="txt-underline txt-color primary">로그인</b>을 해주세요! </span>
@@ -24,7 +31,7 @@
         </section>
         <section>
           <div class="grid-wrap main-grid-area inner">
-            <div class="major-work-01">
+            <div class="major-work">
               <a href="" class="flex-wrap edge">
                 <dl>
                   <dt><strong>모바일 공판정</strong></dt>
@@ -48,13 +55,16 @@
             </div>
             <div class="major-work-03">
               <div class="grid-wrap col-3">
-                <button class="flex-wrap column edge" type="button" onclick="location.href=''">
+                <button class="flex-wrap column edge round" type="button" onclick="location.href=''">
+                  <i class="icon icon-exec"></i>
                   <em>자유형집행</em>
                 </button>
                 <button class="flex-wrap column edge" type="button" onclick="location.href=''">
+                  <i class="icon icon-exec2"></i>
                   <em>재산형집행</em>
                 </button>
                 <button class="flex-wrap column edge" type="button" onclick="location.href=''">
+                  <i class="icon icon-detail-view"></i>
                   <em>정보조회</em>
                 </button>
               </div>
@@ -70,19 +80,19 @@
                 <ul>
                   <li class="flex-wrap">
                     <span class="caption"><em>공판지원</em></span>
-                    <span class="txtInfo">
+                    <span class="txt-info">
                       <a href="">공판카드 작성시 주의사항 및 작성 방법 공판카드 작성시 주의사항 및 작성 방법</a>
                     </span>
                   </li>
                   <li class="flex-wrap">
                     <span class="caption"><em>전자영장</em></span>
-                    <span class="txtInfo">
+                    <span class="txt-info">
                       <a href="">사본 발급시 전자서명과 발급 방법입니다.</a>
                     </span>
                   </li>
                   <li class="flex-wrap">
                     <span class="caption"><em>압수지원</em></span>
-                    <span class="txtInfo">
+                    <span class="txt-info">
                       <a href="">폐기 대상 압수물 선별 및 선택 방법입니다.</a>
                     </span>
                   </li>
@@ -93,10 +103,6 @@
         </section>
       </main>
       <!-- // #contents -->
-
-      <!-- #footer -->
-      @@include('./include/footer.html')
-      <!-- // #footer -->
     </div>
   </body>
 </html>

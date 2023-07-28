@@ -15,8 +15,8 @@
 
 
   <title>통합사건검색 | 킥스</title>
-  <script defer src="../assets/js/main.js"></script>
-  <script defer src="../assets/js/vendor.js"></script>
+  <script defer src="../assets/js/lib.js"></script>
+  <script defer src="../assets/js/common.js"></script>
   <link rel="stylesheet" href="../assets/css/ui.css" />
   <link rel="stylesheet" href="../assets/css/style.css" />
 
@@ -25,12 +25,13 @@
 
 <body>
   <div id="layout" class="search">
-    <!-- #gnb -->
-    <header id="gnb">
+    <!-- page navigation -->
+    <header class="page-nav">
       <div class="inner">
         <div class="flex-wrap edge h-wrap">
           <span>
-            <a href="javascript:void(0);" onclick="history.back()" class="icon icon-back">
+            <a href="javascript:void(0);" onclick="history.back()">
+              <i class="icon icon-back"></i>
               <em class="hidden-txt">뒤로가기</em>
             </a>
           </span>
@@ -38,14 +39,14 @@
         </div>
       </div>
     </header>
-    <!-- // #gnb -->
+    <!-- // page navigation -->
 
     <!-- #contents -->
     <main>
       <section>
         <div class="inner">
           <div class="form-wrap">
-            <dl>
+            <dl class="form-list">
               <dt>진행상태</dt>
               <dd>
                 <div class="select-wrap emphasis">
@@ -58,18 +59,16 @@
                 </div>
               </dd>
             </dl>
-            <dl>
+            <dl class="form-list">
               <dt>조회기간</dt>
-              <dd>
-                <div class="text-wrap flex-wrap emphasis calendar both">
-                  <span>
-                    <label for="startDate"><em class="hidden-txt">조회 시작 날짜</em></label>
-                    <input type="text" id="startDate" autocomplete="off" inputmode="none" />
-                  </span>
-                  <span>
-                    <label for="endDate"><em class="hidden-txt">조회 끝 날짜</em></label>
-                    <input type="text" id="endDate" autocomplete="off" inputmode="none" />
-                  </span>
+              <dd class="flex-wrap edge">
+                <div class="text-wrap calendar both">
+                  <label for="startDate"><em class="hidden-txt">조회 시작 날짜</em></label>
+                  <input type="text" id="startDate" autocomplete="off" inputmode="none" />
+                </div>
+                <div class="text-wrap calendar both">
+                  <label for="endDate"><em class="hidden-txt">조회 끝 날짜</em></label>
+                  <input type="text" id="endDate" autocomplete="off" inputmode="none" />
                 </div>
               </dd>
             </dl>
@@ -200,7 +199,7 @@
 
     <!-- 모달 -->
     <!-- 검색요청 상세-->
-    <div class="modal full animate fast" id="modal-searchApplyDetail">
+    <div class="modal full animate fast" id="modal_searchApplyDetail">
       <header class="modal-header">
         <div class="inner">
           <div class="flex-wrap end h-wrap">
@@ -227,48 +226,47 @@
               </div>
             </div>
             <div class="form-wrap">
-              <dl>
+              <dl class="form-list">
                 <dt>요청자</dt>
-                <dd>
-                  <div class="text-wrap emphasis">
-                    <label for="a1"><em class="hidden-txt">소속부서</em></label>
-                    <input class="disabled" type="text" id="a1" value="서울중앙지검" autocomplete="off" />
+                <dd class="grid-wrap">
+                  <div class="text-wrap">
+                    <input type="text" id="a1" title="소속부서" value="서울중앙지검" autocomplete="off" readonly />
                   </div>
-                  <div class="text-wrap emphasis">
-                    <label for="a2"><em class="hidden-txt">이름</em></label>
-                    <input class="disabled" type="text" id="a2" value="홍길동" autocomplete="off" />
+                  <div class="text-wrap">
+                    <input type="text" id="a2" title="이름" value="홍길동" autocomplete="off" readonly />
                   </div>
                 </dd>
               </dl>
-              <dl>
+              <dl class="form-list">
                 <dt>승인자</dt>
-                <dd>
+                <dd class="grid-wrap">
                   <div class="text-wrap">
-                    <label for="b1"><em class="hidden-txt">소속관서</em></label>
-                    <input type="text" id="b1" autocomplete="off" placeholder="소속 관서" />
+                    <input type="text" id="b1" autocomplete="off" title="소속 관서" placeholder="소속 관서" />
+                    <button type="button" class="button-reset"><em class="hidden-txt">초기화</em></button>
                   </div>
                   <div class="text-wrap">
-                    <label for="b2"><em class="hidden-txt">이름</em></label>
-                    <input type="text" id="b2" autocomplete="off" placeholder="이름" />
+                    <input type="text" id="b2" autocomplete="off" title="이름" placeholder="이름" />
+                    <button type="button" class="button-reset"><em class="hidden-txt">초기화</em></button>
                   </div>
                   <div class="btn-wrap">
                     <button class="btn-search bg-navy"><em>변경</em></button>
                   </div>
                 </dd>
               </dl>
-              <dl>
+              <dl class="form-list">
                 <dt>검색목적</dt>
                 <dd>
-                  <div class="text-wrap emphasis">
+                  <div class="text-wrap">
                     <textarea name="" id="" cols="30" rows="10" placeholder="검색목적은 30자 이상 150자 이내로 입력해 주세요." title="검색목적"></textarea>
                   </div>
                 </dd>
               </dl>
-              <dl>
-                <dt>관할관서</dt>
+              <dl class="form-list">
+                <dt>
+                  <label for="c"><em>관할 관서</em></label>
+                </dt>
                 <dd>
                   <div class="text-wrap">
-                    <label for="c"><em class="hidden-txt">소속관서</em></label>
                     <input type="text" id="c" autocomplete="off" placeholder="소속 관서" />
                   </div>
                   <div class="btn-wrap">
@@ -276,12 +274,11 @@
                   </div>
                 </dd>
               </dl>
-              <dl>
+              <dl class="form-list">
                 <dt>부서&#47;담당자</dt>
                 <dd>
                   <div class="text-wrap">
-                    <label for="d1"><em class="hidden-txt">소속팀</em></label>
-                    <input type="text" id="d1" autocomplete="off" placeholder="소속팀" />
+                    <input type="text" id="d1" autocomplete="off" title="소속팀" placeholder="소속팀" />
                   </div>
                   <div class="btn-wrap">
                     <button class="btn-search bg-navy"><em>검색</em></button>
@@ -289,75 +286,70 @@
                 </dd>
                 <dd>
                   <div class="text-wrap">
-                    <label for="d2"><em class="hidden-txt">이름</em></label>
-                    <input type="text" id="d2" autocomplete="off" placeholder="이름" />
+                    <input type="text" id="d2" autocomplete="off" title="이름" placeholder="이름" />
                   </div>
                   <div class="btn-wrap">
                     <button class="btn-search bg-navy"><em>검색</em></button>
                   </div>
                 </dd>
               </dl>
-              <dl>
+              <dl class="form-list">
                 <dt>접수일</dt>
-                <dd>
-                  <div class="text-wrap flex-wrap calendar both">
-                    <span>
-                      <label for="startDate_1"><em class="hidden-txt">접수 시작 날짜</em></label>
-                      <input type="text" id="startDate_1" autocomplete="off" inputmode="none" />
-                    </span>
-                    <span>
-                      <label for="endDate_1"><em class="hidden-txt">접수 끝 날짜</em></label>
-                      <input type="text" id="endDate_1" autocomplete="off" inputmode="none" />
-                    </span>
+                <dd class="flex-wrap edge">
+                  <div class="text-wrap calendar both">
+                    <label for="startDate_1"><em class="hidden-txt">접수 시작 날짜</em></label>
+                    <input type="text" id="startDate_1" autocomplete="off" inputmode="none" />
+                  </div>
+                  <div class="text-wrap calendar both">
+                    <label for="endDate_1"><em class="hidden-txt">접수 끝 날짜</em></label>
+                    <input type="text" id="endDate_1" autocomplete="off" inputmode="none" />
                   </div>
                 </dd>
               </dl>
-              <dl>
+              <dl class="form-list">
                 <dt>접수번호</dt>
-                <dd>
-                  <div class="text-wrap flex-wrap both">
-                    <span>
-                      <label for="startNumber_1"><em class="hidden-txt">접수번호 시작</em></label>
-                      <input type="text" id="startNumber_1" autocomplete="off" />
-                    </span>
-                    <span>
-                      <label for="endNumber_1"><em class="hidden-txt">접수번호 끝</em></label>
-                      <input type="text" id="endNumber_1" autocomplete="off" />
-                    </span>
+                <dd class="flex-wrap edge">
+                  <div class="text-wrap both">
+                    <label for="startNumber_1"><em class="hidden-txt">접수번호 시작</em></label>
+                    <input type="text" id="startNumber_1" autocomplete="off" />
+                    <button type="button" class="button-reset"><em class="hidden-txt">초기화</em></button>
+                  </div>
+                  <div class="text-wrap both">
+                    <label for="endNumber_1"><em class="hidden-txt">접수번호 끝</em></label>
+                    <input type="text" id="endNumber_1" autocomplete="off" />
+                    <button type="button" class="button-reset"><em class="hidden-txt">초기화</em></button>
                   </div>
                 </dd>
               </dl>
-              <dl>
+              <dl class="form-list">
                 <dt>입건일</dt>
-                <dd>
-                  <div class="text-wrap flex-wrap calendar both">
-                    <span>
-                      <label for="startDate_2"><em class="hidden-txt">입건 시작 날짜</em></label>
-                      <input type="text" id="startDate_2" autocomplete="off" inputmode="none" />
-                    </span>
-                    <span>
-                      <label for="endDate_2"><em class="hidden-txt">입건 끝 날짜</em></label>
-                      <input type="text" id="endDate_2" autocomplete="off" inputmode="none" />
-                    </span>
+                <dd class="flex-wrap edge">
+                  <div class="text-wrap calendar both">
+                    <label for="startDate_2"><em class="hidden-txt">입건 시작 날짜</em></label>
+                    <input type="text" id="startDate_2" autocomplete="off" inputmode="none" />
+                  </div>
+                  <div class="text-wrap calendar both">
+                    <label for="endDate_2"><em class="hidden-txt">입건 끝 날짜</em></label>
+                    <input type="text" id="endDate_2" autocomplete="off" inputmode="none" />
                   </div>
                 </dd>
               </dl>
-              <dl>
+              <dl class="form-list">
                 <dt>사건번호</dt>
-                <dd>
-                  <div class="text-wrap flex-wrap both">
-                    <span>
-                      <label for="startNumber_2"><em class="hidden-txt">사건번호 시작</em></label>
-                      <input type="text" id="startNumber_2" autocomplete="off" />
-                    </span>
-                    <span>
-                      <label for="endNumber_2"><em class="hidden-txt">사건번호 끝</em></label>
-                      <input type="text" id="endNumber_2" autocomplete="off" />
-                    </span>
+                <dd class="flex-wrap edge">
+                  <div class="text-wrap both">
+                    <label for="startNumber_2"><em class="hidden-txt">사건번호 시작</em></label>
+                    <input type="text" id="startNumber_2" autocomplete="off" />
+                    <button type="button" class="button-reset"><em class="hidden-txt">초기화</em></button>
+                  </div>
+                  <div class="text-wrap both">
+                    <label for="endNumber_2"><em class="hidden-txt">사건번호 끝</em></label>
+                    <input type="text" id="endNumber_2" autocomplete="off" />
+                    <button type="button" class="button-reset"><em class="hidden-txt">초기화</em></button>
                   </div>
                 </dd>
               </dl>
-              <dl>
+              <dl class="form-list">
                 <dt>접수단서</dt>
                 <dd>
                   <div class="select-wrap">
@@ -368,7 +360,7 @@
                   </div>
                 </dd>
               </dl>
-              <dl>
+              <dl class="form-list">
                 <dt>접수형태</dt>
                 <dd>
                   <div class="select-wrap">
@@ -379,7 +371,7 @@
                   </div>
                 </dd>
               </dl>
-              <dl>
+              <dl class="form-list">
                 <dt>진행상태</dt>
                 <dd>
                   <div class="select-wrap">
@@ -390,17 +382,19 @@
                   </div>
                 </dd>
               </dl>
-              <dl>
-                <dt>죄명</dt>
+              <dl class="form-list">
+                <dt>
+                  <label for="h"><em>죄명검색</em></label>
+                </dt>
                 <dd>
                   <div class="text-wrap">
-                    <label for="h"><em class="hidden-txt">죄명검색</em></label>
                     <input type="text" id="h" autocomplete="off" placeholder="죄명검색" />
+                    <button type="button" class="button-reset"><em class="hidden-txt">초기화</em></button>
                   </div>
                   <div class="btn-wrap">
                     <button class="btn-search bg-navy"><em>검색</em></button>
                   </div>
-                  <div class="chk-wrap type2 grid-wrap col-2">
+                  <div class="chk-wrap type-02 grid-wrap col-2">
                     <span>
                       <input type="checkbox" name="" id="chk3" />
                       <label for="chk3"><b>원표작성정보</b></label>
@@ -445,7 +439,7 @@
     </div>
 
     <!-- 검색결과 상세-->
-    <div class="modal full animate fast" id="modal-searchResultDetail">
+    <div class="modal full animate fast" id="modal_searchResultDetail">
       <header class="modal-header">
         <div class="inner">
           <div class="flex-wrap end h-wrap">
@@ -461,62 +455,60 @@
         </div>
       </header>
       <div class="modal-body">
-        <section>
-          <div class="searchFilter">
-            <div class="inner current">
-              <a href="javascript:void(0);" class="button--arrow button-active-dropDown">
-                <b>검색요청 상세 조건</b>
-              </a>
-              <div class="dropDown table">
-                <dl>
-                  <dt>관할관서</dt>
-                  <dd>서울중앙지검</dd>
-                </dl>
-                <dl>
-                  <dt>부서&#47;담당자</dt>
-                  <dd>공판제4부 &#47; 홍길동</dd>
-                </dl>
-                <dl>
-                  <dt>접수일</dt>
-                  <dd>2022.01.01 ~ 2022.05.20</dd>
-                </dl>
-                <dl>
-                  <dt>접수번호</dt>
-                  <dd>123456789 - 123456789</dd>
-                </dl>
-                <dl>
-                  <dt>입건일</dt>
-                  <dd>2022.01.01 ~ 2022.05.20</dd>
-                </dl>
-                <dl>
-                  <dt>사건번호</dt>
-                  <dd>123456789 - 123456789</dd>
-                </dl>
-                <dl>
-                  <dt>접수단서</dt>
-                  <dd>-</dd>
-                </dl>
-                <dl>
-                  <dt>접수형태</dt>
-                  <dd>-</dd>
-                </dl>
-                <dl>
-                  <dt>진행상태</dt>
-                  <dd>-</dd>
-                </dl>
-                <dl>
-                  <dt>죄명</dt>
-                  <dd>절도, 사기</dd>
-                </dl>
-                <dl>
-                  <dt>원표작성정보</dt>
-                  <dd>미포함</dd>
-                </dl>
-                <dl>
-                  <dt>단서검색</dt>
-                  <dd>포함</dd>
-                </dl>
-              </div>
+        <section class="search-filter">
+          <div class="inner current">
+            <a href="javascript:void(0);" class="button--arrow button-active-dropDown">
+              <b>검색요청 상세 조건</b>
+            </a>
+            <div class="dropDown table">
+              <dl>
+                <dt>관할관서</dt>
+                <dd>서울중앙지검</dd>
+              </dl>
+              <dl>
+                <dt>부서&#47;담당자</dt>
+                <dd>공판제4부 &#47; 홍길동</dd>
+              </dl>
+              <dl>
+                <dt>접수일</dt>
+                <dd>2022.01.01 ~ 2022.05.20</dd>
+              </dl>
+              <dl>
+                <dt>접수번호</dt>
+                <dd>123456789 - 123456789</dd>
+              </dl>
+              <dl>
+                <dt>입건일</dt>
+                <dd>2022.01.01 ~ 2022.05.20</dd>
+              </dl>
+              <dl>
+                <dt>사건번호</dt>
+                <dd>123456789 - 123456789</dd>
+              </dl>
+              <dl>
+                <dt>접수단서</dt>
+                <dd>-</dd>
+              </dl>
+              <dl>
+                <dt>접수형태</dt>
+                <dd>-</dd>
+              </dl>
+              <dl>
+                <dt>진행상태</dt>
+                <dd>-</dd>
+              </dl>
+              <dl>
+                <dt>죄명</dt>
+                <dd>절도, 사기</dd>
+              </dl>
+              <dl>
+                <dt>원표작성정보</dt>
+                <dd>미포함</dd>
+              </dl>
+              <dl>
+                <dt>단서검색</dt>
+                <dd>포함</dd>
+              </dl>
             </div>
           </div>
         </section>
