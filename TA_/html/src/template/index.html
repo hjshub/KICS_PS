@@ -5,16 +5,23 @@
   </head>
   <body>
     <div id="layout" class="main">
-      <!-- #gnb -->
-      @@include('./include/gnb.html', {path:'.' })
-      <!-- // #gnb -->
+      <!-- gnb -->
+      @@include('./include/gnb.html')
+      <!-- // gnb -->
+
+      <!-- pagenavigation -->
+      @@include('./include/page_nav.html', {path:'.' })
+      <!-- // pagenavigation -->
 
       <!-- #contents -->
       <main>
         <section class="page-top">
           <div class="inner">
             <div class="flex-wrap container">
-              <div class="flex-wrap center symbol"><em class="hidden-txt">검찰</em></div>
+              <div class="flex-wrap center symbol">
+                <i class="icon icon-symbol"></i>
+                <em class="hidden-txt">검찰</em>
+              </div>
               <div class="flex-wrap column start edge info">
                 <em>검찰 형사사법정보시스템 입니다.</em>
                 <span class="log"> 이용을 위해 <b class="txt-underline txt-color primary">로그인</b>을 해주세요! </span>
@@ -32,7 +39,7 @@
                 </dl>
               </a>
             </div>
-            <div class="major-work2 flex-wrap column edge">
+            <div class="major-work-02 flex-wrap column edge">
               <button class="flex-wrap edge" type="button">
                 <span class="flex-wrap">
                   <b>전자영장</b>
@@ -46,16 +53,19 @@
                 </span>
               </button>
             </div>
-            <div class="major-work3">
+            <div class="major-work-03">
               <div class="grid-wrap col-3 gap20">
                 <button class="flex-wrap column edge" type="button" onclick="location.href=''">
                   <em>자유형 집행</em>
+                  <i class="icon icon-exec"></i>
                 </button>
                 <button class="flex-wrap column edge" type="button" onclick="location.href=''">
                   <em>재산형집행</em>
+                  <i class="icon icon-exec2"></i>
                 </button>
                 <button class="flex-wrap column edge" type="button" onclick="location.href=''">
                   <em>정보조회</em>
+                  <i class="icon icon-detail-view"></i>
                 </button>
               </div>
             </div>
@@ -99,10 +109,6 @@
         </section>
       </main>
       <!-- // #contents -->
-
-      <!-- #footer -->
-      @@include('./include/footer.html')
-      <!-- // #footer -->
     </div>
   </body>
 </html>

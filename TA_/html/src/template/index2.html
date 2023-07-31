@@ -5,16 +5,23 @@
   </head>
   <body>
     <div id="layout" class="main sign-in">
-      <!-- #gnb -->
-      @@include('./include/gnb.html', {path:'.' })
-      <!-- // #gnb -->
+      <!-- gnb -->
+      @@include('./include/gnb.html')
+      <!-- // gnb -->
+
+      <!-- pagenavigation -->
+      @@include('./include/page_nav.html', {path:'.' })
+      <!-- // pagenavigation -->
 
       <!-- #contents -->
       <main>
         <section class="page-top">
           <div class="inner">
             <div class="flex-wrap container">
-              <div class="flex-wrap center symbol"><em class="hidden-txt">검찰</em></div>
+              <div class="flex-wrap center symbol">
+                <i class="icon icon-symbol"></i>
+                <em class="hidden-txt">검찰</em>
+              </div>
               <div class="flex-wrap info">
                 <span class="flex-wrap"><b>홍길동 검사님</b>&nbsp;&nbsp;안녕하세요!</span>
                 <span class="flex-wrap log">
@@ -58,8 +65,14 @@
                 </a>
               </div>
               <div class="btn-wrap grid-wrap edge col-2">
-                <button type="button" class="flex-wrap center"><em>인증센터</em></button>
-                <button type="button" class="flex-wrap center"><em>매뉴얼</em></button>
+                <button type="button" class="flex-wrap center">
+                  <i class="icon icon-cert"></i>
+                  <em>인증센터</em>
+                </button>
+                <button type="button" class="flex-wrap center">
+                  <i class="icon icon-manual"></i>
+                  <em>매뉴얼</em>
+                </button>
               </div>
             </div>
             <div class="mobile-trial">
@@ -121,8 +134,12 @@
                         </span>
                       </div>
                     </div>
-                    <div class="swiper-button-prev"><em class="icon icon-arrow-left"></em></div>
-                    <div class="swiper-button-next"><em class="icon icon-arrow-right"></em></div>
+                    <div class="swiper-button-prev">
+                      <i class="icon icon-arrow-left"><em class="hidden-txt">이전</em></i>
+                    </div>
+                    <div class="swiper-button-next">
+                      <i class="icon icon-arrow-right"><em class="hidden-txt">다음</em></i>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -167,10 +184,6 @@
         </section>
       </main>
       <!-- // #contents -->
-
-      <!-- #footer -->
-      @@include('./include/footer.html')
-      <!-- // #footer -->
     </div>
   </body>
 </html>

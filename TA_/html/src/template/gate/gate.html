@@ -5,9 +5,13 @@
   </head>
   <body>
     <div id="layout" class="gate">
-      <!-- #gnb -->
-      @@include('../include/gnb2.html', { menu: false, page_title:"정보조회", path:'..' })
-      <!-- // #gnb -->
+      <!-- gnb -->
+      @@include('../include/gnb.html')
+      <!-- // gnb -->
+
+      <!-- pagenavigation -->
+      @@include('../include/page_nav_02.html', { menu: false, page_title:"정보조회", path:'..'})
+      <!-- // pagenavigation -->
 
       <!-- #contents -->
       <main>
@@ -91,10 +95,6 @@
         </section>
       </main>
       <!-- // #contents -->
-
-      <!-- #footer -->
-      @@include('../include/footer.html')
-      <!-- // #footer -->
     </div>
   </body>
 </html>

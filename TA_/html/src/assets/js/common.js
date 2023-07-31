@@ -3,15 +3,6 @@
 // 공통 스크립트
 //-----------------------------------------------------------------
 //
-import $ from 'jquery';
-import gsap from 'gsap';
-import Swiper, { Navigation, Pagination, Autoplay } from 'swiper';
-import gb from './global.js';
-import { setCookie, getCookie } from './cookie.js';
-
-// swiper style
-import 'swiper/swiper.min.css';
-
 window.addEventListener('load', () => {
   gb.CommonFunction.init();
 });
@@ -185,7 +176,7 @@ gb.CommonFunction = (function () {
       }
 
       gb._listSwiper[idx] = new Swiper(el, {
-        modules: [Autoplay, Navigation, Pagination],
+        //modules: [Autoplay, Navigation, Pagination],
         // autoplay: {
         //   delay: 4000,
         // },
@@ -199,10 +190,56 @@ gb.CommonFunction = (function () {
       });
     });
   };
+  const textInput = () => {
+    const textBox = document.querySelectorAll('.text-wrap input');
+    const btnReset = document.querySelectorAll('.button-reset');
+
+    textBox.forEach(function (elem) {
+      elem.oninput = function (event) {
+        if (event.target.value.length > 0) {
+          this.classList.add('txt-input');
+        } else {
+          this.classList.remove('txt-input');
+        }
+      };
+
+      elem.onfocus = function () {
+        if (this.value.length > 0) {
+          this.classList.add('txt-input');
+        }
+      };
+
+      // elem.onblur = function () {
+      //   this.classList.remove('txt-input');
+      // };
+    });
+
+    btnReset.forEach(function (elem) {
+      elem.onclick = function () {
+        this.previousElementSibling.value = '';
+        this.previousElementSibling.classList.remove('txt-input');
+        this.previousElementSibling.focus();
+      };
+    });
+  };
+  const textCount = () => {
+    const textArea = document.querySelectorAll('.text-wrap textarea');
+
+    textArea.forEach(function (elem) {
+      elem.oninput = function (event) {
+        const txtInfo = this.nextElementSibling;
+        const txtCount = event.target.value.length;
+
+        txtInfo.children[1].firstElementChild.innerHTML = txtCount;
+      };
+    });
+  };
   const init = () => {
     modalOn();
     setGnb();
     checkAll();
+    textInput();
+    textCount();
     dropDown();
     listSwiper();
   };

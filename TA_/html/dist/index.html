@@ -15,8 +15,8 @@
 
 
   <title>킥스</title>
-  <script defer src="assets/js/main.js"></script>
-  <script defer src="assets/js/vendor.js"></script>
+  <script defer src="assets/js/lib.js"></script>
+  <script defer src="assets/js/common.js"></script>
   <link rel="stylesheet" href="assets/css/ui.css" />
   <link rel="stylesheet" href="assets/css/style.css" />
 
@@ -25,12 +25,45 @@
 
 <body>
   <div id="layout" class="main">
-    <!-- #gnb -->
-    <header id="gnb">
+    <!-- gnb -->
+    <nav class="gnb">
+      <div class="inner">
+        <ul class="grid-wrap col-4 gap-none">
+          <li class="flex-wrap center active">
+            <a href="../index.html">
+              <span class="flex-wrap"><em>메인화면</em></span>
+            </a>
+          </li>
+          <li class="flex-wrap center">
+            <a href="">
+              <span class="flex-wrap"><em>마이페이지</em></span>
+            </a>
+          </li>
+          <li class="flex-wrap center">
+            <a href="">
+              <span class="flex-wrap"><em>즐겨찾기</em></span>
+            </a>
+          </li>
+          <li class="flex-wrap center">
+            <a href="">
+              <span class="flex-wrap"><em>환경설정</em></span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- // gnb -->
+
+    <!-- pagenavigation -->
+    <header class="page-nav">
       <div class="inner">
         <div class="flex-wrap edge h-wrap">
           <span>
-            <a href="" class="icon icon-logo"><em class="hidden-txt">검찰</em></a>
+            <a href="">
+              <i class="icon icon-logo"></i>
+              <em class="hidden-txt">검찰</em>
+            </a>
           </span>
           <h1 class="hidden-txt">메인</h1>
           <span class="button--allmenu button-open-allMenu">
@@ -54,7 +87,10 @@
             <aside class="snb">
               <div class="flex-wrap column start edge inner">
                 <div class="flex-wrap column user-info">
-                  <div class="flex-wrap center symbol"><em class="hidden-txt">검찰</em></div>
+                  <div class="flex-wrap center symbol">
+                    <i class="icon icon-symbol"></i>
+                    <em class="hidden-txt">검찰</em>
+                  </div>
                   <div class="align-c">
                     <em>검찰 형사사법정보시스템 입니다.</em>
                     <span class="flex-wrap column log">
@@ -68,16 +104,16 @@
                 </div>
                 <div class="grid-wrap gap30 sideMenu">
                   <span>
-                    <a href="" class="flex-wrap inline"><i class="icon icon-notice"></i><em>공지사항</em></a>
+                    <a href="" class="flex-wrap"><i class="icon icon-notice"></i><em>공지사항</em></a>
                   </span>
                   <span>
-                    <a href="" class="flex-wrap inline"><i class="icon icon-faq"></i><em>자주 묻는 질문</em></a>
+                    <a href="" class="flex-wrap"><i class="icon icon-faq"></i><em>자주 묻는 질문</em></a>
                   </span>
                   <span>
-                    <a href="" class="flex-wrap inline"><i class="icon icon-cert2"></i><em>인증센터</em></a>
+                    <a href="" class="flex-wrap"><i class="icon icon-cert2"></i><em>인증센터</em></a>
                   </span>
                   <span>
-                    <a href="" class="flex-wrap inline"><i class="icon icon-setting-navy"></i><em>환경설정</em></a>
+                    <a href="" class="flex-wrap"><i class="icon icon-setting-navy"></i><em>환경설정</em></a>
                   </span>
                 </div>
               </div>
@@ -87,7 +123,7 @@
                 <li>
                   <div class="container">
                     <h4>모바일 공판정</h4>
-                    <ul class="_depth2">
+                    <ul class="depth2">
                       <li><a href="">1심 사건부</a></li>
                       <li><a href="">2심 사건부</a></li>
                       <li><a href="">3심 사건부</a></li>
@@ -97,7 +133,7 @@
                 <li>
                   <div class="container">
                     <h4>판결문&#47;결정문 조회</h4>
-                    <ul class="_depth2">
+                    <ul class="depth2">
                       <li><a href="">판결문 조회</a></li>
                       <li><a href="">결정문 조회</a></li>
                     </ul>
@@ -106,7 +142,7 @@
                 <li>
                   <div class="container">
                     <h4>전자영장 집행</h4>
-                    <ul class="_depth2">
+                    <ul class="depth2">
                       <li><a href="">압수수색 영장</a></li>
                       <li><a href="">체포구속 영장</a></li>
                       <li><a href="">통신사실확인자료 제공요청 허가서</a></li>
@@ -117,11 +153,11 @@
                 <li>
                   <div class="container">
                     <h4>압수지원</h4>
-                    <ul class="_depth2">
+                    <ul class="depth2">
                       <li><a href="">압수현장 자료</a></li>
                       <li>
                         <a href="">압수물 관리</a>
-                        <ul class="_depth3 dot-list2">
+                        <ul class="depth3 dot-list-02">
                           <li><a href="">압수물 조회</a></li>
                           <li><a href="">압수물 수리</a></li>
                           <li><a href="">압수물 폐기</a></li>
@@ -136,14 +172,14 @@
                     <ul class="_depth2">
                       <li>
                         <a href="">재산형 집행</a>
-                        <ul class="_depth3 dot-list2">
+                        <ul class="depth3 dot-list-02">
                           <li><a href="">벌과금 조회</a></li>
                           <li><a href="">신한은행 가상계좌 조회</a></li>
                         </ul>
                       </li>
                       <li>
                         <a href="">자유형 집행</a>
-                        <ul class="_depth3 dot-list2">
+                        <ul class="depth3 dot-list-02">
                           <li><a href="">집행정보 조회</a></li>
                           <li><a href="">형 집행장</a></li>
                         </ul>
@@ -154,7 +190,7 @@
                 <li>
                   <div class="container">
                     <h4>정보조회</h4>
-                    <ul class="_depth2">
+                    <ul class="depth2">
                       <li><a href="">통합사건검색</a></li>
                       <li><a href="">범죄경력 조회</a></li>
                       <li><a href="">지명수배 정보 조회</a></li>
@@ -172,14 +208,17 @@
       </div>
     </header>
 
-    <!-- // #gnb -->
+    <!-- // pagenavigation -->
 
     <!-- #contents -->
     <main>
       <section class="page-top">
         <div class="inner">
           <div class="flex-wrap container">
-            <div class="flex-wrap center symbol"><em class="hidden-txt">검찰</em></div>
+            <div class="flex-wrap center symbol">
+              <i class="icon icon-symbol"></i>
+              <em class="hidden-txt">검찰</em>
+            </div>
             <div class="flex-wrap column start edge info">
               <em>검찰 형사사법정보시스템 입니다.</em>
               <span class="log"> 이용을 위해 <b class="txt-underline txt-color primary">로그인</b>을 해주세요! </span>
@@ -197,7 +236,7 @@
               </dl>
             </a>
           </div>
-          <div class="major-work2 flex-wrap column edge">
+          <div class="major-work-02 flex-wrap column edge">
             <button class="flex-wrap edge" type="button">
               <span class="flex-wrap">
                 <b>전자영장</b>
@@ -211,16 +250,19 @@
               </span>
             </button>
           </div>
-          <div class="major-work3">
+          <div class="major-work-03">
             <div class="grid-wrap col-3 gap20">
               <button class="flex-wrap column edge" type="button" onclick="location.href=''">
                 <em>자유형 집행</em>
+                <i class="icon icon-exec"></i>
               </button>
               <button class="flex-wrap column edge" type="button" onclick="location.href=''">
                 <em>재산형집행</em>
+                <i class="icon icon-exec2"></i>
               </button>
               <button class="flex-wrap column edge" type="button" onclick="location.href=''">
                 <em>정보조회</em>
+                <i class="icon icon-detail-view"></i>
               </button>
             </div>
           </div>
@@ -264,36 +306,6 @@
       </section>
     </main>
     <!-- // #contents -->
-
-    <!-- #footer -->
-    <footer>
-      <div class="inner">
-        <ul class="grid-wrap col-4 gap-none">
-          <li class="flex-wrap center active">
-            <a href="../index.html">
-              <span class="flex-wrap"><em>메인화면</em></span>
-            </a>
-          </li>
-          <li class="flex-wrap center">
-            <a href="">
-              <span class="flex-wrap"><em>마이페이지</em></span>
-            </a>
-          </li>
-          <li class="flex-wrap center">
-            <a href="">
-              <span class="flex-wrap"><em>즐겨찾기</em></span>
-            </a>
-          </li>
-          <li class="flex-wrap center">
-            <a href="">
-              <span class="flex-wrap"><em>환경설정</em></span>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </footer>
-
-    <!-- // #footer -->
   </div>
 </body>
 

@@ -5,12 +5,13 @@
   </head>
   <body>
     <div id="layout" class="search">
-      <!-- #gnb -->
-      <header id="gnb">
+      <!-- pagenavigation -->
+      <header class="page-nav">
         <div class="inner">
           <div class="flex-wrap edge h-wrap">
             <span>
-              <a href="javascript:void(0);" onclick="history.back()" class="icon icon-back">
+              <a href="javascript:void(0);" onclick="history.back()">
+                <i class="icon icon-back"></i>
                 <em class="hidden-txt">뒤로가기</em>
               </a>
             </span>
@@ -18,17 +19,17 @@
           </div>
         </div>
       </header>
-      <!-- // #gnb -->
+      <!-- // pagenavigation -->
 
       <!-- #contents -->
       <main>
         <section>
           <div class="inner">
             <div class="form-wrap">
-              <dl>
+              <dl class="form-list">
                 <dt>진행상태</dt>
                 <dd>
-                  <div class="select-wrap emphasis">
+                  <div class="select-wrap">
                     <label for="s"><em class="hidden-txt">진행상태 선택</em></label>
                     <select name="" id="s">
                       <option value="">전체</option>
@@ -38,18 +39,16 @@
                   </div>
                 </dd>
               </dl>
-              <dl>
+              <dl class="form-list">
                 <dt>조회기간</dt>
-                <dd>
-                  <div class="text-wrap flex-wrap emphasis calendar both">
-                    <span>
-                      <label for="startDate"><em class="hidden-txt">조회 시작 날짜</em></label>
-                      <input type="text" id="startDate" autocomplete="off" inputmode="none" />
-                    </span>
-                    <span>
-                      <label for="endDate"><em class="hidden-txt">조회 끝 날짜</em></label>
-                      <input type="text" id="endDate" autocomplete="off" inputmode="none" />
-                    </span>
+                <dd class="flex-wrap edge">
+                  <div class="text-wrap calendar both">
+                    <label for="startDate"><em class="hidden-txt">조회 시작 날짜</em></label>
+                    <input type="text" id="startDate" autocomplete="off" inputmode="none" readonly />
+                  </div>
+                  <div class="text-wrap calendar both">
+                    <label for="endDate"><em class="hidden-txt">조회 끝 날짜</em></label>
+                    <input type="text" id="endDate" autocomplete="off" inputmode="none" readonly />
                   </div>
                 </dd>
               </dl>

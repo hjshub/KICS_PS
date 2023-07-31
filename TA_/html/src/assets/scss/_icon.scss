@@ -1,290 +1,242 @@
   @mixin icon { display: inline-block; background-image: url($sprite-url); background-repeat: no-repeat; background-size:
   268px
   261px
-  } .icon { @include icon} .icon + em, .icon + b { margin-left:10px; position:relative; top:1px;}
+  } .icon {font-size:0;} .icon::before {@include icon; content:'';} .icon + em, .icon + b { margin-left:10px;} .column > .icon +
+  em, .column > .icon + b { margin-left:0; }
 
   @mixin icon-arrow-down{ width:17px; height:10px; background-position:
-  -105px
-  -82px; } .icon-arrow-down
-  { @include icon-arrow-down
+  -218px
+  -59px; } .icon-arrow-down::before { @include icon-arrow-down
   }
   @mixin icon-arrow-down2{ width:17px; height:10px; background-position:
-  -136px
-  -196px; } .icon-arrow-down2
-  { @include icon-arrow-down2
+  -209px
+  -196px; } .icon-arrow-down2::before { @include icon-arrow-down2
   }
   @mixin icon-arrow-fold{ width:10px; height:6px; background-position:
   -227px
-  -95px; } .icon-arrow-fold
-  { @include icon-arrow-fold
+  -95px; } .icon-arrow-fold::before { @include icon-arrow-fold
   }
   @mixin icon-arrow-left{ width:10px; height:16px; background-position:
   -60px
-  -244px; } .icon-arrow-left
-  { @include icon-arrow-left
+  -244px; } .icon-arrow-left::before { @include icon-arrow-left
   }
   @mixin icon-arrow-right{ width:10px; height:16px; background-position:
   -75px
-  -244px; } .icon-arrow-right
-  { @include icon-arrow-right
+  -244px; } .icon-arrow-right::before { @include icon-arrow-right
   }
   @mixin icon-arrow-unfold{ width:10px; height:6px; background-position:
-  -93px
-  -97px; } .icon-arrow-unfold
-  { @include icon-arrow-unfold
+  -78px
+  -97px; } .icon-arrow-unfold::before { @include icon-arrow-unfold
   }
   @mixin icon-arrow-up{ width:17px; height:10px; background-position:
-  -158px
-  -196px; } .icon-arrow-up
-  { @include icon-arrow-up
+  -66px
+  -222px; } .icon-arrow-up::before { @include icon-arrow-up
   }
   @mixin icon-back{ width:29px; height:20px; background-position:
   -204px
-  -109px; } .icon-back
-  { @include icon-back
+  -109px; } .icon-back::before { @include icon-back
   }
   @mixin icon-bookmark-active{ width:21px; height:20px; background-position:
-  -66px
-  -196px; } .icon-bookmark-active
-  { @include icon-bookmark-active
+  -118px
+  -196px; } .icon-bookmark-active::before { @include icon-bookmark-active
   }
   @mixin icon-bookmark{ width:21px; height:20px; background-position:
-  -92px
-  -196px; } .icon-bookmark
-  { @include icon-bookmark
+  -144px
+  -196px; } .icon-bookmark::before { @include icon-bookmark
   }
   @mixin icon-calendar{ width:16px; height:16px; background-position:
   -227px
-  -74px; } .icon-calendar
-  { @include icon-calendar
+  -74px; } .icon-calendar::before { @include icon-calendar
   }
   @mixin icon-caution{ width:19px; height:19px; background-position:
   -248px
-  -154px; } .icon-caution
-  { @include icon-caution
+  -154px; } .icon-caution::before { @include icon-caution
   }
   @mixin icon-cert{ width:18px; height:19px; background-position:
   -248px
-  -178px; } .icon-cert
-  { @include icon-cert
+  -178px; } .icon-cert::before { @include icon-cert
   }
   @mixin icon-cert2{ width:19px; height:21px; background-position:
   -248px
-  -80px; } .icon-cert2
-  { @include icon-cert2
+  -80px; } .icon-cert2::before { @include icon-cert2
   }
   @mixin icon-check-info01{ width:31px; height:34px; background-position:
   -118px
-  -151px; } .icon-check-info01
-  { @include icon-check-info01
+  -151px; } .icon-check-info01::before { @include icon-check-info01
   }
   @mixin icon-check-info02{ width:33px; height:40px; background-position:
   0px
-  -151px; } .icon-check-info02
-  { @include icon-check-info02
+  -151px; } .icon-check-info02::before { @include icon-check-info02
   }
   @mixin icon-check-info03{ width:29px; height:43px; background-position:
   0px
-  -196px; } .icon-check-info03
-  { @include icon-check-info03
+  -196px; } .icon-check-info03::before { @include icon-check-info03
   }
   @mixin icon-check-info04{ width:27px; height:37px; background-position:
   -34px
-  -196px; } .icon-check-info04
-  { @include icon-check-info04
+  -196px; } .icon-check-info04::before { @include icon-check-info04
   }
   @mixin icon-check-info05{ width:35px; height:35px; background-position:
   -78px
-  -151px; } .icon-check-info05
-  { @include icon-check-info05
+  -151px; } .icon-check-info05::before { @include icon-check-info05
   }
   @mixin icon-check-info06{ width:37px; height:36px; background-position:
   -63px
-  -56px; } .icon-check-info06
-  { @include icon-check-info06
+  -56px; } .icon-check-info06::before { @include icon-check-info06
   }
   @mixin icon-check-info07{ width:35px; height:25px; background-position:
   -164px
-  -109px; } .icon-check-info07
-  { @include icon-check-info07
+  -109px; } .icon-check-info07::before { @include icon-check-info07
   }
   @mixin icon-checked{ width:10px; height:7px; background-position:
-  -63px
-  -97px; } .icon-checked
-  { @include icon-checked
+  -105px
+  -85px; } .icon-checked::before { @include icon-checked
   }
   @mixin icon-checked2{ width:16px; height:12px; background-position:
   -248px
-  -226px; } .icon-checked2
-  { @include icon-checked2
+  -226px; } .icon-checked2::before { @include icon-checked2
+  }
+  @mixin icon-close{ width:24px; height:24px; background-position:
+  -105px
+  -56px; } .icon-close::before { @include icon-close
   }
   @mixin icon-detail-view{ width:58px; height:48px; background-position:
   0px
-  -56px; } .icon-detail-view
-  { @include icon-detail-view
+  -56px; } .icon-detail-view::before { @include icon-detail-view
   }
   @mixin icon-dot-gray{ width:4px; height:4px; background-position:
-  -239px
-  -55px; } .icon-dot-gray
-  { @include icon-dot-gray
+  -120px
+  -85px; } .icon-dot-gray::before { @include icon-dot-gray
   }
   @mixin icon-dot{ width:4px; height:4px; background-position:
-  -108px
-  -97px; } .icon-dot
-  { @include icon-dot
+  -93px
+  -97px; } .icon-dot::before { @include icon-dot
   }
   @mixin icon-exec{ width:60px; height:51px; background-position:
   -69px
-  0px; } .icon-exec
-  { @include icon-exec
+  0px; } .icon-exec::before { @include icon-exec
   }
   @mixin icon-exec2{ width:64px; height:51px; background-position:
   0px
-  0px; } .icon-exec2
-  { @include icon-exec2
+  0px; } .icon-exec2::before { @include icon-exec2
   }
   @mixin icon-faq{ width:21px; height:21px; background-position:
-  -218px
-  -29px; } .icon-faq
-  { @include icon-faq
+  -191px
+  -151px; } .icon-faq::before { @include icon-faq
   }
   @mixin icon-home-active{ width:20px; height:21px; background-position:
   -248px
-  0px; } .icon-home-active
-  { @include icon-home-active
+  0px; } .icon-home-active::before { @include icon-home-active
   }
   @mixin icon-home{ width:20px; height:21px; background-position:
   -248px
-  -26px; } .icon-home
-  { @include icon-home
+  -26px; } .icon-home::before { @include icon-home
   }
   @mixin icon-login-type01{ width:34px; height:40px; background-position:
   -179px
-  -29px; } .icon-login-type01
-  { @include icon-login-type01
+  -29px; } .icon-login-type01::before { @include icon-login-type01
   }
   @mixin icon-login-type02{ width:36px; height:37px; background-position:
   0px
-  -109px; } .icon-login-type02
-  { @include icon-login-type02
+  -109px; } .icon-login-type02::before { @include icon-login-type02
   }
   @mixin icon-login-type03{ width:35px; height:37px; background-position:
   -38px
-  -151px; } .icon-login-type03
-  { @include icon-login-type03
+  -151px; } .icon-login-type03::before { @include icon-login-type03
   }
   @mixin icon-login-type04{ width:47px; height:28px; background-position:
   -134px
-  -74px; } .icon-login-type04
-  { @include icon-login-type04
+  -74px; } .icon-login-type04::before { @include icon-login-type04
   }
   @mixin icon-logo{ width:109px; height:24px; background-position:
   -134px
-  0px; } .icon-logo
-  { @include icon-logo
+  0px; } .icon-logo::before { @include icon-logo
   }
   @mixin icon-manual{ width:16px; height:19px; background-position:
   -248px
-  -202px; } .icon-manual
-  { @include icon-manual
+  -202px; } .icon-manual::before { @include icon-manual
   }
   @mixin icon-more{ width:10px; height:10px; background-position:
-  -180px
-  -196px; } .icon-more
-  { @include icon-more
+  -231px
+  -196px; } .icon-more::before { @include icon-more
   }
   @mixin icon-mypage-active{ width:20px; height:19px; background-position:
   -248px
-  -106px; } .icon-mypage-active
-  { @include icon-mypage-active
+  -106px; } .icon-mypage-active::before { @include icon-mypage-active
   }
   @mixin icon-mypage{ width:20px; height:19px; background-position:
   -248px
-  -130px; } .icon-mypage
-  { @include icon-mypage
+  -130px; } .icon-mypage::before { @include icon-mypage
   }
   @mixin icon-next-active{ width:10px; height:17px; background-position:
   0px
-  -244px; } .icon-next-active
-  { @include icon-next-active
+  -244px; } .icon-next-active::before { @include icon-next-active
   }
   @mixin icon-next-black{ width:10px; height:17px; background-position:
   -15px
-  -244px; } .icon-next-black
-  { @include icon-next-black
+  -244px; } .icon-next-black::before { @include icon-next-black
   }
   @mixin icon-next-wh{ width:10px; height:17px; background-position:
   -30px
-  -244px; } .icon-next-wh
-  { @include icon-next-wh
+  -244px; } .icon-next-wh::before { @include icon-next-wh
   }
   @mixin icon-next{ width:10px; height:17px; background-position:
   -45px
-  -244px; } .icon-next
-  { @include icon-next
+  -244px; } .icon-next::before { @include icon-next
   }
   @mixin icon-notice{ width:18px; height:23px; background-position:
   -248px
-  -52px; } .icon-notice
-  { @include icon-notice
+  -52px; } .icon-notice::before { @include icon-notice
+  }
+  @mixin icon-search{ width:24px; height:25px; background-position:
+  -218px
+  -29px; } .icon-search::before { @include icon-search
   }
   @mixin icon-setting-active{ width:21px; height:21px; background-position:
-  -105px
-  -56px; } .icon-setting-active
-  { @include icon-setting-active
+  -217px
+  -151px; } .icon-setting-active::before { @include icon-setting-active
   }
   @mixin icon-setting-black{ width:40px; height:40px; background-position:
   -134px
-  -29px; } .icon-setting-black
-  { @include icon-setting-black
+  -29px; } .icon-setting-black::before { @include icon-setting-black
   }
   @mixin icon-setting-navy{ width:21px; height:21px; background-position:
-  -191px
-  -151px; } .icon-setting-navy
-  { @include icon-setting-navy
+  -66px
+  -196px; } .icon-setting-navy::before { @include icon-setting-navy
   }
   @mixin icon-setting{ width:21px; height:21px; background-position:
-  -217px
-  -151px; } .icon-setting
-  { @include icon-setting
+  -92px
+  -196px; } .icon-setting::before { @include icon-setting
   }
   @mixin icon-symbol{ width:40px; height:33px; background-position:
   -41px
-  -109px; } .icon-symbol
-  { @include icon-symbol
+  -109px; } .icon-symbol::before { @include icon-symbol
   }
   @mixin icon-tag{ width:13px; height:16px; background-position:
-  -118px
-  -196px; } .icon-tag
-  { @include icon-tag
+  -170px
+  -196px; } .icon-tag::before { @include icon-tag
   }
   @mixin icon-trial01{ width:32px; height:30px; background-position:
   -154px
-  -151px; } .icon-trial01
-  { @include icon-trial01
+  -151px; } .icon-trial01::before { @include icon-trial01
   }
   @mixin icon-trial02{ width:34px; height:29px; background-position:
   -125px
-  -109px; } .icon-trial02
-  { @include icon-trial02
+  -109px; } .icon-trial02::before { @include icon-trial02
   }
   @mixin icon-trial03{ width:36px; height:27px; background-position:
   -186px
-  -74px; } .icon-trial03
-  { @include icon-trial03
+  -74px; } .icon-trial03::before { @include icon-trial03
   }
   @mixin icon-trial04{ width:34px; height:33px; background-position:
   -86px
-  -109px; } .icon-trial04
-  { @include icon-trial04
+  -109px; } .icon-trial04::before { @include icon-trial04
   }
   @mixin icon-unchecked{ width:10px; height:7px; background-position:
-  -78px
-  -97px; } .icon-unchecked
-  { @include icon-unchecked
+  -63px
+  -97px; } .icon-unchecked::before { @include icon-unchecked
   }
   @mixin icon-unchecked2{ width:16px; height:12px; background-position:
-  -218px
-  -55px; } .icon-unchecked2
-  { @include icon-unchecked2
+  -188px
+  -196px; } .icon-unchecked2::before { @include icon-unchecked2
   }

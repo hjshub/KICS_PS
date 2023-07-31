@@ -5,9 +5,9 @@
   </head>
   <body>
     <div id="layout">
-      <!-- #gnb -->
-      @@include('../include/gnb2.html', { menu: false, page_title:"사용자 아이디 선택", path:'..' })
-      <!-- // #gnb -->
+      <!-- pagenavigation -->
+      @@include('../include/page_nav_02.html', { menu: false, page_title:"사용자 아이디 선택", path:'..' })
+      <!-- // pagenavigation -->
 
       <!-- #contents -->
       <main>
@@ -15,8 +15,8 @@
           <div class="inner">
             <div class="form-wrap">
               <div class="text-wrap">
-                <label for="user_id"><em class="hidden-txt">아이디</em></label>
-                <input type="text" id="user_id" autocomplete="off" placeholder="아이디" />
+                <input type="text" id="user_id" autocomplete="off" title="아이디" placeholder="아이디" />
+                <button type="button" class="button-reset"><em class="hidden-txt">초기화</em></button>
               </div>
               <div class="btn-wrap">
                 <button class="btn-search bg-navy"><em>검색</em></button>

@@ -389,14 +389,6 @@ textarea {
     }
 
     dd {
-      margin-top: 10px;
-
-      .text-wrap {
-        & + .text-wrap {
-          margin-top: 10px;
-        }
-      }
-
       .btn-wrap {
         padding: 10px 0 0 0;
       }
@@ -413,6 +405,23 @@ textarea {
 
   & + .form-wrap {
     margin-top: 20px;
+  }
+}
+
+.form-list {
+  dt {
+    line-height: 1;
+
+    label {
+      em {
+        font-size: 1.4rem;
+        vertical-align: top;
+      }
+    }
+  }
+
+  dd {
+    margin-top: 15px;
   }
 }
 
