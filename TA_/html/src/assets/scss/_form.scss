@@ -717,7 +717,6 @@ button {
           top: 50%;
           background-color: $white;
           margin-left: 6px;
-          margin-top: 1px;
           @include transform(translateY(-50%));
           pointer-events: none;
         }
