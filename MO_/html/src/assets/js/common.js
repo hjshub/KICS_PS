@@ -225,27 +225,38 @@ gb.CommonFunction = (function () {
   const textCount = () => {
     const textArea = document.querySelectorAll('.text-wrap textarea');
 
-    function getBytes(str) {
-      let char;
+    function getBytes(t, maxL) {
+      let char = '';
       let c_bytes = 0;
-    
+      let str = t.value;
+      let strL = 0;
+
       for (let i = 0; i < str.length; i++) {
         char = str.charAt(i);
-    
+
         if (escape(char).length > 4) c_bytes += 2;
         else c_bytes++;
+
+        if (c_bytes <= maxL) {
+          strL = i + 1;
+          t.nextElementSibling.children[1].firstElementChild.innerHTML = c_bytes;
+        }
       }
-    
-      return c_bytes;
+
+      if (c_bytes > maxL) {
+        alert(222);
+        t.value = str.substring(0, strL);
+      }
+
+      //return c_bytes;
     }
 
     textArea.forEach(function (elem) {
       elem.oninput = function (event) {
         const txtInfo = this.nextElementSibling;
 
-        //txtInfo.children[1].firstElementChild.innerHTML = getBytes(event.target.value);
-        
-        if(event.target.value.length <= this.maxLength) txtInfo.children[1].firstElementChild.innerHTML = event.target.value.length
+        //txtInfo.children[1].firstElementChild.innerHTML = getBytes(event.target, 20);
+        getBytes(event.target, 20);
       };
     });
   };

@@ -171,8 +171,8 @@ gb.CommonFunction = (function () {
 
     gb.listSwiper.forEach(function (el, idx) {
       if (typeof gb._listSwiper[idx] !== 'undefined') {
-        gb._vdSwiper[idx].destroy();
-        gb._vdSwiper[idx] = undefined;
+        gb._listSwiper[idx].destroy();
+        gb._listSwiper[idx] = undefined;
       }
 
       gb._listSwiper[idx] = new Swiper(el, {
