@@ -244,7 +244,7 @@ gb.CommonFunction = (function () {
       }
 
       if (c_bytes > maxL) {
-        alert(222);
+        alert('텍스트는 150Byte 이내로 입력해주세요. ');
         t.value = str.substring(0, strL);
       }
 
@@ -254,9 +254,10 @@ gb.CommonFunction = (function () {
     textArea.forEach(function (elem) {
       elem.oninput = function (event) {
         const txtInfo = this.nextElementSibling;
+        const txtMaxLen = txtInfo.children[1].children[1].innerText;
 
         //txtInfo.children[1].firstElementChild.innerHTML = getBytes(event.target, 20);
-        getBytes(event.target, 20);
+        getBytes(event.target, txtMaxLen);
       };
     });
   };
